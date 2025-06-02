@@ -1,0 +1,11 @@
+.descriptorContainer {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}

@@ -1,0 +1,50 @@
+.headerContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 8%;
+    align-items: center;
+    padding: 10px 15px;
+    color: white;
+    z-index: 100;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.footerContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 8%;
+    align-items: center;
+    height: 100%;
+    background-color: black;
+    color: white;
+    z-index: 100;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.headerContainer.hidden {
+    background-color: transparent;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.headerContainer.visible {
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
