@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Start from './screens/Start';
+import Project from './screens/Project';
 import './App.css';
 import './assets/fonts/Fonts.module.css';
 
@@ -41,14 +42,22 @@ function App() {
           showHeader={showHeader}
         />
         <Routes>
-          {
           <Route
-              path="/"
-              element={
-                <Start />
-              }
-            />
-          }
+            path="/"
+            element={
+              <Start />
+            }
+          />
+          <Route
+            path="/project/:projectName"
+            element={
+              <Project />
+            }
+          />
+          <Route
+            path="*"
+            element={<Navigate to="/" replace />}
+          />
         </Routes>
       </div>
     </Router>

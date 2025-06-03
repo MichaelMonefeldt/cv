@@ -8,12 +8,15 @@ export default function Descriptor({ description, goTo }) {
 
     return (
         <div className={styles.descriptorContainer}>
-            <p className={styles.description}>{description}</p>
-            <button className={styles.button} onClick={() =>
-                navigate(goTo)}>
-                <img src={arrowRight
-                    } alt="Arrow Right" style={{height: '25px', padding: '0', margin: '0'}} />
-            </button>
+            <div className={styles.descriptorShadow}></div>
+            <div className={styles.descriptor} onClick={() =>
+                    navigate(goTo)}>
+                <p className={styles.description}>{description}</p>
+                <button>
+                    <img src={arrowRight
+                        } alt="Arrow Right" style={{height: '25px', padding: '0', margin: '0'}} />
+                </button>
+            </div>
         </div>
     );
 }

@@ -83,7 +83,7 @@ export default function Start() {
                 <img src={k_concept_dk} alt="Katalogica-koncept" />
                 <Descriptor
                     description="Katalogica er et katalog over danske designere, der har fokus på bæredygtighed og cirkulær økonomi."
-                    goTo="/katalogica"
+                    goTo="/project/katalogica"
                 />
             </div>
             <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '8 / span 5' }}>
@@ -91,7 +91,7 @@ export default function Start() {
                 <img src={fromPhoneToComputer} alt="Librerate-koncept" />
                 <Descriptor
                     description="Katalogica er et katalog over danske designere, der har fokus på bæredygtighed og cirkulær økonomi."
-                    goTo="/katalogica"
+                    goTo="/project/librerate"
                 />
             </div>
 
