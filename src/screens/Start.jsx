@@ -1,6 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Descriptor from '../components/Descriptor';
+import LayeredSVGAnimation from '../components/LayeredSVGAnimation';
+import TypingEffect from '../components/TypingEffect';
+import SpinningLoad from '../components/SpinningLoad';
 import Footer from '../components/Footer';
 import k_concept_dk from '../assets/images/k_concept_dk.png';
 import k_logo from '../assets/images/k_logo.png';
@@ -9,39 +12,46 @@ import fromPhoneToComputer from '../assets/images/fromPhoneToComputer.svg';
 import michael from '../assets/images/michael.svg';
 import styles from '../styles/Start.module.css';
 
-export default function Start() {
+export default function Start({topRef, projectsRef, contactRef}) {
     const navigate = useNavigate();
     
     return (
-        <div className={styles.startContainer}>
+        <div ref={topRef} className={styles.startContainer}>
             <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)',
                     gridColumn: '1 / span 10', gridRow: '1 / span 5',
                     }}>
                 <div className={`${styles.startContent} ${styles.special}`}>
-                    <img src={michael} alt="Michael Monefeldt" style={{height: 'auto', width: '80%', filter: 'invert(1)'}}/>
+                    <LayeredSVGAnimation />
+                    {/* <img src={michael} alt="Michael Monefeldt" style={{height: 'auto', width: '80%', filter: 'invert(1)'}}/> */}
                 </div>
                 <div className={styles.startContent} style={{padding: '40px'}}>
-                    <h1 className={styles.title}>Michael Monefeldt</h1>
-                    <h1 className={styles.title}>UX/UI-design</h1>
-                    <h1 className={styles.title}>Webkommunikation</h1>
+                    <TypingEffect 
+                        sentences={
+                            [
+                                'Michael Monefeldt',
+                                'UX/UI-designer',
+                                'Full Stack-udvikler',
+                            ]
+                        }
+                    />
                 </div>
             </div>
 
 
             <div className={`${styles.startContent} ${styles.goldenHover}`} style={{ gridColumn: '1 / span 2', gridRow: '6' }}>
-                <h2 className={styles.title}>Front-end</h2>
+                <h2 className={styles.title}>Full-Stack</h2>
                 <div className={styles.hiddenContent}>
-                    <p>React.js</p>
-                    <p>Electron.js</p>
+                    <p>ReactJS</p>
+                    <p>ElectronJS</p>
+                    <p>FastAPI</p>
+                    <p>Flask</p>
                 </div>
             </div>
             <div className={`${styles.startContent} ${styles.goldenHover}`} style={{ gridColumn: '3 / span 2', gridRow: '6' }}>
-                <h2 className={styles.title}>Back-end</h2>
+                <h2 className={styles.title}>Cloud Computing</h2>
                 <div className={styles.hiddenContent}>
                     <p>AWS</p>
                     <p>Azure</p>
-                    {/* <p>FastAPI</p> */}
-                    <p>Flask</p>
                     <p>PostgreSQL</p>
                 </div>
             </div>
@@ -53,11 +63,11 @@ export default function Start() {
                 </div>
             </div>
             <div className={`${styles.startContent} ${styles.goldenHover}`} style={{ gridColumn: '7 / span 2', gridRow: '6' }}>
-                <h2 className={styles.title}>Kommunikation</h2>
+                <h2 className={styles.title}>Formidling</h2>
             </div>
 
 
-            <div className={styles.startContent}
+            <div ref={projectsRef} className={styles.startContent}
                 style={{ 
                     backgroundColor: 'rgb(0, 0, 0)',
                     color: 'white',
@@ -73,16 +83,17 @@ export default function Start() {
                         fontSize: '2rem', 
                         fontFamily: 'Space_Mono, monospace',
                     }}>
-                    ↓ Projects ↓
+                    <SpinningLoad color={'white'} size={'50px'} />
+                    Projekter
                 </h2>
             </div>
 
 
-            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '8 / span 5' }}>
+            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '8 / span 5', backgroundColor: '#AEB862' }}>
                 <img className={styles.projectHeader} src={k_logo} alt="Katalogica" style={{height: '55px', width: 'auto'}}/>
                 <img src={k_concept_dk} alt="Katalogica-koncept" />
                 <Descriptor
-                    description="Katalogica er et katalog over danske designere, der har fokus på bæredygtighed og cirkulær økonomi."
+                    description="AI-drevet webapplikation der høster metadata i bøger."
                     goTo="/project/katalogica"
                 />
             </div>
@@ -90,12 +101,12 @@ export default function Start() {
                 <img className={styles.projectHeader} src={l_logo} alt="Librerate" style={{height: '52px', width: 'auto'}}/>
                 <img src={fromPhoneToComputer} alt="Librerate-koncept" />
                 <Descriptor
-                    description="Katalogica er et katalog over danske designere, der har fokus på bæredygtighed og cirkulær økonomi."
+                    description="Scan et væld af materialer med din mobil og registrer dem hurtigere."
                     goTo="/project/librerate"
                 />
             </div>
 
-            <div className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '13 / span 2' }}>
+            <div ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '13 / span 2' }}>
                 <Footer showHeader={true} />
             </div>
         </div>

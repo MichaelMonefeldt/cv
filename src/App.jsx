@@ -9,10 +9,38 @@ import './assets/fonts/Fonts.module.css';
 function App() {
   const [showHeader, setShowHeader] = useState(false);
   const appRef = useRef(null);
+  const topRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const handleScrollToProjects = () => {
+    if (projectsRef.current) {
+      projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  const handleScrollToContact = () => {
+    if (contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  const handleScrollToSection = (section) => {
+    switch (section) {
+      case 'projects':
+        handleScrollToProjects();
+        break;
+      case 'contact':
+        handleScrollToContact();
+        break;
+      default:
+        if (topRef.current) {
+          topRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+  }
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollThreshold = window.innerHeight / 3;
+      const scrollThreshold = window.innerHeight / 2;
       if (appRef.current) {
         const scrollY = appRef.current.scrollTop;
         if (scrollY > scrollThreshold) {
@@ -40,12 +68,17 @@ function App() {
       <div className="App" ref={appRef}>
         <Header 
           showHeader={showHeader}
+          onScrollToSection={handleScrollToSection}
         />
         <Routes>
           <Route
             path="/"
             element={
-              <Start />
+              <Start 
+                topRef={topRef}
+                projectsRef={projectsRef}
+                contactRef={contactRef}
+              />
             }
           />
           <Route

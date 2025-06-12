@@ -1,0 +1,65 @@
+/* LayeredSVGAnimation.css */
+.svgContainer {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  margin: 50px auto;
+}
+
+.svgLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+  filter: invert(1);
+}
+
+.svg1 {
+  animation: driftAndRotate1 6s ease-in-out infinite alternate;
+}
+
+.svg2 {
+  animation: driftAndRotate2 10s ease-in-out infinite alternate;
+}
+
+.svg3 {
+  animation: driftAndRotate3 6s ease-in-out infinite alternate;
+}
+
+@keyframes driftAndRotate1 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-5px, 10px) rotate(2deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes driftAndRotate2 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(10px, -2px) rotate(-2deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes driftAndRotate3 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(30px, -10px) rotate(3deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}

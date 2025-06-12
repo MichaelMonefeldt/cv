@@ -12,10 +12,10 @@ export default function Descriptor({ description, goTo }) {
             <div className={styles.descriptor} onClick={() =>
                     navigate(goTo)}>
                 <p className={styles.description}>{description}</p>
-                <button>
+                <button style={{padding: '0px'}}>
                     <img src={arrowRight
-                        } alt="Arrow Right" style={{height: '25px', padding: '0', margin: '0'}} />
-                </button>
+                        } alt="Arrow Right" style={{height: '35px', padding: '0', margin: '0'}} />
+                </button>   
             </div>
         </div>
     );

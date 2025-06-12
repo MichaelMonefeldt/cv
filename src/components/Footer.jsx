@@ -7,7 +7,7 @@ export default function Footer({showHeader}) {
 
     return (
         <div className={`${styles.footerContainer}`}>
-            <p className={styles.logo}>Kontakt mig:</p>
+            <p className={styles.logo}>Skriv til mig:</p>
             <a href="mailto:michaelmonefeldt@gmail.com" className={styles.emailLink}>
                 michaelmonefeldt@gmail.com
             </a>

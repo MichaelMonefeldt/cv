@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 
 export default function Project() {
     const [isHovered, setIsHovered] = useState(false);
-
     const { projectName } = useParams();
     // You can replace this with a dynamic import or a switch case based on projectName
     const projectData = {

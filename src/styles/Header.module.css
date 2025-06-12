@@ -7,25 +7,11 @@
     width: 100%;
     height: 8%;
     align-items: center;
-    padding: 10px 15px;
+    padding: 10px 20px;
     color: white;
     z-index: 100;
     transition: background-color 0.3s ease, color 0.3s ease;
     animation: fadeIn 0.5s ease-in-out;
-}
-
-.footerContainer {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 8%;
-    align-items: center;
-    height: 100%;
-    background-color: black;
-    color: white;
-    z-index: 100;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .headerContainer.hidden {
@@ -37,7 +23,60 @@
 .headerContainer.visible {
     background-color: black;
     color: white;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logo {
+    font-family: 'Space_mono', Courier, monospace;
+    width: auto;
+    color: white;
+    cursor: pointer;
+}
+
+.logo.hidden {
+    display: none;
+}
+
+.headerBtn {
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+    color: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.headerBtn:hover {
+    opacity: 0.8;
+}
+
+.headerBtn:focus {
+    outline: none;
+}
+
+.footerContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 8%;
+    align-items: center;
+    height: 100%;
+    background-color: black;
+    color: white;
+    gap: 10px;
+    z-index: 100;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footerContainer a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid white;
 }
 
 @keyframes fadeIn {
