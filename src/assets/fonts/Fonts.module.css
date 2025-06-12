@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'Quicksand';
     src: url('./Quicksand/Quicksand-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
+    /* font-weight: normal; */
     font-style: normal;
   }
 
 @font-face {
     font-family: 'Space_Mono';
     src: url('./Space_Mono/SpaceMono-Regular.ttf') format('truetype');
-    font-weight: normal;
+    /* font-weight: normal;  */
     font-style: normal;
   }

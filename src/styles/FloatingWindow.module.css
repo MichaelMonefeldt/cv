@@ -1,0 +1,55 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    animation : fadeIn 0.5s forwards;
+}
+
+.floatingWindow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    max-width: 700px;
+    height: 80vh;
+    padding: 0px;
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    margin: 0;
+    padding: 0px 20px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: left;
+}
+
+.closeBtn {
+    cursor: pointer;
+    padding: 5px 0px;
+    font-size: 25px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

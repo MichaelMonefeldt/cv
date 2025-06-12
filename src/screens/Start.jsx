@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Descriptor from '../components/Descriptor';
 import LayeredSVGAnimation from '../components/LayeredSVGAnimation';
 import TypingEffect from '../components/TypingEffect';
+import FloatingWindow from '../screens/FloatingWindow';
 import SpinningLoad from '../components/SpinningLoad';
 import Footer from '../components/Footer';
 import k_concept_dk from '../assets/images/k_concept_dk.png';
@@ -14,6 +15,7 @@ import styles from '../styles/Start.module.css';
 
 export default function Start({topRef, projectsRef, contactRef}) {
     const navigate = useNavigate();
+    const [windowOpen, setWindowOpen] = useState(true);
     
     return (
         <div ref={topRef} className={styles.startContainer}>
@@ -41,10 +43,10 @@ export default function Start({topRef, projectsRef, contactRef}) {
             <div className={`${styles.startContent} ${styles.goldenHover}`} style={{ gridColumn: '1 / span 2', gridRow: '6' }}>
                 <h2 className={styles.title}>Full-Stack</h2>
                 <div className={styles.hiddenContent}>
-                    <p>ReactJS</p>
-                    <p>ElectronJS</p>
-                    <p>FastAPI</p>
+                    <p>React JS</p>
                     <p>Flask</p>
+                    <p>Electron JS</p>
+                    <p>FastAPI</p>
                 </div>
             </div>
             <div className={`${styles.startContent} ${styles.goldenHover}`} style={{ gridColumn: '3 / span 2', gridRow: '6' }}>
@@ -58,12 +60,22 @@ export default function Start({topRef, projectsRef, contactRef}) {
             <div className={`${styles.startContent} ${styles.goldenHover}`} style={{ gridColumn: '5 / span 2', gridRow: '6' }}>
                 <h2 className={styles.title}>UX / UI</h2>
                 <div className={styles.hiddenContent}>
-                    <p>Figma</p>
                     <p>Affinity Designer 2</p>
+                    <p>Figma</p>
                 </div>
             </div>
             <div className={`${styles.startContent} ${styles.goldenHover}`} style={{ gridColumn: '7 / span 2', gridRow: '6' }}>
                 <h2 className={styles.title}>Formidling</h2>
+                <div className={styles.hiddenContent}>
+                    <p>Se eksempler</p>
+                </div>
+            </div>
+            <div className={`${styles.startContent} ${styles.goldenHover}`} style={{ gridColumn: '9 / span 2', gridRow: '6' }}>
+                <h2 className={styles.title}>Vision</h2>
+                <div className={styles.hiddenContent}>
+                    <p>Figma</p>
+                    <p>Affinity Designer 2</p>
+                </div>
             </div>
 
 
@@ -109,6 +121,20 @@ export default function Start({topRef, projectsRef, contactRef}) {
             <div ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '13 / span 2' }}>
                 <Footer showHeader={true} />
             </div>
+
+            <FloatingWindow
+                body={
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                        <h2>Medlemmer</h2>
+                        <p>Michael Monefeldt</p>
+                        <p>Andreas Møller</p>
+                        <p>Mathias Bøgh</p>
+                        <p>Rasmus Højmark</p>
+                    </div>
+                }
+                windowOpen={windowOpen}
+                setWindowOpen={setWindowOpen}
+            />
         </div>
     );
 }
