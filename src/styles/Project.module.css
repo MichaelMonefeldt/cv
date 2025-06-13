@@ -1,0 +1,29 @@
+.projectContent {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-rows: minmax(20vh, auto);
+    height: fit-content;
+    width: 100vw;
+    background-color: #000000;
+    color: white;
+    font-family: 'Quicksand', Courier, monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    gap: 0px;
+    text-align: left;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.element {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    color: black;
+    height: 100%;
+    padding: 20px;
+}

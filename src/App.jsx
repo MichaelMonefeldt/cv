@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation} from 'react-router-dom';
 import Header from './components/Header';
 import Start from './screens/Start';
 import Project from './screens/Project';
 import './App.css';
 import './assets/fonts/Fonts.module.css';
+import projects from './projects.json';
 
 function App() {
   const [showHeader, setShowHeader] = useState(false);
@@ -84,7 +85,9 @@ function App() {
           <Route
             path="/project/:projectName"
             element={
-              <Project />
+              <Project 
+                projects={projects}
+              />
             }
           />
           <Route

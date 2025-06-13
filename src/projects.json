@@ -1,0 +1,14 @@
+{
+        "librerate": {
+            "description": "This is the description for Project 1.",
+            "technologies": ["Flask", "React JS", "Azure", "PostgreSQL", "OpenAI API", "spaCy (NLP)"],
+            "image": "path/to/project1-image.jpg",
+            "link": "https://example.com/project1"
+        },
+        "katalogica": {
+            "description": "This is the description for Project 2.",
+            "technologies": ["Flask", "Vanilla JS", "AWS", "PostgreSQL", "OpenAI API"],
+            "image": "path/to/project2-image.jpg",
+            "link": false
+        }
+    }

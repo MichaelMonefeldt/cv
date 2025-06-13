@@ -7,7 +7,9 @@ export default function Header({showHeader, onScrollToSection}) {
 
     return (
         <div className={`${styles.headerContainer} ${showHeader ? styles.visible : styles.hidden}`}>
-            <div className={styles.headerLeft} onClick={() => onScrollToSection('top')}>
+            <div className={styles.headerLeft} onClick={() => {
+                navigate('/');
+                onScrollToSection('top')}}>
                 <p className={`${styles.logo} ${showHeader ? styles.visible : styles.hidden}`} onClick={() => navigate('/')}>Michael Monefeldt</p>
             </div>
             <div className={styles.headerRight}>

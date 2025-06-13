@@ -12,10 +12,13 @@ import l_logo from '../assets/images/l_logo.svg';
 import fromPhoneToComputer from '../assets/images/fromPhoneToComputer.svg';
 import michael from '../assets/images/michael.svg';
 import styles from '../styles/Start.module.css';
+import technologies from '../technologies.json';
 
 export default function Start({topRef, projectsRef, contactRef}) {
     const navigate = useNavigate();
-    const [windowOpen, setWindowOpen] = useState(true);
+    const [windowOpen, setWindowOpen] = useState(false);
+    const [skillTitle, setSkillTitle] = useState(<div></div>)
+    const [skillBody, setSkillBody] = useState(<div></div>)
     
     return (
         <div ref={topRef} className={styles.startContainer}>
@@ -39,45 +42,31 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 </div>
             </div>
 
-
-            <div className={`${styles.startContent} ${styles.goldenHover}`} style={{ gridColumn: '1 / span 2', gridRow: '6' }}>
-                <h2 className={styles.title}>Full-Stack</h2>
-                <div className={styles.hiddenContent}>
-                    <p>React JS</p>
-                    <p>Flask</p>
-                    <p>Electron JS</p>
-                    <p>FastAPI</p>
+            {Object.entries(technologies).map(([category, techs], index) => (
+                <div 
+                    key={category}
+                    className={`${styles.startContent} ${styles.goldenHover}`}
+                    style={{ gridColumn: `${1 + index * 2} / span 2`, gridRow: '6' }}
+                >
+                    <h2 className={styles.title}>{category}</h2>
+                    <div className={styles.hiddenContent}>
+                        {Object.entries(techs).map(([techKey, tech]) => (
+                            <p key={techKey} onClick={() => {
+                                setSkillTitle(tech.name);
+                                setSkillBody(
+                                    <div>
+                                        <h3>{tech.name}</h3>
+                                        <p>{tech.description}</p>
+                                    </div>
+                                );
+                                setWindowOpen(true);
+                            }}>
+                                {tech.name}
+                            </p>
+                        ))}
+                    </div>
                 </div>
-            </div>
-            <div className={`${styles.startContent} ${styles.goldenHover}`} style={{ gridColumn: '3 / span 2', gridRow: '6' }}>
-                <h2 className={styles.title}>Cloud Computing</h2>
-                <div className={styles.hiddenContent}>
-                    <p>AWS</p>
-                    <p>Azure</p>
-                    <p>PostgreSQL</p>
-                </div>
-            </div>
-            <div className={`${styles.startContent} ${styles.goldenHover}`} style={{ gridColumn: '5 / span 2', gridRow: '6' }}>
-                <h2 className={styles.title}>UX / UI</h2>
-                <div className={styles.hiddenContent}>
-                    <p>Affinity Designer 2</p>
-                    <p>Figma</p>
-                </div>
-            </div>
-            <div className={`${styles.startContent} ${styles.goldenHover}`} style={{ gridColumn: '7 / span 2', gridRow: '6' }}>
-                <h2 className={styles.title}>Formidling</h2>
-                <div className={styles.hiddenContent}>
-                    <p>Se eksempler</p>
-                </div>
-            </div>
-            <div className={`${styles.startContent} ${styles.goldenHover}`} style={{ gridColumn: '9 / span 2', gridRow: '6' }}>
-                <h2 className={styles.title}>Vision</h2>
-                <div className={styles.hiddenContent}>
-                    <p>Figma</p>
-                    <p>Affinity Designer 2</p>
-                </div>
-            </div>
-
+            ))}
 
             <div ref={projectsRef} className={styles.startContent}
                 style={{ 
@@ -123,14 +112,9 @@ export default function Start({topRef, projectsRef, contactRef}) {
             </div>
 
             <FloatingWindow
+                title={skillTitle}
                 body={
-                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                        <h2>Medlemmer</h2>
-                        <p>Michael Monefeldt</p>
-                        <p>Andreas Møller</p>
-                        <p>Mathias Bøgh</p>
-                        <p>Rasmus Højmark</p>
-                    </div>
+                    skillBody
                 }
                 windowOpen={windowOpen}
                 setWindowOpen={setWindowOpen}

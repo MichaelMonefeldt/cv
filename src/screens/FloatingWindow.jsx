@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/FloatingWindow.module.css';
 
-export default function FloatingWindow({ body, windowOpen, setWindowOpen }) {
+export default function FloatingWindow({title, body, windowOpen, setWindowOpen }) {
     return (
         windowOpen && 
         <div 
@@ -12,7 +12,7 @@ export default function FloatingWindow({ body, windowOpen, setWindowOpen }) {
             >
             <div className={styles.floatingWindow} onClick={(e) => e.stopPropagation()}>
                 <div className={styles.header} style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center'}}>
-                    <h2>Members</h2>
+                    <h2>{title}</h2>
                     <span className={styles.closeBtn} onClick={() => {
                         (e) => e.stopPropagation();
                         setWindowOpen(false);

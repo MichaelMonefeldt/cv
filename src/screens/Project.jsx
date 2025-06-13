@@ -2,43 +2,31 @@ import React, {useState} from 'react';
 import styles from '../styles/Project.module.css';
 import { useParams } from 'react-router-dom';
 
-export default function Project() {
+export default function Project({projects}) {
     const [isHovered, setIsHovered] = useState(false);
     const { projectName } = useParams();
     // You can replace this with a dynamic import or a switch case based on projectName
-    const projectData = {
-        'librerate': {
-            description: 'This is the description for Project 1.',
-            image: 'path/to/project1-image.jpg',
-            link: 'https://example.com/project1'
-        },
-        'katalogica': {
-            description: 'This is the description for Project 2.',
-            image: 'path/to/project2-image.jpg',
-            link: 'https://example.com/project2'
-        }
-    };
+    const projectData = projects
     const project = projectData[projectName];
     if (!project) {
         return <div className={styles.error}>Project not found</div>;
     }
     return (
         <div className={styles.projectContainer}>
-            <h1 className={styles.projectTitle}>{projectName}</h1>
             <div className={styles.projectContent}>
-                <img 
-                    src={project.image} 
-                    alt={`${projectName} screenshot`} 
-                    className={styles.projectImage}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                />
-                {isHovered && (
-                    <div className={styles.projectDescription}>
-                        <p>{project.description}</p>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
-                    </div>
-                )}
+                <div className={styles.element} style={{ gridColumn: '2 / span 5', gridRow: '1 / span 3', border: '10px solid black', borderBottom: '0', borderRight: '0' }}>
+                    <h1>{projectName}</h1>
+                </div>
+                <div className={styles.element} style={{ gridColumn: '7 / span 3', gridRow: '1 / span 3', border: '10px solid black' }}>
+                    <h2>Teknologier</h2>
+                    {project.technologies.map((item, index) => (
+                        <p key={index}>{item}</p>
+                    ))}
+                </div>
+
+                <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '4 / span 3', border: '10px solid black', borderTop: '0' }}>
+                    Michael
+                </div>
             </div>
         </div>
     );
