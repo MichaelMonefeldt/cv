@@ -13,6 +13,7 @@ export default function Project({projects}) {
     }
     return (
         <div className={styles.projectContainer}>
+            <div style={{height: '8vh'}}></div>
             <div className={styles.projectContent}>
                 <div className={styles.element} style={{ gridColumn: '2 / span 5', gridRow: '1 / span 3', border: '10px solid black', borderBottom: '0', borderRight: '0' }}>
                     <h1>{projectName}</h1>

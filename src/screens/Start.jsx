@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Descriptor from '../components/Descriptor';
 import LayeredSVGAnimation from '../components/LayeredSVGAnimation';
 import TypingEffect from '../components/TypingEffect';
@@ -15,13 +15,23 @@ import styles from '../styles/Start.module.css';
 import technologies from '../technologies.json';
 
 export default function Start({topRef, projectsRef, contactRef}) {
-    const navigate = useNavigate();
     const [windowOpen, setWindowOpen] = useState(false);
     const [skillTitle, setSkillTitle] = useState(<div></div>)
     const [skillBody, setSkillBody] = useState(<div></div>)
     
+    const location = useLocation();
+    
+    useEffect(() => {
+    if (location.state?.scrollTo) {
+      const section = document.getElementById(location.state.scrollTo);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location.state]);
+
     return (
-        <div ref={topRef} className={styles.startContainer}>
+        <div id={top} ref={topRef} className={styles.startContainer}>
             <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)',
                     gridColumn: '1 / span 10', gridRow: '1 / span 5',
                     }}>
@@ -68,7 +78,7 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 </div>
             ))}
 
-            <div ref={projectsRef} className={styles.startContent}
+            <div id="projects" ref={projectsRef} className={styles.startContent}
                 style={{ 
                     backgroundColor: 'rgb(0, 0, 0)',
                     color: 'white',
@@ -107,7 +117,7 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 />
             </div>
 
-            <div ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '13 / span 2' }}>
+            <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '13 / span 2' }}>
                 <Footer showHeader={true} />
             </div>
 
