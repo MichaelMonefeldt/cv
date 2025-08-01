@@ -6,7 +6,7 @@ export default function FloatingWindow({title, body, windowOpen, setWindowOpen }
         windowOpen && 
         <div 
             className={styles.container}
-            onClick={() => 
+            onClick={() =>
                     setWindowOpen(false)
                 }
             >

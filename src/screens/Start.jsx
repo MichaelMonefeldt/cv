@@ -32,15 +32,14 @@ export default function Start({topRef, projectsRef, contactRef}) {
 
     return (
         <div id={top} ref={topRef} className={styles.startContainer}>
-            <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)',
-                    gridColumn: '1 / span 10', gridRow: '1 / span 5',
+            <div className={styles.special} style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)',
+                    gridColumn: '1 / span 10', gridRow: '1 / span 5', backgroundColor:'white'
                     }}>
-                <div className={`${styles.startContent} ${styles.special}`}>
+                <div className={`${styles.startContent}`}>
                     <LayeredSVGAnimation />
-                    {/* <img src={michael} alt="Michael Monefeldt" style={{height: 'auto', width: '80%', filter: 'invert(1)'}}/> */}
                 </div>
                 <div className={styles.startContent} style={{padding: '40px'}}>
-                    <TypingEffect 
+                    <TypingEffect
                         sentences={
                             [
                                 'Michael Monefeldt',
@@ -98,7 +97,6 @@ export default function Start({topRef, projectsRef, contactRef}) {
                     Projekter
                 </h2>
             </div>
-
 
             <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '8 / span 5', backgroundColor: '#AEB862' }}>
                 <img className={styles.projectHeader} src={k_logo} alt="Katalogica" style={{height: '55px', width: 'auto'}}/>

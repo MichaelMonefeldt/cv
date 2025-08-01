@@ -20,20 +20,22 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     overflow: hidden;
     background-color: white;
     color: black;
     height: 100%;
-    padding: 20px;
+    padding: 40px;
 }
 
 @keyframes fadeIn {
     0% {
         opacity: 0;
+        transform: translateY(20px);
     }
     100% {
         opacity: 1;
+        transform: translateY(0);
     }
 }

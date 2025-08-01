@@ -26,7 +26,7 @@ export default function Project({projects}) {
                 </div>
 
                 <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '4 / span 3', border: '10px solid black', borderTop: '0' }}>
-                    Michael
+                    {project.description}
                 </div>
             </div>
         </div>
