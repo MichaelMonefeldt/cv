@@ -1,16 +1,42 @@
 {
     "librerate": {
         "subheader": "Scan et væld af materialer med din mobil og registrer dem hurtigere",
-        "description": "This is the description for Project 1.",
-        "technologies": ["Flask", "React JS", "Azure", "PostgreSQL", "OpenAI API", "spaCy (NLP)"],
+        "paragraph1": "På de danske forskningsbiblioteker findes der millioner af bøger, tidsskrifter m.m. som aldrig er blevet registreret. Og som ansat på Syddansk Universitetsbibliotek pinte det mig, at brugerne ikke kunne søge 25% af vores samlinger frem.",
+        "technologies": {
+            "Frontend": ["React JS"],
+            "Backend": ["Flask"],
+            "Database": ["PostgreSQL"],
+            "Cloud": ["Azure"],
+            "AI": ["OpenAI API", "spaCy (NLP)"],
+            "Payment": ["Stripe"]
+        },
         "image": "path/to/project1-image.jpg",
-        "link": "https://example.com/project1"
+        "link": "librerate.com"
     },
     "katalogica": {
         "subheader": "AI-drevet webapplikation der høster metadata i bøger",
-        "description": "This is the description for Project 2.",
-        "technologies": ["Flask", "Vanilla JS", "AWS", "PostgreSQL", "OpenAI API"],
+        "paragraph1": "På de danske forskningsbiblioteker findes der millioner af bøger, tidsskrifter m.m. som aldrig er blevet registreret. Som ansat på Syddansk Universitetsbibliotek pinte det mig, at brugerne ikke kunne søge 25% af vores samlinger frem, og derfor gik jeg et stykke tid og fiflede med forskellige digitale løsninger, som ikke bar frugt.",
+        "paragraph2": "En aften i december 2023 sad min kone og jeg og så første afsnit Hercule Poirot, da jeg fik en indskydelse, der skulle vise sig blive den bedste løsning til dato. Mange steder var det blevet forsøgt at lave en AI-drevet webapplikation, der kunne læse metadata i bøger, men uden held. Den stødte udvikling i vores fælles viden om AI gjorde det dog muligt at lave en velfungerende løsning på et par uger.",
+        "technologies": {
+            "Frontend": ["Vanilla JS"],
+            "Backend": ["Flask"],
+            "Database": ["PostgreSQL"],
+            "Cloud": ["AWS"],
+            "AI": ["OpenAI API"]
+        },
         "image": "path/to/project2-image.jpg",
+        "link": false
+    },
+    "pageTurner": {
+        "subheader": "Hold styr på dine læsevaner og få anbefalinger",
+        "paragraph1": "This is the description for Project 3.",
+        "technologies": {
+            "Frontend": ["React JS"],
+            "Backend": ["FastAPI"],
+            "Database": ["PostgreSQL"],
+            "Cloud": ["Azure"]
+        },
+        "image": "path/to/project3-image.jpg",
         "link": false
     }
 }

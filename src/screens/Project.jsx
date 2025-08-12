@@ -15,18 +15,19 @@ export default function Project({projects}) {
         <div className={styles.projectContainer}>
             <div style={{height: '8vh'}}></div>
             <div className={styles.projectContent}>
-                <div className={styles.element} style={{ gridColumn: '2 / span 5', gridRow: '1 / span 3', border: '10px solid black', borderBottom: '0', borderRight: '0' }}>
+                <div className={styles.titleElement} style={{ gridColumn: '2 / span 8', gridRow: '1 / span 3'}}>
                     <h1>{projectName}</h1>
+                    <p>{project.subheader}</p>
                 </div>
-                <div className={styles.element} style={{ gridColumn: '7 / span 3', gridRow: '1 / span 3', border: '10px solid black' }}>
-                    <h2>Teknologier</h2>
+                {/* <div className={styles.element} style={{ gridColumn: '7 / span 3', gridRow: '1 / span 3', border: '10px solid black' }}>
                     {project.technologies.map((item, index) => (
                         <p key={index}>{item}</p>
                     ))}
-                </div>
+                </div> */}
 
-                <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '4 / span 3', border: '10px solid black', borderTop: '0' }}>
-                    {project.description}
+                <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '4 / span 3' }}>
+                    {project.paragraph1 && <p>{project.paragraph1}</p>}
+                    {project.paragraph2 && <p>{project.paragraph2}</p>}
                 </div>
             </div>
         </div>

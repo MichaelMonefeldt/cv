@@ -55,7 +55,7 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 <div 
                     key={category}
                     className={`${styles.startContent} ${styles.goldenHover}`}
-                    style={{ gridColumn: `${1 + index * 2} / span 2`, gridRow: '6' }}
+                    style={{ gridColumn: `${1 + index * 2} / span 2`, gridRow: '6 / span 2' }}
                 >
                     <h2 className={styles.title}>{category}</h2>
                     <div className={styles.hiddenContent}>
@@ -82,10 +82,10 @@ export default function Start({topRef, projectsRef, contactRef}) {
                     backgroundColor: 'rgb(0, 0, 0)',
                     color: 'white',
                     gridColumn: '1 / span 10', 
-                    gridRow: '7 / span 1', 
+                    gridRow: '8 / span 1', 
                     display: 'flex',
                     justifyContent: 'center',
-                    padding: '40px',
+                    padding: '20px',
                 }}>
                 <h2 
                     style={{
@@ -98,7 +98,7 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 </h2>
             </div>
 
-            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '8 / span 5', backgroundColor: '#AEB862' }}>
+            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '9 / span 5', backgroundColor: '#ffffffff' }}>
                 <img className={styles.projectHeader} src={k_logo} alt="Katalogica" style={{height: '55px', width: 'auto'}}/>
                 <img src={k_concept_dk} alt="Katalogica-koncept" />
                 <Descriptor
@@ -106,7 +106,7 @@ export default function Start({topRef, projectsRef, contactRef}) {
                     goTo="/project/katalogica"
                 />
             </div>
-            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '8 / span 5' }}>
+            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '9 / span 5' }}>
                 <img className={styles.projectHeader} src={l_logo} alt="Librerate" style={{height: '52px', width: 'auto'}}/>
                 <img src={fromPhoneToComputer} alt="Librerate-koncept" />
                 <Descriptor
@@ -115,7 +115,7 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 />
             </div>
 
-            <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '13 / span 2' }}>
+            <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '14 / span 2' }}>
                 <Footer showHeader={true} />
             </div>
 
