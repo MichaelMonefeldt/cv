@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useLocation} from 're
 import Header from './components/Header';
 import Start from './screens/Start';
 import Project from './screens/Project';
+import ScrollToTop from './ScrollToTop';
 import './App.css';
 import './assets/fonts/Fonts.module.css';
 import projects from './projects.json';
@@ -66,6 +67,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="App" ref={appRef}>
         <Header 
           showHeader={showHeader}

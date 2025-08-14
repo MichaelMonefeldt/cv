@@ -28,7 +28,7 @@
         "link": false
     },
     "pageTurner": {
-        "subheader": "Hold styr på dine læsevaner og få anbefalinger",
+        "subheader": "Hold styr på dine læsevaner og få anbefalinger.",
         "paragraph1": "This is the description for Project 3.",
         "technologies": {
             "Frontend": ["React JS"],

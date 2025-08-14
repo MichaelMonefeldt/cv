@@ -1,5 +1,17 @@
 {
-  "Full-Stack": {
+  "Full-Stack Development": {
+    "AWS": { 
+        "name": "AWS", 
+        "description": "Amazon Web Services.", 
+        "example_projects": ["Katalogica"],
+        "image": "aws.svg" 
+    },
+    "Azure": { 
+        "name": "Azure", 
+        "description": "Microsoft Azure cloud platform.", 
+        "example_projects": ["Librerate"],
+        "image": "azure.svg" 
+    },
     "React": {
       "name": "React JS",
       "description": "A JavaScript library for building UIs.",
@@ -21,27 +33,13 @@
       "name": "FastAPI",
       "description": "A modern, fast web framework for Python APIs.",
       "image": "fastapi.svg"
-    }
-  },
-  "Cloud Computing": {
-    "AWS": { 
-        "name": "AWS", 
-        "description": "Amazon Web Services.", 
-        "example_projects": ["Katalogica"],
-        "image": "aws.svg" 
-    },
-    "Azure": { 
-        "name": "Azure", 
-        "description": "Microsoft Azure cloud platform.", 
-        "example_projects": ["Librerate"],
-        "image": "azure.svg" 
     },
     "PostgreSQL": { 
         "name": "PostgreSQL", 
         "description": "Advanced open-source relational DB.", 
         "example_projects": ["Librerate", "Katalogica"],
         "image": "postgresql.svg" 
-    }
+    }    
   },
   "UX / UI": {
     "Affinity": {
@@ -54,25 +52,11 @@
       "name": "Figma",
       "description": "A collaborative design and prototyping tool.",
       "image": "figma.svg"
-    }
-  },
-  "Formidling": {
-    "Showcases": {
-      "name": "Se eksempler",
-      "description": "Various communication examples.",
-      "image": "examples.svg"
-    }
-  },
-  "Vision": {
-    "Figma": {
-      "name": "Figma",
-      "description": "Reused for vision and prototyping.",
-      "image": "figma.svg"
     },
-    "Affinity": {
-      "name": "Affinity Designer 2",
-      "description": "Used for vision design assets.",
-      "image": "affinity.svg"
-    }
+    "Formidling": {
+      "name": "Formidling",
+      "description": "A design tool for creating user interfaces.",
+      "image": "formidling.svg"
+    } 
   }
 }

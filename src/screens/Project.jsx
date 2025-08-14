@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styles from '../styles/Project.module.css';
+import manyBook from '../assets/images/manyBook.jpg';
 import { useParams } from 'react-router-dom';
 
 export default function Project({projects}) {
@@ -15,7 +16,10 @@ export default function Project({projects}) {
         <div className={styles.projectContainer}>
             <div style={{height: '8vh'}}></div>
             <div className={styles.projectContent}>
-                <div className={styles.titleElement} style={{ gridColumn: '2 / span 8', gridRow: '1 / span 3'}}>
+                <div className={styles.imageContainer} style={{ gridColumn: '1 / span 10', gridRow: '1 / span 3' }}>
+                    <img src={manyBook} alt={projectName} className={styles.projectImage} />
+                </div>
+                <div className={styles.titleElement} style={{ gridColumn: '2 / span 8', gridRow: '3 / span 2'}}>
                     <h1>{projectName}</h1>
                     <p>{project.subheader}</p>
                 </div>
@@ -25,7 +29,7 @@ export default function Project({projects}) {
                     ))}
                 </div> */}
 
-                <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '4 / span 3' }}>
+                <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5 / span 3' }}>
                     {project.paragraph1 && <p>{project.paragraph1}</p>}
                     {project.paragraph2 && <p>{project.paragraph2}</p>}
                 </div>

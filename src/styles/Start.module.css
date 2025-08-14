@@ -34,6 +34,7 @@ h2 {
     background-color: transparent;
     color: black;
     height: 100%;
+    width: 100%;
     padding: 20px;
 }
 
@@ -75,11 +76,12 @@ h2 {
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: white;
+    width: 100%;
+    background-color: var(--primary);
 }
 
 .goldenHover:hover {
-    background-color: var(--primary);
-    color: white;
     cursor: pointer;
 }
 
@@ -99,6 +101,15 @@ h2 {
 .goldenHover:hover .hiddenContent {
     max-height: 500px; /* adjust based on expected content */
     opacity: 1;
+}
+
+.title {
+    font-family: 'Space_Mono', Courier, monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
 }
 
 .project {
@@ -130,7 +141,6 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 @keyframes moveGradient {
