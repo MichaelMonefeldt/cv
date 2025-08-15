@@ -6,11 +6,11 @@ import TypingEffect from '../components/TypingEffect';
 import FloatingWindow from '../screens/FloatingWindow';
 import SpinningLoad from '../components/SpinningLoad';
 import Footer from '../components/Footer';
-import k_concept_dk from '../assets/images/k_concept_dk.png';
 import k_logo from '../assets/images/k_logo.png';
 import l_logo from '../assets/images/l_logo.svg';
 import fromPhoneToComputer from '../assets/images/fromPhoneToComputer.svg';
 import reading from '../assets/images/reading.jpg';
+import manyBook from '../assets/images/manyBook.jpg';
 import styles from '../styles/Start.module.css';
 import technologies from '../technologies.json';
 
@@ -70,7 +70,7 @@ export default function Start({topRef, projectsRef, contactRef}) {
                                 );
                                 setWindowOpen(true);
                             }}>
-                                {tech.name}
+                                <b><span style={{fontSize: '20px', marginRight: '10px'}}>→</span> {tech.name}</b>
                             </p>
                         ))}
                     </div>
@@ -98,32 +98,40 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 </h2>
             </div>
 
-            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '9 / span 5' }}>
-                <img className={styles.projectHeader} src={k_logo} alt="Katalogica" style={{height: '55px', width: 'auto'}}/>
-                <img style={{width: '100%'}} src={reading} alt="Katalogica-koncept" />
-                <Descriptor
-                    description="Hold styr på dine læsevaner og modtag anbefalinger"
-                    goTo="/project/pageTurner"
+            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '9 / span 4', backgroundColor: 'var(--secondary)' }}>
+                <img className={styles.projectHeader} src={l_logo} alt="Librerate"/>
+                <img 
+                    src={fromPhoneToComputer}
+                    alt="Librerate-koncept" 
+                    style={{
+                        height: 'auto',
+                        width: '70%',
+                        objectFit: 'cover',
+                    }}
                 />
-            </div>
-            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '9 / span 5', backgroundColor: 'rgb(255, 213, 0)' }}>
-                <img className={styles.projectHeader} src={l_logo} alt="Librerate" style={{height: '52px', width: 'auto'}}/>
-                <img src={fromPhoneToComputer} alt="Librerate-koncept" />
                 <Descriptor
                     description="Scan et væld af materialer med din mobil og registrer dem hurtigere."
                     goTo="/project/librerate"
                 />
             </div>
-            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '14 / span 5', backgroundColor: 'rgb(0, 255, 217)' }}>
-                <img className={styles.projectHeader} src={k_logo} alt="Katalogica" style={{height: '55px', width: 'auto'}}/>
-                <img src={k_concept_dk} alt="Katalogica-koncept" />
+            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '9 / span 4' }}>
+                <img className={styles.projectHeader} src={k_logo} alt="Katalogica"/>
+                <img src={reading} alt="Reader reading" />
+                <Descriptor
+                    description="Hold styr på dine læsevaner og modtag anbefalinger"
+                    goTo="/project/pageTurner"
+                />
+            </div>
+            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '13 / span 4', backgroundColor: 'var(--tertiary)' }}>
+                <img className={styles.projectHeader} src={k_logo} alt="Katalogica"/>
+                <img src={manyBook} alt="Katalogica-koncept" />
                 <Descriptor
                     description="AI-drevet webapplikation der høster metadata i bøger."
                     goTo="/project/katalogica"
                 />
             </div>
 
-            <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '19 / span 5' }}>
+            <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '17 / span 3' }}>
                 <Footer showHeader={true} />
             </div>
 
