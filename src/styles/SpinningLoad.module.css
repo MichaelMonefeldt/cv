@@ -1,7 +1,7 @@
 /* SpinningShape.css */
 .spinningShape {
   border-radius: 50%;
-  animation: spinAndMorph 5s infinite linear;
+  animation: spinAndMorph 3s infinite linear;
   margin: 50px auto;
 }
 

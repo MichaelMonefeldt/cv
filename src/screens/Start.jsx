@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { FaLaptopCode } from "react-icons/fa";
+import { MdOutlineDesignServices } from "react-icons/md";
 import Descriptor from '../components/Descriptor';
 import LayeredSVGAnimation from '../components/LayeredSVGAnimation';
 import TypingEffect from '../components/TypingEffect';
@@ -8,6 +10,7 @@ import SpinningLoad from '../components/SpinningLoad';
 import Footer from '../components/Footer';
 import k_logo from '../assets/images/k_logo.png';
 import l_logo from '../assets/images/l_logo.svg';
+import p_logo from '../assets/images/p_logo.svg';
 import fromPhoneToComputer from '../assets/images/fromPhoneToComputer.svg';
 import reading from '../assets/images/reading.jpg';
 import manyBook from '../assets/images/manyBook.jpg';
@@ -55,7 +58,7 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 <div 
                     key={category}
                     className={`${styles.startContent} ${styles.goldenHover}`}
-                    style={{ gridColumn: `${1 + index * 5} / span 5`, gridRow: '6 / span 2' }}
+                    style={{ gridColumn: `${1 + index * 5} / span 5`, gridRow: '6 / span 2', backgroundColor: index % 2 === 0 ? 'var(--secondary)' : 'var(--primary)' }}
                 >
                     <h2 className={styles.title}>{category}</h2>
                     <div className={styles.hiddenContent}>
@@ -74,6 +77,16 @@ export default function Start({topRef, projectsRef, contactRef}) {
                             </p>
                         ))}
                     </div>
+                    {index === 0 && (
+                    <FaLaptopCode 
+                        style={{ position: 'absolute', right: '50px', height: '40px', width: '40px', color: 'white' }}
+                    />
+                    )}
+                    {index === 1 && (
+                    <MdOutlineDesignServices
+                        style={{ position: 'absolute', right: '50px', height: '40px', width: '40px', color: 'white' }}
+                    />
+                    )}
                 </div>
             ))}
 
@@ -98,7 +111,7 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 </h2>
             </div>
 
-            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '9 / span 4', backgroundColor: 'var(--secondary)' }}>
+            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '9 / span 4', backgroundColor: 'var(--tertiary)' }}>
                 <img className={styles.projectHeader} src={l_logo} alt="Librerate"/>
                 <img 
                     src={fromPhoneToComputer}
@@ -115,7 +128,7 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 />
             </div>
             <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '9 / span 4' }}>
-                <img className={styles.projectHeader} src={k_logo} alt="Katalogica"/>
+                <img className={styles.projectHeader} src={p_logo} alt="PageTurner"/>
                 <img src={reading} alt="Reader reading" />
                 <Descriptor
                     description="Hold styr på dine læsevaner og modtag anbefalinger"

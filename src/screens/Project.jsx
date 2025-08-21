@@ -17,7 +17,7 @@ export default function Project({projects}) {
             <div style={{height: '8vh'}}></div>
             <div className={styles.projectContent}>
                 <div className={styles.imageContainer} style={{ gridColumn: '1 / span 10', gridRow: '1 / span 3' }}>
-                    <img src={manyBook} alt={projectName} className={styles.projectImage} />
+                    <img src={project.image} alt={projectName} className={styles.projectImage} />
                 </div>
                 <div className={styles.titleElement} style={{ gridColumn: '2 / span 8', gridRow: '3 / span 2'}}>
                     <h1>{projectName}</h1>

@@ -10,7 +10,7 @@
             "AI": ["OpenAI API", "spaCy (NLP)"],
             "Payment": ["Stripe"]
         },
-        "image": "path/to/project1-image.jpg",
+        "image": "/projects/manyBook.jpg",
         "link": "librerate.com"
     },
     "katalogica": {
@@ -24,19 +24,19 @@
             "Cloud": ["AWS"],
             "AI": ["OpenAI API"]
         },
-        "image": "path/to/project2-image.jpg",
+        "image": "/projects/manyBook.jpg",
         "link": false
     },
     "pageTurner": {
         "subheader": "Hold styr på dine læsevaner og få anbefalinger.",
-        "paragraph1": "This is the description for Project 3.",
+        "paragraph1": "Der er udviklet mange løsninger til at holde styr på dine læsevaner",
         "technologies": {
             "Frontend": ["React JS"],
             "Backend": ["FastAPI"],
             "Database": ["PostgreSQL"],
             "Cloud": ["Azure"]
         },
-        "image": "path/to/project3-image.jpg",
+        "image": "/projects/reading.jpg",
         "link": false
     }
 }

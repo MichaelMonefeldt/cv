@@ -78,7 +78,6 @@ h2 {
     text-align: center;
     color: white;
     width: 100%;
-    background-color: var(--primary);
 }
 
 .goldenHover:hover {
@@ -139,7 +138,6 @@ h2 {
     width: auto !important;
     height: 50px !important;
     display: flex;
-    padding: 0px 10px;
     border-radius: 50px;
     flex-direction: column;
     justify-content: center;
