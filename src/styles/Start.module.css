@@ -7,20 +7,15 @@
     width: 100vw;
     background-color: white;
     color: black;
-    font-family: 'Quicksand', Courier, monospace;
     font-size: 1rem;
     font-weight: bold;
-    gap: 2px;
+    gap: 30px;
+    padding: 30px;
     text-align: left;
     animation: fadeIn 0.5s ease-in-out;
 }
 
-h1 {
-    font-family: 'Space_Mono', Courier, monospace;
-  }
-
 h2 {
-    font-family: 'Space_Mono', Courier, monospace;
     font-size: 1.3rem;
 }
 
@@ -36,6 +31,7 @@ h2 {
     height: 100%;
     width: 100%;
     padding: 20px;
+    border-radius: 40px;
 }
 
 .startContent h1, .startContent h2, .startContent h3, .startContent h4, .startContent p {
@@ -52,6 +48,7 @@ h2 {
         conic-gradient(from 90deg, var(--tertiary), rgb(169, 0, 149), var(--secondary), var(--tertiary));
     color: white;
     background-size: 400% 400%;
+    border-radius: 40px;
     animation: moveGradient 30s ease-in-out infinite;
     overflow: hidden; /* so the pseudo-element doesn't spill out */
 }
@@ -69,6 +66,16 @@ h2 {
 .special > * {
     position: relative;
     z-index: 2; /* ensure text and content stay on top */
+}
+
+.centeredHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centeredHeader h2 {
+    font-size: 50px;
 }
 
 .goldenHover {
@@ -103,9 +110,9 @@ h2 {
 }
 
 .title {
-    font-family: 'Space_Mono', Courier, monospace;
     font-size: 1.5rem;
     font-weight: bold;
+    font-family: 'Quicksand';
     margin-bottom: 10px;
     text-align: center;
     width: 100%;

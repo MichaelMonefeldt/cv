@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./assets/fonts/Quicksand-Variable.ttf') format('truetype'); /* Adjust the path if needed */
+}
+
+@font-face {
+  font-family: 'Melodrama';
+  src: url('./assets/fonts/Melodrama-Variable.ttf') format('truetype'); /* Adjust the path if needed */
+}
+
 #root {
   max-width: 1280px;
   margin: 0 0;
@@ -9,6 +19,12 @@
   padding: 0;
   margin: 0;
   text-align: left;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+h1, h2 {
+  font-family: 'Melodrama', 'Times New Roman', Times, serif;
 }
 
 html {

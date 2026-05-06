@@ -1,5 +1,5 @@
 {
-  "Full-Stack Development": {
+  "Til softwareudvikling": {
     "AWS": { 
         "name": "AWS", 
         "description": "Amazon Web Services.", 
@@ -41,7 +41,7 @@
         "image": "postgresql.svg" 
     }    
   },
-  "UX / UI": {
+  "Til design": {
     "Affinity": {
       "name": "Affinity Designer 2",
       "description": "A vector graphic design tool.",

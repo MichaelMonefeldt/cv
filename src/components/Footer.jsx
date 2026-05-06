@@ -27,10 +27,6 @@ export default function Footer({showHeader}) {
             <div className={styles.scrollToTop} onClick={() => navigate('/')}>
                 <img src={arrowDownIcon} alt="Scroll to top" />
             </div>
-            <div className={styles.footerText}>
-                <p>© 2025 Michael Monefeldt</p>
-                <p>Alle rettigheder forbeholdes.</p>
-            </div>
         </div>
     );
 }

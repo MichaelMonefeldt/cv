@@ -6,7 +6,6 @@ import Descriptor from '../components/Descriptor';
 import LayeredSVGAnimation from '../components/LayeredSVGAnimation';
 import TypingEffect from '../components/TypingEffect';
 import FloatingWindow from '../screens/FloatingWindow';
-import SpinningLoad from '../components/SpinningLoad';
 import Footer from '../components/Footer';
 import k_logo from '../assets/images/k_logo.png';
 import l_logo from '../assets/images/l_logo.svg';
@@ -36,7 +35,7 @@ export default function Start({topRef, projectsRef, contactRef}) {
     return (
         <div id={top} ref={topRef} className={styles.startContainer}>
             <div className={styles.special} style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)',
-                    gridColumn: '1 / span 10', gridRow: '1 / span 5', backgroundColor:'white'
+                    gridColumn: '1 / span 10', gridRow: '1 / span 4', backgroundColor:'white'
                     }}>
                 <div className={`${styles.startContent}`}>
                     <LayeredSVGAnimation />
@@ -54,11 +53,70 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 </div>
             </div>
 
+            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '5 / span 3' }}>
+                <img className={styles.projectHeader} src={p_logo} alt="PageTurner"/>
+                <img src={reading} alt="Reader reading" />
+                <Descriptor
+                    description="Den simple app til at holde styr på læsevaner"
+                    goTo="/projekt/PageTurner"
+                />
+            </div>
+
+            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '7 / span 3' }}>
+                <img className={styles.projectHeader} src={p_logo} alt="PageTurner"/>
+                <img src={reading} alt="Reader reading" />
+                <Descriptor
+                    description="Hold styr på dine læsevaner og modtag anbefalinger"
+                    goTo="/projekt/PageTurner"
+                />
+            </div>
+
+            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '9 / span 3' }}>
+                <img className={styles.projectHeader} src={p_logo} alt="PageTurner"/>
+                <img src={reading} alt="Reader reading" />
+                <Descriptor
+                    description="Hold styr på dine læsevaner og modtag anbefalinger"
+                    goTo="/projekt/PageTurner"
+                />
+            </div>
+
+            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '11 / span 3', backgroundColor: 'var(--tertiary)' }}>
+                <img className={styles.projectHeader} src={l_logo} alt="Librerate"/>
+                <img 
+                    src={fromPhoneToComputer}
+                    alt="Librerate-koncept" 
+                    style={{
+                        height: 'auto',
+                        width: '70%',
+                        objectFit: 'cover',
+                    }}
+                />
+                <Descriptor
+                    description="Scan et væld af materialer med din mobil og registrer dem hurtigere."
+                    goTo="/projekt/Librerate"
+                />
+            </div>
+
+            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '13 / span 3', backgroundColor: 'var(--tertiary)' }}>
+                <img className={styles.projectHeader} src={k_logo} alt="Katalogica"/>
+                <img src={manyBook} alt="Katalogica-koncept" />
+                <Descriptor
+                    description="AI-drevet webapplikation der høster metadata i bøger."
+                    goTo="/projekt/Katalogica"
+                />
+            </div>
+
+            <div className={styles.centeredHeader} style={{ gridColumn: '1 / span 10', gridRow: '17 / span 1'}}>
+                <h2>
+                    Værktøjer og kompetencer
+                </h2>
+            </div>
+
             {Object.entries(technologies).map(([category, techs], index) => (
                 <div 
                     key={category}
                     className={`${styles.startContent} ${styles.goldenHover}`}
-                    style={{ gridColumn: `${1 + index * 5} / span 5`, gridRow: '6 / span 2', backgroundColor: index % 2 === 0 ? 'var(--secondary)' : 'var(--primary)' }}
+                    style={{ gridColumn: `${1 + index * 5} / span 5`, gridRow: '18 / span 2', backgroundColor: index % 2 === 0 ? 'var(--secondary)' : 'var(--primary)' }}
                 >
                     <h2 className={styles.title}>{category}</h2>
                     <div className={styles.hiddenContent}>
@@ -90,61 +148,7 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 </div>
             ))}
 
-            <div id="projects" ref={projectsRef} className={styles.startContent}
-                style={{ 
-                    backgroundColor: 'rgb(0, 0, 0)',
-                    color: 'white',
-                    gridColumn: '1 / span 10', 
-                    gridRow: '8 / span 1', 
-                    display: 'flex',
-                    justifyContent: 'center',
-                    padding: '20px',
-                }}>
-                <h2 
-                    style={{
-                        textAlign: 'center', 
-                        fontSize: '2rem', 
-                        fontFamily: 'Space_Mono, monospace',
-                    }}>
-                    <SpinningLoad color={'white'} size={'50px'} />
-                    Projekter
-                </h2>
-            </div>
-
-            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '9 / span 4', backgroundColor: 'var(--tertiary)' }}>
-                <img className={styles.projectHeader} src={l_logo} alt="Librerate"/>
-                <img 
-                    src={fromPhoneToComputer}
-                    alt="Librerate-koncept" 
-                    style={{
-                        height: 'auto',
-                        width: '70%',
-                        objectFit: 'cover',
-                    }}
-                />
-                <Descriptor
-                    description="Scan et væld af materialer med din mobil og registrer dem hurtigere."
-                    goTo="/project/librerate"
-                />
-            </div>
-            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '9 / span 4' }}>
-                <img className={styles.projectHeader} src={p_logo} alt="PageTurner"/>
-                <img src={reading} alt="Reader reading" />
-                <Descriptor
-                    description="Hold styr på dine læsevaner og modtag anbefalinger"
-                    goTo="/project/pageTurner"
-                />
-            </div>
-            <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '13 / span 4', backgroundColor: 'var(--tertiary)' }}>
-                <img className={styles.projectHeader} src={k_logo} alt="Katalogica"/>
-                <img src={manyBook} alt="Katalogica-koncept" />
-                <Descriptor
-                    description="AI-drevet webapplikation der høster metadata i bøger."
-                    goTo="/project/katalogica"
-                />
-            </div>
-
-            <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '17 / span 3' }}>
+            <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '20 / span 3' }}>
                 <Footer showHeader={true} />
             </div>
 

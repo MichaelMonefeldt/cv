@@ -85,7 +85,7 @@ function App() {
             }
           />
           <Route
-            path="/project/:projectName"
+            path="/projekt/:projectName"
             element={
               <Project 
                 projects={projects}
