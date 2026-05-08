@@ -32,6 +32,7 @@ h2 {
     width: 100%;
     padding: 20px;
     border-radius: 40px;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); */
 }
 
 .startContent h1, .startContent h2, .startContent h3, .startContent h4, .startContent p {
@@ -42,6 +43,10 @@ h2 {
 
 .special {
     position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     background: 
         radial-gradient(circle at 50% 50%, var(--primary), transparent 40%), 
         radial-gradient(circle at 20% 20%, var(--secondary), transparent 40%), 
@@ -145,11 +150,39 @@ h2 {
     width: auto !important;
     height: 50px !important;
     display: flex;
-    border-radius: 50px;
-    flex-direction: column;
+    border-radius: 0px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
     /* background-color: white; */
+}
+
+.projectHeader img {
+    height: 100%;
+    width: auto;
+}
+
+.fadeInSection {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .startContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
 }
 
 @keyframes moveGradient {

@@ -29,14 +29,38 @@
     },
     "PageTurner": {
         "subheader": "Hold styr på dine læsevaner og få anbefalinger.",
-        "paragraph1": "Der er udviklet mange løsninger til at holde styr på dine læsevaner",
         "technologies": {
             "Frontend": ["React JS"],
             "Backend": ["FastAPI"],
             "Database": ["PostgreSQL"],
-            "Cloud": ["Azure"]
+            "Cloud": ["Azure"],
+            "Deployment": ["Docker"]
         },
         "image": "/projects/reading.jpg",
-        "link": false
+        "link": "https://pageturner.orbitter.app/"
+    },
+    "WishWell": {
+        "subheader": "Appen der lader venner og familie reservere ønsker uden at oprette en profil",
+        "technologies": {
+            "Frontend": ["React JS"],
+            "Backend": ["Flask"],
+            "Database": ["PostgreSQL"],
+            "Cloud": ["Azure"],
+            "Deployment": ["Docker"]
+        },
+        "image": "/projects/reading.jpg",
+        "link": "https://wishwell.orbitter.app/"
+    },
+    "DreamTrail": {
+        "subheader": "Hold styr på dine læsevaner og få anbefalinger.",
+        "technologies": {
+            "Frontend": ["React JS"],
+            "Backend": ["Flask"],
+            "Database": ["PostgreSQL"],
+            "Cloud": ["Azure"],
+            "Deployment": ["Docker"]
+        },
+        "image": "/projects/reading.jpg",
+        "link": "https://dreamtrail.orbitter.app/"
     }
 }

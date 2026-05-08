@@ -69,10 +69,10 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="App" ref={appRef}>
-        <Header 
+        {/* <Header 
           showHeader={showHeader}
           onScrollToSection={handleScrollToSection}
-        />
+        /> */}
         <Routes>
           <Route
             path="/"

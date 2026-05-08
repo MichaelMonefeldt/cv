@@ -48,13 +48,14 @@ const TypingEffectLoop = ({ sentences }) => {
   }, [text, phase, sentenceIndex, currentSentence]);
 
   return (
-    <div style={{ fontFamily: 'Space_Mono', fontSize: '90px',}}>
+    <div style={{ fontFamily: 'Space_Mono', fontSize: '90px', width: '100%', color: 'white' }}>
       <span
         style={{
           backgroundColor: highlight ? 'white' : 'transparent',
           color: highlight ? 'black' : 'white',
           transition: 'background-color 0.3s, color 0.3s',
           padding: '0 4px',
+          textAlign: 'left'
         }}
       >
         {text}

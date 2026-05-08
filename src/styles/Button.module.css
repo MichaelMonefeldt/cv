@@ -1,0 +1,108 @@
+.MainBtn, .SecondBtn, .DeclineBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin: none;
+    font-weight: 800;
+    width: 100%;
+    max-width: 600px;
+    padding: 0px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); */
+}
+
+.MainBtn {
+    background-color: var(--primary);
+    color: white;
+    border: 2px solid var(--primary-dark);
+    border-bottom: 5px solid var(--primary-dark);
+}
+
+.SecondBtn {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: 2px solid var(--contrast);
+    border-bottom: 5px solid var(--contrast);
+    font-weight: 700;
+}
+
+.MainBtn:hover, .SecondBtn:hover, .DeclineBtn:hover {
+    opacity: 0.8;
+}
+
+.MainBtn:active, .SecondBtn:active, .DeclineBtn:active {
+    transform: translateY(2px);
+    opacity: 0.7;
+    border-bottom-width: 2px;
+}
+
+.DeclineBtn {
+    background-color: #af000f;
+    color: white;
+    border: 2px solid var(--text-color);
+    border-bottom: 5px solid var(--text-color);
+    font-weight: 700;
+}
+
+.inside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+}
+
+.SmallBtn {
+    color: var(--primary);
+    background-color: transparent;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.MainBtn:disabled, .SecondBtn:disabled, .DeclineBtn:disabled, .SmallBtn:disabled {
+    outline: none;
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.whiteSpinner {
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+.blackSpinner {
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(47, 47, 47, 0.3);
+    border-top: 3px solid black;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+.ai {
+    background: #482a9b;
+    background: linear-gradient(157deg, rgba(72, 42, 155, 1) 0%, #9c0056 50%, rgba(83, 237, 98, 1) 100%);
+    border: none;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
