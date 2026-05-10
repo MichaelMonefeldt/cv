@@ -25,10 +25,11 @@
             "AI": ["OpenAI API"]
         },
         "image": "/projects/manyBook.jpg",
-        "link": false
+        "link": false,
+        "color": "var(--tertiary)"
     },
     "PageTurner": {
-        "subheader": "Hold styr på dine læsevaner og få anbefalinger.",
+        "subheader": "Den mest simple måde at holde styr på dine læsevaner",
         "technologies": {
             "Frontend": ["React JS"],
             "Backend": ["FastAPI"],
@@ -36,8 +37,9 @@
             "Cloud": ["Azure"],
             "Deployment": ["Docker"]
         },
-        "image": "/projects/reading.jpg",
-        "link": "https://pageturner.orbitter.app/"
+        "image": "/projects/pageturner_logo.svg",
+        "link": "https://pageturner.orbitter.app/",
+        "color": "var(--primary)"
     },
     "WishWell": {
         "subheader": "Appen der lader venner og familie reservere ønsker uden at oprette en profil",
@@ -48,8 +50,9 @@
             "Cloud": ["Azure"],
             "Deployment": ["Docker"]
         },
-        "image": "/projects/reading.jpg",
-        "link": "https://wishwell.orbitter.app/"
+        "image": "/projects/wishwell_logo.svg",
+        "link": "https://wishwell.orbitter.app/",
+        "color": "var(--secondary)"
     },
     "DreamTrail": {
         "subheader": "Hold styr på dine læsevaner og få anbefalinger.",
@@ -60,7 +63,8 @@
             "Cloud": ["Azure"],
             "Deployment": ["Docker"]
         },
-        "image": "/projects/reading.jpg",
-        "link": "https://dreamtrail.orbitter.app/"
+        "image": "/projects/dreamtrail_logo.svg",
+        "link": "https://dreamtrail.orbitter.app/",
+        "color": "var(--fortiary)"
     }
 }

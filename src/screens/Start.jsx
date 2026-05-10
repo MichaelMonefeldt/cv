@@ -13,9 +13,10 @@ import l_logo from '../assets/images/l_logo.svg';
 import pageturner_logo from '../assets/images/pageturner_logo.svg';
 import wishwell_logo from '../assets/images/wishwell_logo.svg';
 import dreamtrail_logo from '../assets/images/dreamtrail_logo.svg';
+import starStanding from '../assets/images/star_standing.svg';
+import walkEx from '../assets/images/walkEx.svg';
+import katalogica_concept from '../assets/images/k_concept_dk.png';
 import fromPhoneToComputer from '../assets/images/fromPhoneToComputer.svg';
-import reading from '../assets/images/reading.jpg';
-import manyBook from '../assets/images/manyBook.jpg';
 import styles from '../styles/Start.module.css';
 import technologies from '../technologies.json';
 
@@ -50,7 +51,7 @@ function FadeInOnScroll({ children, className = "", style={}}) {
 }
 
 
-export default function Start({topRef, projectsRef, contactRef}) {
+export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
     const [windowOpen, setWindowOpen] = useState(false);
     const [skillTitle, setSkillTitle] = useState(<div></div>)
     const [skillBody, setSkillBody] = useState(<div></div>)
@@ -58,19 +59,71 @@ export default function Start({topRef, projectsRef, contactRef}) {
     const location = useLocation();
     
     useEffect(() => {
-    if (location.state?.scrollTo) {
-      const section = document.getElementById(location.state.scrollTo);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [location.state]);
+        if (location.state?.scrollTo) {
+        const section = document.getElementById(location.state.scrollTo);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        }
+    }, [location.state]);
+
+    const specialRef = useRef(null);
+    const toolsRef = useRef(null);
+    const [line, setLine] = useState({ top: 0, height: 0, active: false });
+
+    useEffect(() => {
+        const scrollEl = scrollRef?.current;
+        if (!scrollEl) return;
+
+        const updateLine = () => {
+            if (!specialRef.current || !toolsRef.current) return;
+
+            const containerRect = scrollEl.getBoundingClientRect();
+            const specialRect = specialRef.current.getBoundingClientRect();
+            const toolsRect = toolsRef.current.getBoundingClientRect();
+
+            const startY =
+                specialRect.bottom - containerRect.top + scrollEl.scrollTop;
+
+            const stopY =
+                toolsRect.top -
+                containerRect.top +
+                scrollEl.scrollTop +
+                toolsRect.height - toolsRect.height * 2 + 10;
+
+            const dotY =
+                scrollEl.scrollTop + scrollEl.clientHeight / 2;
+
+            const clampedDotY = Math.min(Math.max(dotY, startY), stopY);
+
+            setLine({
+                top: startY,
+                height: Math.max(0, clampedDotY - startY),
+                active: dotY >= startY && dotY <= stopY
+            });
+        };
+
+        updateLine();
+
+        scrollEl.addEventListener("scroll", updateLine);
+        window.addEventListener("resize", updateLine);
+
+        return () => {
+            scrollEl.removeEventListener("scroll", updateLine);
+            window.removeEventListener("resize", updateLine);
+        };
+    }, [scrollRef]);
 
     return (
-        <div id={top} ref={topRef} className={styles.startContainer}>
-            <div className={styles.special} style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)',
-                    gridColumn: '1 / span 10', gridRow: '1 / span 4', backgroundColor:'white'
-                }}>
+        <div id="top" ref={topRef} className={styles.startContainer}>
+            
+            <div 
+                className={styles.special} 
+                style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)',
+                    gridColumn: '1 / span 10', gridRow: '1 / 5', backgroundColor:'white'
+                }}
+                ref={specialRef}
+                >
                 <LayeredSVGAnimation />
                 <div style={{padding: '40px'}}>
                     <TypingEffect
@@ -85,7 +138,17 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 </div>
             </div>
 
-            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '5 / span 3', backgroundColor: 'var(--primary)' }}>
+             <div
+                className={styles.scrollLine}
+                style={{
+                    top: `${line.top}px`,
+                    height: `${line.height}px`
+                }}
+            >
+                <div className={styles.scrollDot}></div>
+            </div>
+
+            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '5 / span 4', backgroundColor: 'var(--primary)' }}>
                 <div className={styles.projectHeader}>
                     <img src={pageturner_logo} alt="PageTurner"/>
                     <h3>PageTurner</h3>
@@ -117,23 +180,32 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 />
             </FadeInOnScroll>
 
-            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '7 / span 3', backgroundColor: 'var(--secondary)' }}>
+            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '8 / span 4', backgroundColor: 'var(--secondary)' }}>
                 <div className={styles.projectHeader}>
                     <img  src={wishwell_logo} alt="WishWell"/>
                     <h3>WishWell</h3>
                 </div>
-                
+            
                 <Descriptor
                     description="En smartere måde at dele dine ønsker med familie og venner"
                     goTo="/projekt/WishWell"
                 />
             </FadeInOnScroll>
 
-            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '9 / span 3', backgroundColor: 'var(--fortiary)' }}>
+            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '11 / span 4', backgroundColor: 'var(--fortiary)' }}>
                 <div className={styles.projectHeader}>
                     <img src={dreamtrail_logo} alt="DreamTrail"/>
                     <h3>DreamTrail</h3>
                 </div>
+                <img
+                    src={walkEx}
+                    alt="DreamTrail-koncept"
+                    style={{
+                        height: 'auto',
+                        width: '50%',
+                        objectFit: 'cover',
+                    }}
+                />
                 <Descriptor
                     description="Appen der udfordrer dig til at bevæge dig mere"
                     goTo="/projekt/DreamTrail"
@@ -157,16 +229,29 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 />
             </div> */}
 
-            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '11 / span 3', backgroundColor: 'var(--tertiary)' }}>
+            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '14 / span 4', backgroundColor: 'var(--tertiary)' }}>
                 <img className={styles.projectHeader} src={k_logo} alt="Katalogica"/>
                 
+                <img
+                    src={katalogica_concept}
+                    alt="Katalogica-koncept"
+                    style={{
+                        height: 'auto',
+                        width: '60%',
+                        objectFit: 'cover',
+                    }}
+                />
                 <Descriptor
                     description="AI-drevet webapplikation der høster metadata i gamle bøger."
                     goTo="/projekt/Katalogica"
                 />
             </FadeInOnScroll>
 
-            <div className={styles.centeredHeader} style={{ gridColumn: '1 / span 10', gridRow: '15 / span 1'}}>
+            <div 
+                className={styles.centeredHeader} 
+                style={{ gridColumn: '1 / span 10', gridRow: '19 / span 1'}}
+                ref={toolsRef}
+            >
                 <h2>
                     Værktøjer og kompetencer
                 </h2>
@@ -176,7 +261,11 @@ export default function Start({topRef, projectsRef, contactRef}) {
                 <div
                     key={category}
                     className={`${styles.startContent} ${styles.goldenHover}`}
-                    style={{ gridColumn: `${1 + index * 5} / span 5`, gridRow: '16 / span 2', backgroundColor: index % 2 === 0 ? 'var(--secondary)' : 'var(--primary)' }}
+                    style={{ 
+                        gridColumn: `${1 + index * 5} / span 5`, gridRow: '20 / span 2', 
+                        backgroundColor: 'white',
+                        // index % 2 === 0 ? 'var(--secondary)' : 'var(--primary)' 
+                    }}
                 >
                     <h2 className={styles.title}>{category}</h2>
                     <div className={styles.hiddenContent}>
@@ -196,19 +285,23 @@ export default function Start({topRef, projectsRef, contactRef}) {
                         ))}
                     </div>
                     {index === 0 && (
-                    <FaLaptopCode 
-                        style={{ position: 'absolute', right: '50px', height: '40px', width: '40px', color: 'white' }}
+                    <img 
+                        src="/coding.jpg"
+                        alt="Coding"
+                        style={{ position: 'absolute', right: '0px', height: 'auto', width: '50%' }}
                     />
                     )}
                     {index === 1 && (
-                    <MdOutlineDesignServices
-                        style={{ position: 'absolute', right: '50px', height: '40px', width: '40px', color: 'white' }}
+                    <img 
+                        src="/ux.jpg"
+                        alt="Design"
+                        style={{ position: 'absolute', right: '0px', height: '120%', width: '50%', objectFit: 'cover', top: '-20px' }}
                     />
                     )}
                 </div>
             ))}
 
-            <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '18 / span 3' }}>
+            <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '22 / span 3' }}>
                 <Footer showHeader={true} />
             </div>
 

@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
-import { useParams } from 'react-router-dom';
+import React, {useState, useRef} from 'react';
+import { useParams, Link } from 'react-router-dom';
 import Bodies from '../components/Bodies';
 import Button from '../components/Button'; 
+import ScrollToTopButton from '../components/ScrollToTopButton';
 import manyBook from '../assets/images/manyBook.jpg';
 import arrowBackIcon from '../assets/images/arrow_back.svg';
 import styles from '../styles/Project.module.css';
 
-export default function Project({projects}) {
+export default function Project({projects, scrollRef}) {
     const [isHovered, setIsHovered] = useState(false);
     const { projectName } = useParams();
     // You can replace this with a dynamic import or a switch case based on projectName
@@ -15,11 +16,18 @@ export default function Project({projects}) {
     if (!project) {
         return <div className={styles.error}>Project not found</div>;
     }
+
     return (
         <div className={styles.projectContainer}>
             <div className={styles.projectContent}>
-                <div className={styles.imageContainer} style={{ gridColumn: '1 / span 10', gridRow: '1 / span 3' }}>
-                    <img src={project.image} alt={projectName} className={styles.projectImage} />
+                <div className={styles.imageContainer} style={{ gridColumn: '1 / span 10', gridRow: '1 / span 3', backgroundColor: project.color }}>
+                    <Link to={project.link} target="_blank" rel="noopener noreferrer">
+                        <img 
+                            src={project.image} 
+                            alt={projectName} 
+                            className={styles.projectImage} 
+                        />
+                    </Link>
                 </div>
                 <div className={styles.titleElement} style={{ gridColumn: '2 / span 8', gridRow: '3 / span 2'}}>
                     <h1>{projectName}</h1>
@@ -36,6 +44,7 @@ export default function Project({projects}) {
                     />
                 </div>
             </div>
+            <ScrollToTopButton scrollRef={scrollRef} />
         </div>
     );
 }

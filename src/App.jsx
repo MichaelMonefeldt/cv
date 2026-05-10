@@ -78,6 +78,7 @@ function App() {
             path="/"
             element={
               <Start 
+                scrollRef={appRef}
                 topRef={topRef}
                 projectsRef={projectsRef}
                 contactRef={contactRef}
@@ -89,6 +90,7 @@ function App() {
             element={
               <Project 
                 projects={projects}
+                scrollRef={appRef}
               />
             }
           />
