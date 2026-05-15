@@ -16,6 +16,7 @@
 }
 
 .imageContainer {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,6 +25,17 @@
     color: black;
     height: 100%;
     width: 100%;
+}
+
+.backBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    filter: invert(1);
 }
 
 .projectImage {

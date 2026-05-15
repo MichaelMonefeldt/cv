@@ -24,7 +24,7 @@
             "Cloud": ["AWS"],
             "AI": ["OpenAI API"]
         },
-        "image": "/projects/manyBook.jpg",
+        "image": "/projects/katalogica_logo.svg",
         "link": false,
         "color": "var(--tertiary)"
     },

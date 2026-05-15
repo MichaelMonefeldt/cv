@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import Bodies from '../components/Bodies';
 import Button from '../components/Button'; 
 import ScrollToTopButton from '../components/ScrollToTopButton';
@@ -10,6 +10,7 @@ import styles from '../styles/Project.module.css';
 export default function Project({projects, scrollRef}) {
     const [isHovered, setIsHovered] = useState(false);
     const { projectName } = useParams();
+    const navigate = useNavigate();
     // You can replace this with a dynamic import or a switch case based on projectName
     const projectMetaData = projects
     const project = projectMetaData[projectName];
@@ -21,6 +22,12 @@ export default function Project({projects, scrollRef}) {
         <div className={styles.projectContainer}>
             <div className={styles.projectContent}>
                 <div className={styles.imageContainer} style={{ gridColumn: '1 / span 10', gridRow: '1 / span 3', backgroundColor: project.color }}>
+                    <img
+                        src={arrowBackIcon}
+                        alt="Back"
+                        className={styles.backBtn}
+                        onClick={() => navigate(-1)}
+                    />
                     <Link to={project.link} target="_blank" rel="noopener noreferrer">
                         <img 
                             src={project.image} 
@@ -39,7 +46,7 @@ export default function Project({projects, scrollRef}) {
                     <Button
                         text="Tilbage til start"
                         startImage={arrowBackIcon}
-                        onClick={() => window.history.back()}
+                        onClick={() => navigate(-1)}
                         style="SecondBtn"
                     />
                 </div>

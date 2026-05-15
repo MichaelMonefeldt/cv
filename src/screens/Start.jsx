@@ -57,6 +57,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
     const [skillBody, setSkillBody] = useState(<div></div>)
     
     const location = useLocation();
+    const navigate = useNavigate();
     
     useEffect(() => {
         if (location.state?.scrollTo) {
@@ -69,7 +70,15 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
 
     const specialRef = useRef(null);
     const toolsRef = useRef(null);
-    const [line, setLine] = useState({ top: 0, height: 0, active: false });
+    const projectRefs = useRef({});
+
+    const [line, setLine] = useState({
+        top: 0,
+        height: 0,
+        active: false,
+        message: '',
+        side: 'left'
+    });
 
     useEffect(() => {
         const scrollEl = scrollRef?.current;
@@ -89,17 +98,98 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
                 toolsRect.top -
                 containerRect.top +
                 scrollEl.scrollTop +
-                toolsRect.height - toolsRect.height * 2 + 10;
+                toolsRect.height -
+                toolsRect.height * 2 +
+                10;
 
-            const dotY =
-                scrollEl.scrollTop + scrollEl.clientHeight / 2;
-
+            const dotY = scrollEl.scrollTop + scrollEl.clientHeight / 2;
             const clampedDotY = Math.min(Math.max(dotY, startY), stopY);
+
+            const dotViewportX = containerRect.left + containerRect.width / 2;
+            const dotViewportY = containerRect.top + scrollEl.clientHeight / 2;
+
+            const projects = [
+                {
+                    key: 'pageturner',
+                    message: 'En nytænkning ',
+                    color: 'var(--primary)'
+                },
+                {
+                    key: 'wishwell',
+                    message: 'Venner og familie kan reservere ønsker helt uden at oprette en profil',
+                    color: 'var(--secondary)'
+                },
+                {
+                    key: 'dreamtrail',
+                    message: 'Appen der udfordrer dig til at bevæge dig mere',
+                    color: 'var(--fortiary)'
+                },
+                {
+                    key: 'katalogica',
+                    message: 'Jeg gjorde det ti gange hurtigere at oprette poster på gamle bøger',
+                    color: 'var(--tertiary)'
+                }
+            ];
+
+            let activeProject = null;
+            let shortestDistance = Infinity;
+
+            projects.forEach((project) => {
+                const projectEl = projectRefs.current[project.key];
+                if (!projectEl) return;
+
+                const rect = projectEl.getBoundingClientRect();
+
+                const projectTop = rect.top;
+                const projectBottom = rect.bottom;
+                const projectCenterY = rect.top + rect.height / 2;
+
+                const dotIsInsideProject =
+                    dotViewportY >= projectTop &&
+                    dotViewportY <= projectBottom;
+
+                if (!dotIsInsideProject) return;
+
+                const distance = Math.abs(projectCenterY - dotViewportY);
+
+                if (distance < shortestDistance) {
+                    shortestDistance = distance;
+                    activeProject = {
+                        ...project,
+                        rect
+                    };
+                }
+            });
+
+            let message = '';
+            let side = 'left';
+            let color = '';
+            let messageActive = false;
+
+            if (activeProject) {
+                const projectCenterX =
+                    activeProject.rect.left + activeProject.rect.width / 2;
+
+                const projectProgress =
+                    (dotViewportY - activeProject.rect.top) / activeProject.rect.height;
+
+                const isNearBottom = projectProgress > 0.08;
+                const isNearTop = projectProgress < 1;
+
+                message = activeProject.message;
+                side = projectCenterX > dotViewportX ? 'left' : 'right';
+                color = activeProject.color;
+
+                messageActive = !isNearBottom && !isNearTop;
+            }
 
             setLine({
                 top: startY,
                 height: Math.max(0, clampedDotY - startY),
-                active: dotY >= startY && dotY <= stopY
+                active: dotY >= startY && dotY <= stopY,
+                message,
+                side,
+                color
             });
         };
 
@@ -138,19 +228,38 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
                 </div>
             </div>
 
-             <div
+            <div
                 className={styles.scrollLine}
                 style={{
                     top: `${line.top}px`,
                     height: `${line.height}px`
                 }}
             >
+                <div
+                    className={`${styles.scrollMessage} ${
+                        line.message ? styles.scrollMessageVisible : ''
+                    } ${
+                        line.side === 'left'
+                            ? styles.scrollMessageLeft
+                            : styles.scrollMessageRight
+                    }`}
+                    style={{border: `1px solid ${line.active ? line.color : 'transparent'}`, backgroundColor: line.active ? 'white' : 'transparent', color: line.active ? 'black' : 'transparent'}}
+                >
+                    {line.message}
+                </div>
+
                 <div className={styles.scrollDot}></div>
             </div>
 
-            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '5 / span 4', backgroundColor: 'var(--primary)' }}>
+            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 4', gridRow: '5 / span 4', backgroundColor: 'var(--primary)' }}>
+                <div
+                    ref={(el) => {
+                        projectRefs.current.pageturner = el;
+                    }}
+                    className={styles.projectRefAnchor}
+                />
                 <div className={styles.projectHeader}>
-                    <img src={pageturner_logo} alt="PageTurner"/>
+                    <img src="./projects/pageturner_logo.svg" alt="PageTurner"/>
                     <h3>PageTurner</h3>
                 </div>
                 <PixelSprite
@@ -175,26 +284,39 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
                         scale={4}
                     />
                 <Descriptor
-                    description="Den simpleste måde at holde styr på dine læsevaner"
+                    description="Den simpleste måde at holde styr på læsevaner"
                     goTo="/projekt/PageTurner"
                 />
             </FadeInOnScroll>
 
-            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '8 / span 4', backgroundColor: 'var(--secondary)' }}>
+            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '2 / span 4', gridRow: '9 / span 4', backgroundColor: 'var(--secondary)' }}>
+                <div
+                    ref={(el) => {
+                        projectRefs.current.wishwell = el;
+                    }}
+                    className={styles.projectRefAnchor}
+                />
+                
                 <div className={styles.projectHeader}>
-                    <img  src={wishwell_logo} alt="WishWell"/>
+                    <img  src="./projects/wishwell_logo.svg" alt="WishWell"/>
                     <h3>WishWell</h3>
                 </div>
             
                 <Descriptor
-                    description="En smartere måde at dele dine ønsker med familie og venner"
+                    description="En smart måde at dele dine ønsker med dine nærmeste"
                     goTo="/projekt/WishWell"
                 />
             </FadeInOnScroll>
 
-            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 5', gridRow: '11 / span 4', backgroundColor: 'var(--fortiary)' }}>
+            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 4', gridRow: '13 / span 4', backgroundColor: 'var(--fortiary)' }}>
+                <div
+                    ref={(el) => {
+                        projectRefs.current.dreamtrail = el;
+                    }}
+                    className={styles.projectRefAnchor}
+                />
                 <div className={styles.projectHeader}>
-                    <img src={dreamtrail_logo} alt="DreamTrail"/>
+                    <img src="./projects/dreamtrail_logo.svg" alt="DreamTrail"/>
                     <h3>DreamTrail</h3>
                 </div>
                 <img
@@ -202,7 +324,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
                     alt="DreamTrail-koncept"
                     style={{
                         height: 'auto',
-                        width: '50%',
+                        width: '50%',  
                         objectFit: 'cover',
                     }}
                 />
@@ -229,9 +351,18 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
                 />
             </div> */}
 
-            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '14 / span 4', backgroundColor: 'var(--tertiary)' }}>
-                <img className={styles.projectHeader} src={k_logo} alt="Katalogica"/>
-                
+            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '2 / span 4', gridRow: '17 / span 4', backgroundColor: 'var(--tertiary)' }}>                
+                <div
+                    ref={(el) => {
+                        projectRefs.current.katalogica = el;
+                    }}
+                    className={styles.projectRefAnchor}
+                />
+                <div className={styles.projectHeader}>
+                    <img src="./projects/katalogica_logo.svg" alt="Katalogica"/>
+                    <h3 style={{color: 'black'}}>Katalogica</h3>
+                </div>
+
                 <img
                     src={katalogica_concept}
                     alt="Katalogica-koncept"
@@ -242,18 +373,18 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
                     }}
                 />
                 <Descriptor
-                    description="AI-drevet webapplikation der høster metadata i gamle bøger."
+                    description="Høster metadata i gamle bøger med hjælp fra AI"
                     goTo="/projekt/Katalogica"
                 />
             </FadeInOnScroll>
 
             <div 
                 className={styles.centeredHeader} 
-                style={{ gridColumn: '1 / span 10', gridRow: '19 / span 1'}}
+                style={{ gridColumn: '2 / span 8', gridRow: '22 / span 1'}}
                 ref={toolsRef}
             >
                 <h2>
-                    Værktøjer og kompetencer
+                    Dyk ned i mine kompetencer
                 </h2>
             </div>
 
@@ -262,7 +393,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
                     key={category}
                     className={`${styles.startContent} ${styles.goldenHover}`}
                     style={{ 
-                        gridColumn: `${1 + index * 5} / span 5`, gridRow: '20 / span 2', 
+                        gridColumn: `${index === 0 ? '2' : '6'} / span 4`, gridRow: '23 / span 2', 
                         backgroundColor: 'white',
                         // index % 2 === 0 ? 'var(--secondary)' : 'var(--primary)' 
                     }}
@@ -273,9 +404,22 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
                             <p key={techKey} onClick={() => {
                                 setSkillTitle(tech.name);
                                 setSkillBody(
-                                    <div>
-                                        <h3>{tech.name}</h3>
+                                    <div style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
                                         <p>{tech.description}</p>
+                                        <p><b>Brugt i udviklingen af:</b></p>
+                                        <div className={styles.exampleProjects}>
+                                            {tech.example_projects.map((proj, idx) => (
+                                                <p 
+                                                    key={idx} 
+                                                    className={styles.exampleProject}
+                                                    onClick={() => {
+                                                        navigate(`/projekt/${proj}`);
+                                                    }}  
+                                                >
+                                                    {proj}
+                                                </p>
+                                            ))}
+                                        </div>
                                     </div>
                                 );
                                 setWindowOpen(true);
@@ -301,7 +445,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
                 </div>
             ))}
 
-            <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '22 / span 3' }}>
+            <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '25 / span 3' }}>
                 <Footer showHeader={true} />
             </div>
 
