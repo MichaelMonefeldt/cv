@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useLayoutEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation} from 'react-router-dom';
 import Header from './components/Header';
 import Start from './screens/Start';
@@ -7,6 +7,40 @@ import ScrollToTop from './ScrollToTop';
 import './App.css';
 import './assets/fonts/Fonts.module.css';
 import projects from './projects.json';
+
+function AppScrollManager({ scrollRef }) {
+  const location = useLocation();
+  const previousPathRef = useRef(location.pathname);
+
+  useLayoutEffect(() => {
+    const scrollEl = scrollRef.current;
+    if (!scrollEl) return;
+
+    const previousPath = previousPathRef.current;
+    const currentPath = location.pathname;
+
+    sessionStorage.setItem(
+      `scroll-position:${previousPath}`,
+      String(scrollEl.scrollTop)
+    );
+
+    previousPathRef.current = currentPath;
+
+    if (currentPath === '/' && !location.state?.scrollTo) {
+      const savedScrollTop = sessionStorage.getItem(`scroll-position:${currentPath}`);
+
+      requestAnimationFrame(() => {
+        scrollEl.scrollTop = savedScrollTop ? Number(savedScrollTop) : 0;
+      });
+    } else {
+      requestAnimationFrame(() => {
+        scrollEl.scrollTop = 0;
+      });
+    }
+  }, [location.pathname, location.state, scrollRef]);
+
+  return null;
+}
 
 function App() {
   const [showHeader, setShowHeader] = useState(false);
@@ -67,8 +101,8 @@ function App() {
 
   return (
     <Router>
-      <ScrollToTop />
       <div className="App" ref={appRef}>
+        <AppScrollManager scrollRef={appRef} />
         {/* <Header 
           showHeader={showHeader}
           onScrollToSection={handleScrollToSection}

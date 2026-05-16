@@ -1,5 +1,6 @@
 import React, {useState, useRef} from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
+import ScrollToTop from '../ScrollToTop';
 import Bodies from '../components/Bodies';
 import Button from '../components/Button'; 
 import ScrollToTopButton from '../components/ScrollToTopButton';
@@ -20,6 +21,7 @@ export default function Project({projects, scrollRef}) {
 
     return (
         <div className={styles.projectContainer}>
+            {/* <ScrollToTop /> */}
             <div className={styles.projectContent}>
                 <div className={styles.imageContainer} style={{ gridColumn: '1 / span 10', gridRow: '1 / span 3', backgroundColor: project.color }}>
                     <img
@@ -28,13 +30,21 @@ export default function Project({projects, scrollRef}) {
                         className={styles.backBtn}
                         onClick={() => navigate(-1)}
                     />
-                    <Link to={project.link} target="_blank" rel="noopener noreferrer">
+                    {project.link ? ( 
+                        <Link to={project.link} target="_blank" rel="noopener noreferrer">
+                            <img 
+                                src={project.image} 
+                                alt={projectName} 
+                                className={styles.projectImage} 
+                            />
+                        </Link>
+                    ) : (
                         <img 
                             src={project.image} 
                             alt={projectName} 
                             className={styles.projectImage} 
                         />
-                    </Link>
+                    )}
                 </div>
                 <div className={styles.titleElement} style={{ gridColumn: '2 / span 8', gridRow: '3 / span 2'}}>
                     <h1>{projectName}</h1>

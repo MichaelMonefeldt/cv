@@ -13,7 +13,8 @@ import l_logo from '../assets/images/l_logo.svg';
 import pageturner_logo from '../assets/images/pageturner_logo.svg';
 import wishwell_logo from '../assets/images/wishwell_logo.svg';
 import dreamtrail_logo from '../assets/images/dreamtrail_logo.svg';
-import starStanding from '../assets/images/star_standing.svg';
+import starStorm from '../assets/images/star_storm.svg';
+import wishlist_screenshot from '../assets/images/wishlist_screenshot.png';
 import walkEx from '../assets/images/walkEx.svg';
 import katalogica_concept from '../assets/images/k_concept_dk.png';
 import fromPhoneToComputer from '../assets/images/fromPhoneToComputer.svg';
@@ -58,15 +59,26 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
     
     const location = useLocation();
     const navigate = useNavigate();
-    
+
     useEffect(() => {
         if (location.state?.scrollTo) {
-        const section = document.getElementById(location.state.scrollTo);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+            const section = document.getElementById(location.state.scrollTo);
+
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+
+                setTimeout(() => {
+                    const scrollEl = scrollRef?.current;
+                    if (scrollEl) {
+                        sessionStorage.setItem(
+                            'start-scroll-position',
+                            String(scrollEl.scrollTop)
+                        );
+                    }
+                }, 500);
+            }
         }
-        }
-    }, [location.state]);
+    }, [location.state, scrollRef]);
 
     const specialRef = useRef(null);
     const toolsRef = useRef(null);
@@ -93,7 +105,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
 
             const startY =
                 specialRect.bottom - containerRect.top + scrollEl.scrollTop;
-
+            
             const stopY =
                 toolsRect.top -
                 containerRect.top +
@@ -111,17 +123,17 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
             const projects = [
                 {
                     key: 'pageturner',
-                    message: 'En nytænkning ',
+                    message: 'Jeg gjorde det sjovt og intuitivt at holde styr på læsevaner',
                     color: 'var(--primary)'
                 },
                 {
                     key: 'wishwell',
-                    message: 'Venner og familie kan reservere ønsker helt uden at oprette en profil',
+                    message: 'En bryllupsinvitation på web endte som en app for alle',
                     color: 'var(--secondary)'
                 },
                 {
                     key: 'dreamtrail',
-                    message: 'Appen der udfordrer dig til at bevæge dig mere',
+                    message: 'En dårlig oplevelse med trænings-apps gav inpiration',
                     color: 'var(--fortiary)'
                 },
                 {
@@ -248,7 +260,11 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
                     {line.message}
                 </div>
 
-                <div className={styles.scrollDot}></div>
+                <div
+                    className={`${styles.scrollMarker} ${
+                        line.active ? styles.scrollDot : styles.scrollArrowDown
+                    }`}
+                />
             </div>
 
             <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 4', gridRow: '5 / span 4', backgroundColor: 'var(--primary)' }}>
@@ -301,6 +317,31 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
                     <img  src="./projects/wishwell_logo.svg" alt="WishWell"/>
                     <h3>WishWell</h3>
                 </div>
+
+                <img
+                    src={wishlist_screenshot}
+                    alt="WishWell-koncept"
+                    style={{
+                        height: 'auto',
+                        width: '30%',
+                        borderRadius: '20px',
+                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
+                        zIndex: 10,
+                    }}
+                />
+
+                <img 
+                    src={starStorm}
+                    alt="WishWell-koncept" 
+                    style={{
+                        position: 'absolute',
+                        height: 'auto',
+                        width: '100%',
+                        objectFit: 'cover',
+                        zIndex: 1,
+                        opacity: 0.1,
+                    }}
+                />
             
                 <Descriptor
                     description="En smart måde at dele dine ønsker med dine nærmeste"
@@ -324,7 +365,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
                     alt="DreamTrail-koncept"
                     style={{
                         height: 'auto',
-                        width: '50%',  
+                        width: '70%',  
                         objectFit: 'cover',
                     }}
                 />
@@ -368,7 +409,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
                     alt="Katalogica-koncept"
                     style={{
                         height: 'auto',
-                        width: '60%',
+                        width: '70%',
                         objectFit: 'cover',
                     }}
                 />

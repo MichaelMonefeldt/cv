@@ -1,6 +1,9 @@
 import {useState} from 'react'; 
+import { Link } from 'react-router-dom';
 import PixelSprite from './PixelSprite';
 import Shelf from './Shelf';
+import starStanding from '../assets/images/star_standing.svg';
+import ratingGraph from '../assets/images/ratingGraph.png';
 import styles from '../styles/Project.module.css';
 
 export default function Bodies({project}) {
@@ -60,6 +63,7 @@ export default function Bodies({project}) {
                         <p>PageTurner byder på mange ekstra goder:</p>
                         <ul>
                             <li>Figurer og grafer vækker dine læsevaner til live. Med PageTurner er det altid let at se, hvor mange sider og hvilke genrer du læser, hvor mange stjerner du giver i gennemsnit, m.m.</li>
+                        <img src={ratingGraph} alt="Rating graph" className={styles.displayImage} />
                             <li>Scan ISBN-koder! På den måde slipper du for at taste, og du sikrer dig, at eksemplaret i appen er akkurat det samme, som det du holder i hånden.</li>
                             <li>Du kan vælge op til tre yndlingsbøger og udstille dem på din profil.</li>
                         </ul>
@@ -69,6 +73,16 @@ export default function Bodies({project}) {
         case 'WishWell':
             return (
                 <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>
+                    <div className={styles.moovingBackground}>
+                        <img
+                            src={
+                                starStanding
+                            }
+                            alt="Wish Upon a Star"
+                            className={styles.starImage}
+                        />
+                    </div>
+                    
                     <p>I forbindelse med mit bryllup i 2025 programmerede jeg en hjemmeside, som fungerede som invitation, og som lod gæsterne tilmelde sig og reservere ønsker. WishWell er bygget oven på min oprindelige kode.</p>
                     
                     <p>Opret ønskelister til alle former begivenheder og vær sikker på, at du får akkurat det, som du har ønsket dig. Gavegiverne kan reservere ønske, og på den måde undgår du dubletter.</p>
@@ -101,6 +115,8 @@ export default function Bodies({project}) {
                     
                     <p>En aften sad jeg og så Agatha Christies Poirot, da jeg fik en indskydelse, der skulle vise sig at gøre registreringen 10 gange hurtigere. Jeg skrev hurtigt et program, der kunne høste tekst fra et titelblad (selv med gamle krøllede bogstaver), sortere titel, forfatternavn, udgivelsesår mm. og således lave første udkast til en bibliotekspost på få sekunder. Dagen efter gik jeg til min leder på Syddansk Universitet – og jeg fik lov til at udvikle Katalogica.</p>
                     
+                    <img className={styles.displayImage} src="/projects/k_concept_dk.png" alt="Katalogica" />
+
                     <p>At læse titelblade for at producere poster automatisk var prøvet mange gange før. Mit producerede som det første inden for den danske biblioteksverden præcise nok resultater til at kunne bruges i det daglige – også når det kom til de krøllede gotiske bogstaver, som er at finde i mange ældre bøger.</p>
                     
                     <h3>Da AI ikke var nok, UX!</h3>
@@ -111,12 +127,22 @@ export default function Bodies({project}) {
                     <p>Image processing leverer ikke fejlfri resultater. Katalogica måtte nødvendigvis gøre det så gnidningsfrit som muligt at rette til, hvor AI stadig ikke kunne følge med den menneskelige intelligens.</p>
                     
                     <p>Jeg beholdt billedet som reference og placerede den fulde tekst i midten, så det var let at kopiere tekst over, hvor noget alligevel var sorteret ukorrekt. Romertal blev automatisk oversat til arabertal, og små mellemprocesser sørgede blandt andet for at forfattere blev stavet med stort.</p>
-                    
+
                     <h3>Udgivelser om Katalogica:</h3>
-                    <p>https://www.sdu.dk/da/bibliotek/om-biblioteket/special-collections/nyheder-og-projekter/kunstigintelligensregistrerersaersamlingerne</p>
-                    <p>https://rauli.cbs.dk/index.php/revy/article/view/7356</p>
+                    <ul>
+                        <li>
+                            <Link to="https://rauli.cbs.dk/index.php/revy/article/view/7356" target="_blank" rel="noopener noreferrer">
+                                <p>Artikel i REVY: Tidsskrift for Danske Fag-, Forsknings- og Uddannelsesbiblioteker</p>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="https://www.sdu.dk/da/bibliotek/om-biblioteket/special-collections/nyheder-og-projekter/kunstigintelligensregistrerersaersamlingerne" target="_blank" rel="noopener noreferrer">
+                                <p>Intern artikel fra Syddansk Universitet</p>
+                            </Link>
+                        </li>
+                    </ul>
                     
-                    <p>Projektet er desværre lagt på is, efter jeg stoppede på Syddansk Universitet, da der ikke var nogen til at overtage vedligeholdelsen af systemet.</p>
+                    <p>Projektet er desværre lagt på is, efter jeg stoppede på Syddansk Universitet. Der var ingen til at overtage vedligeholdelsen af programmet efter mig.</p>
                 </div>
             );
         default:
