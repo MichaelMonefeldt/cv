@@ -49,8 +49,8 @@
     cursor: pointer;    
 }
 
-.projectImage:hover {
-    transform: translateY(-60px) scale(1.05);
+.projectImage:hover, .visitImage:hover {
+    transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.788);
 }
@@ -125,12 +125,60 @@
     padding-left: 20px;
 }
 
+.visit {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 30px;
+}
+
+.visit p {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.visit img {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
 .buttonContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     padding: 20px;;
+}
+
+@media (max-width: 800px) {
+    .projectContent {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .titleElement h1 {
+        font-size: 50px;
+    }
+
+    .titleElement h2 {
+        font-size: 20px;
+    }
+
+    .element h3 {
+        font-size: 18px;
+    }
+
+    .element p, .element ul, .element li {
+        font-size: 16px;
+    }
 }
 
 @keyframes fadeIn {

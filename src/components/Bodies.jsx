@@ -1,5 +1,6 @@
 import {useState} from 'react'; 
 import PixelSprite from './PixelSprite';
+import Shelf from './Shelf';
 import styles from '../styles/Project.module.css';
 
 export default function Bodies({project}) {
@@ -47,6 +48,8 @@ export default function Bodies({project}) {
                         <h3>Alt på en hylde</h3>
                         <p>Læste bøger, igangværende læsninger, droppede bøger – alt sammen i en ordnet visning, der gør det let at få overblik over dine læsevaner!</p>
 
+                        <Shelf />
+
                         <h3>Et unikt tiltag: Del hvert øjeblik</h3>
                         <p>Normalt giver læseren én bedømmelse, når bogen er afsluttet. Men hvad hvis man kunne dele sine tanker når som helst undervejs på rejsen?</p>
                         
@@ -56,7 +59,7 @@ export default function Bodies({project}) {
 
                         <p>PageTurner byder på mange ekstra goder:</p>
                         <ul>
-                            <li>Figurer og grafer illustrere dine læsevaner live. Med PageTurner er det altid let at orientere sig om, hvor mange sider og hvilke genrer du læser, hvor mange stjerner du giver bøger i gennemsnit, m.m.</li>
+                            <li>Figurer og grafer vækker dine læsevaner til live. Med PageTurner er det altid let at se, hvor mange sider og hvilke genrer du læser, hvor mange stjerner du giver i gennemsnit, m.m.</li>
                             <li>Scan ISBN-koder! På den måde slipper du for at taste, og du sikrer dig, at eksemplaret i appen er akkurat det samme, som det du holder i hånden.</li>
                             <li>Du kan vælge op til tre yndlingsbøger og udstille dem på din profil.</li>
                         </ul>

@@ -1,0 +1,134 @@
+.openMenuButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0px;
+    height: fit-content;
+    border-radius: 20px;
+    color: var(--text-color);
+    width: 100%;
+}
+
+.imageButton {
+    padding: 5px;
+    width: 35px;
+    height: auto;
+    color: var(--text-color);
+}
+
+.textButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    gap: 10px;
+    height: fit-content;
+    min-height: 35px;
+    min-width: 150px;
+    width: 100%;
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
+    border-radius: 20px;
+    border: 1px solid var(--contrast);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+}
+
+.withStart {
+    display: grid;
+    grid-template-columns: 20px auto 20px;
+    color: var(--text-color);
+}
+
+#lable {
+    color: var(--text-color) !important;
+}
+
+.withStart .lable {
+overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 1;
+           line-clamp: 1;
+   -webkit-box-orient: vertical;
+   margin: 0px;
+   color: var(--text-color);
+}
+
+.imageButton:hover, .textButton:hover {
+    border-radius: 20px;
+}
+
+.menuContent {
+    position: absolute;
+    top: 33px;
+    right: 0px;
+    height: 0px;
+    visibility: hidden;
+    padding: 0px;
+    margin: 0;
+    overflow: visible;
+    background-color: var(--secondary-background-color);
+    transform: translateY(5px);
+    z-index: 9999;
+}
+
+.menuContent p {
+    margin: 10px;
+    padding: 0;
+    color: var(--text-color);
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.right {
+    left: 0;
+    z-index: 1000;
+}
+
+.menuContent button {
+    display: flex;
+    align-items: center;
+}
+
+.open {
+    height: fit-content;
+    width: fit-content;
+    min-width: 150px;
+    visibility:visible;
+    gap: 0px;
+    padding: 5px;
+    background-color: var(--secondary-background-color);
+    border: 1px solid var(--contrast);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.open button {
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--text-color);
+    background-color: var(--secondary-background-color);
+}
+
+.open button:hover {
+    background-color: var(--contrast);
+    border: 1px solid var(--contrast);
+}
+
+button {
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    z-index: none;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: auto;
+}
