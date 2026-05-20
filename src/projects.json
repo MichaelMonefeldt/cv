@@ -55,7 +55,7 @@
         "color": "var(--secondary)"
     },
     "DreamTrail": {
-        "subheader": "Hold styr på dine læsevaner og få anbefalinger.",
+        "subheader": "Appen der udfordrer dig til at bevæge dig mere.",
         "technologies": {
             "Frontend": ["React JS"],
             "Backend": ["Flask"],

@@ -6,6 +6,7 @@ import Project from './screens/Project';
 import ScrollToTop from './ScrollToTop';
 import './App.css';
 import './assets/fonts/Fonts.module.css';
+import useMediaQuery from './useMediaQuery';
 import projects from './projects.json';
 
 function AppScrollManager({ scrollRef }) {
@@ -48,6 +49,8 @@ function App() {
   const topRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
+
+  const isLargeScreen = useMediaQuery('(min-width:800px)');
 
   const handleScrollToProjects = () => {
     if (projectsRef.current) {
@@ -116,6 +119,7 @@ function App() {
                 topRef={topRef}
                 projectsRef={projectsRef}
                 contactRef={contactRef}
+                isLargeScreen={isLargeScreen}
               />
             }
           />

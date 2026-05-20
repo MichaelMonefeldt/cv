@@ -52,7 +52,7 @@ function FadeInOnScroll({ children, className = "", style={}}) {
 }
 
 
-export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
+export default function Start({scrollRef,topRef, projectsRef, contactRef, isLargeScreen}) {
     const [windowOpen, setWindowOpen] = useState(false);
     const [skillTitle, setSkillTitle] = useState(<div></div>)
     const [skillBody, setSkillBody] = useState(<div></div>)
@@ -220,20 +220,19 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
         <div id="top" ref={topRef} className={styles.startContainer}>
             
             <div 
-                className={styles.special} 
-                style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)',
-                    gridColumn: '1 / span 10', gridRow: '1 / 5', backgroundColor:'white'
-                }}
+                className={styles.special}
                 ref={specialRef}
                 >
                 <LayeredSVGAnimation />
-                <div style={{padding: '40px'}}>
+                <div style={{padding: '40px', height: isLargeScreen ? '100%' : '75%', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'flex-start' : 'center'}}>
                     <TypingEffect
+                        size={isLargeScreen ? "90" : "60"}
+                        alignment={isLargeScreen ? "left" : "center"}
                         sentences={
                             [
                                 'Michael Monefeldt',
-                                'UX/UI-designer',
-                                'Software-udvikler',
+                                'UX-designer',
+                                'Full Stack-udvikler',
                             ]
                         }
                     />
@@ -432,7 +431,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
             {Object.entries(technologies).map(([category, techs], index) => (
                 <div
                     key={category}
-                    className={`${styles.startContent} ${styles.goldenHover}`}
+                    className={`${isLargeScreen ? styles.startContent : ''} ${styles.goldenHover}`}
                     style={{ 
                         gridColumn: `${index === 0 ? '2' : '6'} / span 4`, gridRow: '23 / span 2', 
                         backgroundColor: 'white',

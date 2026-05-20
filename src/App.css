@@ -80,8 +80,6 @@ html {
 *::selection {
   background: black;
   color: white;
-  padding: 2px;
-  border-radius: 2px;
 }
 
 ::-webkit-scrollbar {
@@ -98,8 +96,7 @@ html {
 @media screen and (max-width: 800px) {
   
   ::-webkit-scrollbar {
-    width: 0px;
-    height: 3px;
+    display: none;
   }
 
   ::-webkit-scrollbar-thumb {

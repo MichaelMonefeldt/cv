@@ -21,7 +21,6 @@ export default function Project({projects, scrollRef}) {
 
     return (
         <div className={styles.projectContainer}>
-            {/* <ScrollToTop /> */}
             <div className={styles.projectContent}>
                 <div className={styles.imageContainer} style={{ gridColumn: '1 / span 10', gridRow: '1 / span 3', backgroundColor: project.color }}>
                     <img
