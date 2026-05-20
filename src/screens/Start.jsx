@@ -300,7 +300,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
                         scale={4}
                     />
                 <Descriptor
-                    description="Den simpleste måde at holde styr på læsevaner"
+                    description="Den mest simple måde at holde styr på læsevaner"
                     goTo="/projekt/PageTurner"
                 />
             </FadeInOnScroll>
