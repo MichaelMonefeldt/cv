@@ -255,7 +255,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef}) {
                             ? styles.scrollMessageLeft
                             : styles.scrollMessageRight
                     }`}
-                    style={{border: `1px solid ${line.active ? line.color : 'transparent'}`, backgroundColor: line.active ? 'white' : 'transparent', color: line.active ? 'black' : 'transparent'}}
+                    style={{border: `3px solid ${line.active ? line.color : 'transparent'}`, backgroundColor: line.active ? 'white' : 'transparent', color: line.active ? 'black' : 'transparent'}}
                 >
                     {line.message}
                 </div>

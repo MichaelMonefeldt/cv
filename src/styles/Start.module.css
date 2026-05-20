@@ -247,18 +247,20 @@
 
 .scrollMessage {
     position: absolute;
-    bottom: -30px;
+    bottom: -25px;
     width: max-content;
     max-width: min(320px, 35vw);
     padding: 30px;
     background: white;
     color: black;
     font-family: 'Quicksand';
-    line-height: 1.3;
+    font-weight: 600;
+    font-size: 15px;
     opacity: 0;
     transform: scaleX(0);
     transition: transform 0.25s ease, opacity 0.2s ease;
     z-index: 21;
+    text-align: center;
 }
 
 .scrollMessageVisible {
@@ -269,14 +271,12 @@
 .scrollMessageLeft {
     right: 20px;
     transform-origin: right center;
-    text-align: left;
     border-radius: 30px 30px 0px 30px;
 }
 
 .scrollMessageRight {
     left: 20px;
     transform-origin: left center;
-    text-align: left;
     border-radius: 30px 30px 30px 0px;
 }
 

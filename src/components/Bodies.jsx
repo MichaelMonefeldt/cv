@@ -117,13 +117,18 @@ export default function Bodies({project}) {
                     </p>
                     
                     <p>
-                        DreamTrail skal motivere dig til at bevæge dig længere. Det gør de
-                        
+                        DreamTrail skal motivere dig til at bevæge dig længere. Det gør den gennem engagerende udfordringer, grafer og virtuelle belønninger.
+                        Om brugeren har lyst til at bevæge sig alene eller sammen med vennerne, er op til dem. 
+                        Udfordringerne er designet til også at kunne gennemføres i fællesskab, og appen gør det let at dele resultater med vennerne.
+                    </p>
+                    
+                    <p>
+                        Er du et konkurrencemenneske? Start en udfordring med dine venner, og se, hvem der kommer først i mål!
                     </p>
                     
                     <h3>Hvad er på tegnebrættet?</h3>
                     <p>
-                        Til en start en DreamTrail udgivet 
+                        Til en start en DreamTrail udgivet uden skræddersyede udfordringer – brugeren kan kun oprette sine egne. Det er en god måde at teste konceptet af, og det giver mig mulighed for at se, hvordan brugerne interagerer med appen, og hvad de har lyst til at bruge den til.
                    </p>
                </div>
            );
