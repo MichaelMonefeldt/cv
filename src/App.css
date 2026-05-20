@@ -37,10 +37,11 @@ html {
   --checked: white;
   --contrast: #ccc;
   --text-color: #000000;
-  --primary: #FF005E;
-  --secondary: #00c943;
-  --tertiary: #ffd000;
-  --fortiary: #00d6bd;
+  --primary: #c32454;
+  --secondary: #1ebc73;
+  --tertiary: #f79617;
+  --fortiary: #0eaf9b;
+  --fiftiary: #6b3e75;
   --primary-light: #f5d3e0;
   --reject: #B00000;
   --accept: #00B00E;  

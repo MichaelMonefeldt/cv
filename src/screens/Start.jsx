@@ -88,6 +88,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
         top: 0,
         height: 0,
         active: false,
+        arrow: true,
         message: '',
         side: 'left'
     });
@@ -128,12 +129,12 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                 },
                 {
                     key: 'wishwell',
-                    message: 'En bryllupsinvitation på web endte som en app for alle',
+                    message: 'En bryllupsinvitation på web blev til en app for alle',
                     color: 'var(--secondary)'
                 },
                 {
                     key: 'dreamtrail',
-                    message: 'En dårlig oplevelse med trænings-apps gav inpiration',
+                    message: 'En dårlig oplevelse med andre apps gav inspiration',
                     color: 'var(--fortiary)'
                 },
                 {
@@ -195,10 +196,14 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                 messageActive = !isNearBottom && !isNearTop;
             }
 
+            // Arrow will show instead of the dot at the very top of the page. As soon as the user scrolls down even a little bit, it turns into the dot.
+            const arrowShowing = scrollEl.scrollTop < 10;
+
             setLine({
                 top: startY,
                 height: Math.max(0, clampedDotY - startY),
                 active: dotY >= startY && dotY <= stopY,
+                arrow: arrowShowing,
                 message,
                 side,
                 color
@@ -222,19 +227,25 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
             <div 
                 className={styles.special}
                 ref={specialRef}
-                >
-                <LayeredSVGAnimation />
-                <div style={{padding: '40px', height: isLargeScreen ? '100%' : '75%', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'flex-start' : 'center'}}>
+            >
+                <div style={{padding: '40px', height: isLargeScreen ? '100%' : '75%', display: 'flex', alignItems: 'flex-start', justifyContent: isLargeScreen ? 'flex-start' : 'center'}}>
                     <TypingEffect
-                        size={isLargeScreen ? "90" : "60"}
+                        size={isLargeScreen ? "120" : "60"}
                         alignment={isLargeScreen ? "left" : "center"}
                         sentences={
                             [
-                                'Michael Monefeldt',
-                                'UX-designer',
-                                'Full Stack-udvikler',
+                                'MICHAEL MONEFELDT',
+                                'UX-DESIGNER',
+                                'FULL STACK-UDVIKLER',
                             ]
                         }
+                    />
+                </div>
+                <div className={styles.portraitContainer}>
+                    <img 
+                        src="./portrait.jpg"
+                        alt="Michael Monefeldt"
+                        className={styles.portrait}
                     />
                 </div>
             </div>
@@ -261,7 +272,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
 
                 <div
                     className={`${styles.scrollMarker} ${
-                        line.active ? styles.scrollDot : styles.scrollArrowDown
+                        line.arrow ? styles.scrollArrowDown : styles.scrollDot
                     }`}
                 />
             </div>
@@ -299,7 +310,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                         scale={4}
                     />
                 <Descriptor
-                    description="Den mest simple måde at holde styr på læsevaner"
+                    description="Den mest simple måde at holde styr på, hvad du læser"
                     goTo="/projekt/PageTurner"
                 />
             </FadeInOnScroll>
@@ -364,7 +375,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                     alt="DreamTrail-koncept"
                     style={{
                         height: 'auto',
-                        width: '70%',  
+                        width: '80%',  
                         objectFit: 'cover',
                     }}
                 />
@@ -418,6 +429,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                 />
             </FadeInOnScroll>
 
+            {isLargeScreen && (
             <div 
                 className={styles.centeredHeader} 
                 style={{ gridColumn: '2 / span 8', gridRow: '22 / span 1'}}
@@ -427,6 +439,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                     Dyk ned i mine kompetencer
                 </h2>
             </div>
+            )}
 
             {Object.entries(technologies).map(([category, techs], index) => (
                 <div

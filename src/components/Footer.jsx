@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import LayeredSVGAnimation from './LayeredSVGAnimation';
 import arrowDownIcon from '../assets/images/arrow_down.svg';
 import styles from '../styles/Header.module.css';
 
@@ -9,7 +10,7 @@ export default function Footer({showHeader}) {
 
     return (
         <div className={`${styles.footerContainer}`}>
-            <p className={styles.logo}>Kontakt mig</p>
+            <LayeredSVGAnimation />
             <a href="mailto:michaelmonefeldt@gmail.com" className={styles.emailLink}>
                 michaelmonefeldt@gmail.com
             </a>

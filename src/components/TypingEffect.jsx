@@ -63,7 +63,7 @@ const TypingEffectLoop = ({ sentences = [], size, alignment, speed }) => {
       <span
         style={{
           backgroundColor: highlight ? 'white' : 'transparent',
-          color: highlight ? 'black' : 'white',
+          color: highlight ? 'var(--fiftiary)' : 'white',
           transition: 'background-color 0.3s, color 0.3s',
           padding: '0 4px',
         }}

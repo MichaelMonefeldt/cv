@@ -1,13 +1,14 @@
 .descriptorContainer {
     position: absolute;
     bottom: 30px;
-    right: 30px;
+    right: 20px;
     width: 60%;
     height: fit-content;
     min-height: 100px;
     border-radius: 30px;
     background-color: white;
     cursor: pointer;
+    z-index: 11;
 }
 
 .descriptorShadow {
@@ -43,14 +44,24 @@
     gap: 20px;
     align-items: center;
     padding: 10px 15px;
-    font-weight: bold;
+}
+
+.description{
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 .descriptor button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     width: 25px;
-    background-color: white;
+    height: 100%;
+    background-color: transparent;
     border: none;
     cursor: pointer;
+    font-weight: 900;
+    filter: invert(1);
 }
 
 .descriptor button:hover, .descriptor button:focus {

@@ -1,5 +1,5 @@
 {
-  "Til udvikling": {
+  "Udvikling": {
      "React": {
       "name": "React",
       "description": "Et JavaScript/TypeScript-bibliotek, brugt til at programmere flotte og intuitive brugergrænseflader til web og Windows.",
@@ -36,7 +36,7 @@
         "example_projects": ["Katalogica"]
     }
   },
-  "Til design": {
+  "Design": {
     "Figma": {
       "name": "Figma",
       "description": "Et designværktøj, der gør det nemt at samarbejde om at skabe brugergrænseflader. Jeg bruger Figma til at designe prototyper af mine projekter, før jeg begynder at kode.",
