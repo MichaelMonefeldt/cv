@@ -54,9 +54,8 @@ const TypingEffectLoop = ({ sentences = [], size, alignment, speed }) => {
   }, [text, phase, sentenceIndex, currentSentence, sentences.length, speed, hasMultipleSentences]);
 
   return (
-    <div style={{ 
-        fontFamily: 'Space_Mono', 
-        fontSize: `${size}px`, 
+    <div style={{  
+        fontSize: `${size}`, 
         textAlign: alignment, 
         whiteSpace: 'pre-wrap', 
       }}>
@@ -66,6 +65,8 @@ const TypingEffectLoop = ({ sentences = [], size, alignment, speed }) => {
           color: highlight ? 'var(--fiftiary)' : 'white',
           transition: 'background-color 0.3s, color 0.3s',
           padding: '0 4px',
+          fontWeight: 'bold',
+          fontFamily: 'ClashDisplay, serif',
         }}
       >
         {text}

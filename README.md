@@ -1,10 +1,12 @@
-# My Online Portfolio
+# Online Portfolio of Michael Monefeldt
 
 ## About
 
 I am a developer and UX designer based in Denmark. This project is primarily created for recruiters and collaborators to learn more about my prior work. Feel free to [install](#installation) and use my codebase for other projects.
 
 Visit my [portfolio](https://michaelmonefeldt.com/).
+
+![Portfolio of Michael Monefeldt](./screenshot.png)
 
 ## Projects 
 

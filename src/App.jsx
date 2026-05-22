@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation} from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate, useLocation} from 'react-router-dom';
 import Header from './components/Header';
 import Start from './screens/Start';
 import Project from './screens/Project';

@@ -98,11 +98,11 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
         if (!scrollEl) return;
 
         const updateLine = () => {
-            if (!specialRef.current || !toolsRef.current) return;
+            if (!specialRef.current || !contactRef.current) return;
 
             const containerRect = scrollEl.getBoundingClientRect();
             const specialRect = specialRef.current.getBoundingClientRect();
-            const toolsRect = toolsRef.current.getBoundingClientRect();
+            const toolsRect = contactRef.current.getBoundingClientRect();
 
             const startY =
                 specialRect.bottom - containerRect.top + scrollEl.scrollTop;
@@ -112,8 +112,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                 containerRect.top +
                 scrollEl.scrollTop +
                 toolsRect.height -
-                toolsRect.height * 2 +
-                10;
+                toolsRect.height + 10;
 
             const dotY = scrollEl.scrollTop + scrollEl.clientHeight / 2;
             const clampedDotY = Math.min(Math.max(dotY, startY), stopY);
@@ -228,10 +227,10 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                 className={styles.special}
                 ref={specialRef}
             >
-                <div style={{padding: '40px', height: isLargeScreen ? '100%' : '75%', display: 'flex', alignItems: 'flex-start', justifyContent: isLargeScreen ? 'flex-start' : 'center'}}>
+                <div style={{padding: '40px', height: isLargeScreen ? '100%' : '75%', display: 'flex', alignItems: 'flex-start', justifyContent: 'center'}}>
                     <TypingEffect
-                        size={isLargeScreen ? "120" : "60"}
-                        alignment={isLargeScreen ? "left" : "center"}
+                        size={isLargeScreen ? "20vh" : "65px"}
+                        alignment={"center"}
                         sentences={
                             [
                                 'MICHAEL MONEFELDT',
@@ -307,7 +306,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                             "/books_big/book_15.png",
                         ]}
                         fps={6}
-                        scale={4}
+                        scale={5}
                     />
                 <Descriptor
                     description="Den mest simple måde at holde styr på, hvad du læser"
@@ -429,19 +428,19 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                 />
             </FadeInOnScroll>
 
-            {isLargeScreen && (
-            <div 
-                className={styles.centeredHeader} 
-                style={{ gridColumn: '2 / span 8', gridRow: '22 / span 1'}}
-                ref={toolsRef}
-            >
-                <h2>
-                    Dyk ned i mine kompetencer
-                </h2>
-            </div>
+            {/* {isLargeScreen && (
+                <div 
+                    className={styles.centeredHeader} 
+                    style={{ gridColumn: '2 / span 8', gridRow: '22 / span 1'}}
+                    ref={toolsRef}
+                >
+                    <h2>
+                        Dyk ned i mine kompetencer
+                    </h2>
+                </div>
             )}
 
-            {Object.entries(technologies).map(([category, techs], index) => (
+            {isLargeScreen && Object.entries(technologies).map(([category, techs], index) => (
                 <div
                     key={category}
                     className={`${isLargeScreen ? styles.startContent : ''} ${styles.goldenHover}`}
@@ -496,9 +495,9 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                     />
                     )}
                 </div>
-            ))}
+            ))} */}
 
-            <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '25 / span 3' }}>
+            <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '21 / span 3' }}>
                 <Footer showHeader={true} />
             </div>
 
