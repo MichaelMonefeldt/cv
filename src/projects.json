@@ -1,5 +1,5 @@
 {
-    "librerate": {
+    "Librerate": {
         "subheader": "Scan et væld af materialer med din mobil og registrer dem hurtigere",
         "paragraph1": "På de danske forskningsbiblioteker findes der millioner af bøger, tidsskrifter m.m. som aldrig er blevet registreret. Og som ansat på Syddansk Universitetsbibliotek pinte det mig, at brugerne ikke kunne søge 25% af vores samlinger frem.",
         "technologies": {
@@ -13,7 +13,7 @@
         "image": "/projects/manyBook.jpg",
         "link": "librerate.com"
     },
-    "katalogica": {
+    "Katalogica": {
         "subheader": "AI-drevet webapplikation der høster metadata i bøger",
         "paragraph1": "På de danske forskningsbiblioteker findes der millioner af bøger, tidsskrifter m.m. som aldrig er blevet registreret. Som ansat på Syddansk Universitetsbibliotek pinte det mig, at brugerne ikke kunne søge 25% af vores samlinger frem, og derfor gik jeg et stykke tid og fiflede med forskellige digitale løsninger, som ikke bar frugt.",
         "paragraph2": "En aften i december 2023 sad min kone og jeg og så første afsnit Hercule Poirot, da jeg fik en indskydelse, der skulle vise sig blive den bedste løsning til dato. Mange steder var det blevet forsøgt at lave en AI-drevet webapplikation, der kunne læse metadata i bøger, men uden held. Den stødte udvikling i vores fælles viden om AI gjorde det dog muligt at lave en velfungerende løsning på et par uger.",
@@ -24,19 +24,47 @@
             "Cloud": ["AWS"],
             "AI": ["OpenAI API"]
         },
-        "image": "/projects/manyBook.jpg",
-        "link": false
+        "image": "/projects/katalogica_logo.svg",
+        "link": false,
+        "color": "var(--tertiary)"
     },
-    "pageTurner": {
-        "subheader": "Hold styr på dine læsevaner og få anbefalinger.",
-        "paragraph1": "Der er udviklet mange løsninger til at holde styr på dine læsevaner",
+    "PageTurner": {
+        "subheader": "Den mest simple måde at holde styr på dine læsevaner",
         "technologies": {
             "Frontend": ["React JS"],
             "Backend": ["FastAPI"],
             "Database": ["PostgreSQL"],
-            "Cloud": ["Azure"]
+            "Cloud": ["Azure"],
+            "Deployment": ["Docker"]
         },
-        "image": "/projects/reading.jpg",
-        "link": false
+        "image": "/projects/pageturner_logo.svg",
+        "link": "https://pageturner.orbitter.app/",
+        "color": "var(--primary)"
+    },
+    "WishWell": {
+        "subheader": "Appen der lader venner og familie reservere ønsker uden at oprette en profil",
+        "technologies": {
+            "Frontend": ["React JS"],
+            "Backend": ["Flask"],
+            "Database": ["PostgreSQL"],
+            "Cloud": ["Azure"],
+            "Deployment": ["Docker"]
+        },
+        "image": "/projects/wishwell_logo.svg",
+        "link": "https://wishwell.orbitter.app/",
+        "color": "var(--secondary)"
+    },
+    "DreamTrail": {
+        "subheader": "Appen der udfordrer dig til at bevæge dig mere.",
+        "technologies": {
+            "Frontend": ["React JS"],
+            "Backend": ["Flask"],
+            "Database": ["PostgreSQL"],
+            "Cloud": ["Azure"],
+            "Deployment": ["Docker"]
+        },
+        "image": "/projects/dreamtrail_logo.svg",
+        "link": "https://dreamtrail.orbitter.app/",
+        "color": "var(--fortiary)"
     }
 }

@@ -1,12 +1,35 @@
-# React + Vite
+# My Online Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About
 
-Currently, two official plugins are available:
+I am a developer and UX designer based in Denmark. This project is primarily created for recruiters and collaborators to learn more about my prior work. Feel free to [install](#installation) and use my codebase for other projects.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Visit my [portfolio](https://michaelmonefeldt.com/).
 
-## Expanding the ESLint configuration
+## Projects 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+In my portfolio, you can read about my projects:
+### PageTurner
+A book-tracking app designed to motivate users to achieve their reading goals.
+
+[Experience PageTurner](https://pageturner.orbitter.app/).
+
+### WishWell
+A wishlist app that lets your share wishes without forcing your friends and family to sign up to make reservations.
+
+[Experience WishWell](https://wishwell.orbitter.app/).
+
+### DreamTrail
+A training app that challenges users  to stay active.
+
+[Experience DreamTrail](https://dreamtrail.orbitter.app/).
+
+### Katalogica
+An AI-powered tool that extracts text from images to instantly create metadata for historical books.
+
+## Installation
+
+```bash
+npm install
+npm run dev
+```

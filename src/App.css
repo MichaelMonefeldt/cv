@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./assets/fonts/Quicksand-Variable.ttf') format('truetype'); /* Adjust the path if needed */
+}
+
+@font-face {
+  font-family: 'Melodrama';
+  src: url('./assets/fonts/Melodrama-Variable.ttf') format('truetype'); /* Adjust the path if needed */
+}
+
 #root {
   max-width: 1280px;
   margin: 0 0;
@@ -9,6 +19,12 @@
   padding: 0;
   margin: 0;
   text-align: left;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+p {
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 html {
@@ -21,9 +37,11 @@ html {
   --checked: white;
   --contrast: #ccc;
   --text-color: #000000;
-  --primary: #ef5b5b;
-  --secondary: #20a39e;
-  --tertiary: #ffba49;
+  --primary: #c32454;
+  --secondary: #1ebc73;
+  --tertiary: #f79617;
+  --fortiary: #0eaf9b;
+  --fiftiary: #6b3e75;
   --primary-light: #f5d3e0;
   --reject: #B00000;
   --accept: #00B00E;  
@@ -63,8 +81,6 @@ html {
 *::selection {
   background: black;
   color: white;
-  padding: 2px;
-  border-radius: 2px;
 }
 
 ::-webkit-scrollbar {
@@ -76,4 +92,16 @@ html {
 ::-webkit-scrollbar-thumb {
   background: var(--contrast);
   border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--contrast);
+    border-radius: 10px;
+  }
 }

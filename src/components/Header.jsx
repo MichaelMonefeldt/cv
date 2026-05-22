@@ -14,10 +14,10 @@ export default function Header({showHeader, onScrollToSection}) {
                 <p className={`${styles.logo} ${(location.pathname !== '/' || showHeader) ? styles.visible : styles.hidden}`} onClick={() => navigate('/')}>Michael Monefeldt</p>
             </div>
             <div className={styles.headerRight}>
-                <button className={styles.headerBtn} onClick={() => navigate('/', { state: { scrollTo: 'projects' } })}>
+                <button className={`${styles.headerBtn} ${(location.pathname !== '/' || showHeader) ? styles.visible : styles.hidden}`} onClick={() => navigate('/', { state: { scrollTo: 'projects' } })}>
                     Projekter
                 </button>
-                <button className={styles.headerBtn} onClick={() => navigate('/', { state: { scrollTo: 'contact' } })}>
+                <button className={`${styles.headerBtn} ${(location.pathname !== '/' || showHeader) ? styles.visible : styles.hidden}`} onClick={() => navigate('/', { state: { scrollTo: 'contact' } })}>
                     Kontakt
                 </button>
             </div>

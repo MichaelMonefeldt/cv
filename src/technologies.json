@@ -1,62 +1,51 @@
 {
-  "Full-Stack Development": {
-    "AWS": { 
-        "name": "AWS", 
-        "description": "Amazon Web Services.", 
-        "example_projects": ["Katalogica"],
-        "image": "aws.svg" 
-    },
-    "Azure": { 
-        "name": "Azure", 
-        "description": "Microsoft Azure cloud platform.", 
-        "example_projects": ["Librerate"],
-        "image": "azure.svg" 
-    },
-    "React": {
-      "name": "React JS",
-      "description": "A JavaScript library for building UIs.",
-      "example_projects": ["Librerate"],
-      "image": "react.svg"
+  "Udvikling": {
+     "React": {
+      "name": "React",
+      "description": "Et JavaScript/TypeScript-bibliotek, brugt til at programmere flotte og intuitive brugergrænseflader til web og Windows.",
+      "example_projects": ["PageTurner", "WishWell", "DreamTrail"]
     },
     "Flask": {
       "name": "Flask",
-      "description": "A lightweight WSGI web application framework.",
-      "example_projects": ["Librerate", "Katalogica"],
-      "image": "flask.svg"
-    },
-    "Electron": {
-      "name": "Electron JS",
-      "description": "A framework for desktop apps using web technologies.",
-      "image": "electron.svg"
+      "description": "Et letvægts Python web framework, der er perfekt til hurtigt at bygge skalerbare webapplikationer.",
+      "example_projects": ["WishWell", "DreamTrail", "Katalogica"]
     },
     "FastAPI": {
       "name": "FastAPI",
-      "description": "A modern, fast web framework for Python APIs.",
-      "image": "fastapi.svg"
+      "description": "Et moderne, high-performance web framework, der gør det nemt at bygge API'er med automatisk dokumentation.",
+      "example_projects": ["PageTurner"]
     },
     "PostgreSQL": { 
         "name": "PostgreSQL", 
-        "description": "Advanced open-source relational DB.", 
-        "example_projects": ["Librerate", "Katalogica"],
-        "image": "postgresql.svg" 
-    }    
-  },
-  "UX / UI": {
-    "Affinity": {
-      "name": "Affinity Designer 2",
-      "description": "A vector graphic design tool.",
-      "example_projects": ["Portfolio"],
-      "image": "affinity.svg"
+        "description": "Avanceret open-source relationsdatabase. Jeg bruger det i alle mine projekter, da det er pålideligt, skalerbart og har fremragende support for komplekse forespørgsler og datatyper.", 
+        "example_projects": ["PageTurner", "WishWell", "DreamTrail", "Katalogica"]
     },
+    "Docker": {
+        "name": "Docker",
+        "description": "Jeg udruller applikationer i containere for at sikre, at mine applikationer kører ensartet på tværs af forskellige miljøer.",
+        "example_projects": ["PageTurner", "WishWell", "DreamTrail"]
+    },
+    "Azure": { 
+        "name": "Azure", 
+        "description": "Microsofts cloud computing platform, der tilbyder en bred vifte af tjenester til hosting, datalagring og AI-integration. Jeg bruger Azure i de fleste af mine projekter.",
+        "example_projects": ["PageTurner", "WishWell", "DreamTrail"]
+    },
+    "AWS": { 
+        "name": "AWS", 
+        "description": "Amazon Web Services: En omfattende cloud computing platform, der tilbyder en bred vifte af tjenester til hosting, datalagring og AI-integration.",
+        "example_projects": ["Katalogica"]
+    }
+  },
+  "Design": {
     "Figma": {
       "name": "Figma",
-      "description": "A collaborative design and prototyping tool.",
-      "image": "figma.svg"
+      "description": "Et designværktøj, der gør det nemt at samarbejde om at skabe brugergrænseflader. Jeg bruger Figma til at designe prototyper af mine projekter, før jeg begynder at kode.",
+      "example_projects": ["PageTurner", "WishWell", "DreamTrail", "Katalogica"]
     },
-    "Formidling": {
-      "name": "Formidling",
-      "description": "A design tool for creating user interfaces.",
-      "image": "formidling.svg"
-    } 
+    "Affinity": {
+      "name": "Affinity Designer",
+      "description": "Et vektorgrafikdesignværktøj. Jeg bruger det til at skabe logoer, ikoner og andre grafiske elementer til mine projekter.",
+      "example_projects": ["PageTurner", "WishWell", "DreamTrail", "Katalogica"]
+    }
   }
 }
