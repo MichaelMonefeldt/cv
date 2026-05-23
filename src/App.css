@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: 'Melodrama';
-  src: url('./assets/fonts/Melodrama-Variable.ttf') format('truetype'); /* Adjust the path if needed */
+  font-family: 'ClashDisplay';
+  src: url('./assets/fonts/ClashDisplay-Variable.ttf') format('truetype'); /* Adjust the path if needed */
 }
 
 #root {
@@ -22,6 +22,12 @@
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
 }
+
+h1, h2, h3 {
+  font-family: 'ClashDisplay', serif;
+  font-weight: 700;
+}
+
 p {
   font-size: 16px;
   line-height: 1.8;

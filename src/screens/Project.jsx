@@ -53,17 +53,19 @@ export default function Project({projects, scrollRef}) {
                 <Bodies project={projectName} />
 
                 {project.link && (
-                    <div className={styles.visit} style={{ gridColumn: '4 / span 8', gridRow: '6', backgroundColor: project.color }}>
-                        <p>Besøg {projectName}</p>  
-                        <Link to={project.link} target="_blank" rel="noopener noreferrer">
-                            <img
-                                src={project.image}
-                                alt={projectName}
-                                className={styles.visitImage}
-                                onMouseEnter={() => setIsHovered(true)}
-                                onMouseLeave={() => setIsHovered(false)}
-                            />
-                        </Link>
+                    <div style={{ gridColumn: '2 / span 8', gridRow: '6', display: 'flex', justifyContent: 'center' }}>
+                        <div className={styles.visit} style={{ backgroundColor: project.color }}>
+                            <p>Besøg {projectName}</p>  
+                            <Link to={project.link} target="_blank" rel="noopener noreferrer">
+                                <img
+                                    src={project.image}
+                                    alt={projectName}
+                                    className={styles.visitImage}
+                                    onMouseEnter={() => setIsHovered(true)}
+                                    onMouseLeave={() => setIsHovered(false)}
+                                />
+                            </Link>
+                        </div>
                     </div>
                 )}
 
