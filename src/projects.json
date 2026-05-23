@@ -29,7 +29,7 @@
         "color": "var(--tertiary)"
     },
     "PageTurner": {
-        "subheader": "Den mest simple måde at holde styr på dine læsevaner",
+        "subheader": "Den simpleste måde at holde styr på, hvad du læser",
         "technologies": {
             "Frontend": ["React JS"],
             "Backend": ["FastAPI"],

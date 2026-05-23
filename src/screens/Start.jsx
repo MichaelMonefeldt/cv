@@ -123,7 +123,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
             const projects = [
                 {
                     key: 'pageturner',
-                    message: 'Jeg gjorde det sjovt og intuitivt at holde styr på læsevaner',
+                    message: 'Jeg gjorde det sjovt og intuitivt at følge med i læsevaner',
                     color: 'var(--primary)'
                 },
                 {
@@ -133,12 +133,12 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                 },
                 {
                     key: 'dreamtrail',
-                    message: 'En dårlig oplevelse med andre apps gav inspiration',
+                    message: 'En dårlig oplevelse med andre produkter gav inspiration',
                     color: 'var(--fortiary)'
                 },
                 {
                     key: 'katalogica',
-                    message: 'Jeg gjorde det ti gange hurtigere at oprette poster på gamle bøger',
+                    message: 'Jeg gjorde det ti gange hurtigere at oprette poster til historiske bøger',
                     color: 'var(--tertiary)'
                 }
             ];
@@ -309,7 +309,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                         scale={5}
                     />
                 <Descriptor
-                    description="Den mest simple måde at holde styr på, hvad du læser"
+                    description="Den simpleste måde at holde styr på, hvad du læser"
                     goTo="/projekt/PageTurner"
                 />
             </FadeInOnScroll>

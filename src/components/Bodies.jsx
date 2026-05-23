@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PixelSprite from './PixelSprite';
 import Shelf from './Shelf';
 import starStanding from '../assets/images/star_standing.svg';
+import walkEx from '../assets/images/walkEx.svg';
 import ratingGraph from '../assets/images/ratingGraph.png';
 import styles from '../styles/Project.module.css';
  
@@ -102,6 +103,8 @@ export default function Bodies({project}) {
        case 'DreamTrail':
            return (
                <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>
+                    <img className={styles.displayImage} src={walkEx} alt="Katalogica" />
+
                    <h3>En dårlig oplevelse gav inspiration</h3>
                     <p>Sidste år downloadede jeg en app, der gav et spændende løfte: Hvis jeg kunne gå/løbe/cykle en længere distance, ville jeg blive belønnet med en specialdesignet medalje. Jeg skulle følge en fiktiv historie og gå i fodsporene på dens karakterer – virkeligt motiverende!</p> 
                     <p>Men sjældent har jeg haft en kedeligere oplevelse som bruger.</p>
@@ -135,13 +138,14 @@ export default function Bodies({project}) {
        case 'Katalogica':
            return (
                <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>
+                    <img className={styles.displayImage} src="/projects/k_concept_dk.png" alt="Katalogica" />
+
+                   
                    <h3>En gigantisk udfordring løst med AI</h3>
                    <p>På Syddansk Universitet har biblioteket 100.000-vis af materialer, som brugerne ikke kan tilgå eller låne, fordi de ikke er registreret. På Det Kgl. Bibliotek overstiger antallet én million. Begge institutioner arbejder på sagen, men selv med</p>
                   
                    <p>En aften sad jeg og så Agatha Christies Poirot, da jeg fik en indskydelse, der skulle vise sig at gøre registreringen 10 gange hurtigere. Jeg skrev hurtigt et program, der kunne høste tekst fra et titelblad (selv med gamle krøllede bogstaver), sortere titel, forfatternavn, udgivelsesår mm. og således lave første udkast til en bibliotekspost på få sekunder. Dagen efter gik jeg til min leder på Syddansk Universitet – og jeg fik lov til at udvikle Katalogica.</p>
-                  
-                   <img className={styles.displayImage} src="/projects/k_concept_dk.png" alt="Katalogica" />
- 
+                   
                    <p>At læse titelblade for at producere poster automatisk var prøvet mange gange før. Mit producerede som det første inden for den danske biblioteksverden præcise nok resultater til at kunne bruges i det daglige – også når det kom til de krøllede gotiske bogstaver, som er at finde i mange ældre bøger.</p>
                   
                    <h3>Da AI ikke var nok, UX!</h3>

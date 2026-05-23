@@ -6,11 +6,12 @@ I am a developer and UX designer based in Denmark. This project is primarily cre
 
 Visit my [portfolio](https://michaelmonefeldt.com/).
 
-![Portfolio of Michael Monefeldt](./screenshot.png)
+![Portfolio of Michael Monefeldt](./public/screenshot.png)
 
 ## Projects 
 
 In my portfolio, you can read about my projects:
+
 ### PageTurner
 A book-tracking app designed to motivate users to achieve their reading goals.
 
