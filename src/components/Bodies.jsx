@@ -47,7 +47,7 @@ export default function Bodies({project}) {
                       
                        <p>De fleste læseapps er bygget op som lister af lister. Du får en liste over bøger, som du har læst + en liste over bøger du er i gang med at læse osv. Brugeren flytter bøgerne fra en liste til en anden til en tredje … </p>
                       
-                       <p>Det fungerer, men det kan gøres mere intuitivt. Derfor: PageTurner.</p>
+                       <p>Det fungerer, men det kan gøres langt mere intuitivt. Derfor: PageTurner.</p>
                       
                        <h3>Alt på en hylde</h3>
                        <p>Læste bøger, igangværende læsninger, droppede bøger – alt sammen i en ordnet visning, der gør det let at skabe sig et overblik over dine læsevaner!</p>
@@ -142,16 +142,16 @@ export default function Bodies({project}) {
 
                    
                    <h3>En gigantisk udfordring løst med AI</h3>
-                   <p>På Syddansk Universitet har biblioteket 100.000-vis af materialer, som brugerne ikke kan tilgå eller låne, fordi de ikke er registreret. På Det Kgl. Bibliotek overstiger antallet én million. Begge institutioner arbejder på sagen, men selv med</p>
+                   <p>På Syddansk Universitet har biblioteket 100.000-vis af materialer, som brugerne ikke kan tilgå, fordi de ikke er registreret. På Det Kgl. Bibliotek overstiger antallet én million.</p>
                   
-                   <p>En aften sad jeg og så Agatha Christies Poirot, da jeg fik en indskydelse, der skulle vise sig at gøre registreringen 10 gange hurtigere. Jeg skrev hurtigt et program, der kunne høste tekst fra et titelblad (selv med gamle krøllede bogstaver), sortere titel, forfatternavn, udgivelsesår mm. og således lave første udkast til en bibliotekspost på få sekunder. Dagen efter gik jeg til min leder på Syddansk Universitet – og jeg fik lov til at udvikle Katalogica.</p>
+                   <p>En aften sad jeg og så Agatha Christies Poirot, da jeg fik en indskydelse, der skulle vise sig at gøre registreringen 10 gange hurtigere. Jeg skrev hurtigt et program, der kunne høste tekst fra et titelblad (selv med gamle krøllede bogstaver), sortere titel, forfatternavn, udgivelsesår mm. og således danne første udkast til en bibliotekspost på få sekunder. Dagen efter gik jeg til min leder på Syddansk Universitet – og jeg fik lov til at udvikle Katalogica.</p>
                    
                    <p>At læse titelblade for at producere poster automatisk var prøvet mange gange før. Mit producerede som det første inden for den danske biblioteksverden præcise nok resultater til at kunne bruges i det daglige – også når det kom til de krøllede gotiske bogstaver, som er at finde i mange ældre bøger.</p>
                   
                    <h3>Da AI ikke var nok, UX!</h3>
-                   <p>Statens interne IT-løsninger kan ofte få en til at tænke: Der har ikke været en designer inden for en radius på 10 kilometer, da det her blev program blev udviklet. Man spilder meget tid og mange clicks på handlinger, der burde være simple. Det frustrerede mig som nyuddannet at blive mødt af ineffektive organisationer – og det gjorde mig for alvor interesseret i UX-design.</p>
+                   <p>Statens interne IT-løsninger kan ofte få en til at tænke: Der har ikke været en designer inden for en radius på 10 kilometer, da det her blev program blev udviklet. Man spilder meget tid og mange clicks på handlinger, der burde være simple. Det frustrerede mig som nyuddannet at blive mødt af ineffektive systemer – og det gjorde mig for alvor interesseret i UX-design.</p>
                   
-                   <p>Jeg havde forskningstid på biblioteket, og i min fritid blev jeg certificeret designer. Jeg tegnede wireframes og realiserede dem i Figma for at skabe mig en idé om Katalogicas arkitektur. Også min fritid brugte jeg på alverdens småprojekter, som kunne træne mig håndværket, og jeg begyndte for alvor at specialisere mig i at programmere apps.</p>
+                   <p>Jeg havde forskningstid på biblioteket, og i min fritid blev jeg certificeret designer. Jeg tegnede wireframes og realiserede dem i Figma for at skabe mig en idé om Katalogicas arkitektur. Også min fritid brugte jeg på alverdens småprojekter, som kunne træne mig i håndværket, og jeg begyndte for alvor at specialisere mig i at programmere apps.</p>
                   
                    <p>Image processing leverer ikke fejlfri resultater. Katalogica måtte nødvendigvis gøre det så gnidningsfrit som muligt at rette til, hvor AI stadig ikke kunne følge med den menneskelige intelligens.</p>
                   
