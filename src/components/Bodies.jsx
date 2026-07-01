@@ -144,12 +144,12 @@ export default function Bodies({project}) {
                    <h3>En gigantisk udfordring løst med AI</h3>
                    <p>På Syddansk Universitet har biblioteket 100.000-vis af materialer, som brugerne ikke kan tilgå, fordi de ikke er registreret. På Det Kgl. Bibliotek overstiger antallet én million.</p>
                   
-                   <p>En aften sad jeg og så Agatha Christies Poirot, da jeg fik en indskydelse, der skulle vise sig at gøre registreringen 10 gange hurtigere. Jeg skrev hurtigt et program, der kunne høste tekst fra et titelblad (selv med gamle krøllede bogstaver), sortere titel, forfatternavn, udgivelsesår mm. og således danne første udkast til en bibliotekspost på få sekunder. Dagen efter gik jeg til min leder på Syddansk Universitet – og jeg fik lov til at udvikle Katalogica.</p>
+                   <p>En aften sad jeg og så Agatha Christies Poirot, da jeg fik en indskydelse, der skulle vise sig at gøre registreringen 10 gange hurtigere. Mens filmen kørte skrev jeg hurtigt et program, der kunne høste tekst fra et titelblad, sortere titel, forfatternavn, udgivelsesår mm. og således danne første udkast til en bibliotekspost på få sekunder. Dagen efter gik jeg til min leder på Syddansk Universitet – og jeg fik lov til at udvikle Katalogica.</p>
                    
                    <p>At læse titelblade for at producere poster automatisk var prøvet mange gange før. Mit producerede som det første inden for den danske biblioteksverden præcise nok resultater til at kunne bruges i det daglige – også når det kom til de krøllede gotiske bogstaver, som er at finde i mange ældre bøger.</p>
                   
                    <h3>Da AI ikke var nok, UX!</h3>
-                   <p>Statens interne IT-løsninger kan ofte få en til at tænke: Der har ikke været en designer inden for en radius på 10 kilometer, da det her blev program blev udviklet. Man spilder meget tid og mange clicks på handlinger, der burde være simple. Det frustrerede mig som nyuddannet at blive mødt af ineffektive systemer – og det gjorde mig for alvor interesseret i UX-design.</p>
+                   <p>Statens IT-løsninger kan ofte få en til at tænke: Der har ikke været en designer inden for en 10 kilometers radius, da det her blev program blev udviklet. Man spilder meget tid og mange clicks på handlinger, der burde være simple. Det frustrerede mig som nyuddannet at blive mødt af ineffektive systemer – og derfor blev jeg alvorligt interesseret i UX-design.</p>
                   
                    <p>Jeg havde forskningstid på biblioteket, og i min fritid blev jeg certificeret designer. Jeg tegnede wireframes og realiserede dem i Figma for at skabe mig en idé om Katalogicas arkitektur. Også min fritid brugte jeg på alverdens småprojekter, som kunne træne mig i håndværket, og jeg begyndte for alvor at specialisere mig i at programmere apps.</p>
                   
@@ -157,21 +157,22 @@ export default function Bodies({project}) {
                   
                    <p>Jeg beholdt billedet som reference og placerede den fulde tekst i midten, så det var let at kopiere tekst over, hvor noget alligevel var sorteret ukorrekt. Romertal blev automatisk oversat til arabertal, og små mellemprocesser sørgede blandt andet for at forfattere blev stavet med stort.</p>
  
-                   <h3>Udgivelser om Katalogica:</h3>
+                   <h3>Udgivelser om Katalogica</h3>
+                   <p>Læs mere om rejsen i mine udgivelser:</p>
                    <ul>
                        <li>
                            <Link to="https://rauli.cbs.dk/index.php/revy/article/view/7356" target="_blank" rel="noopener noreferrer">
-                               <p>Artikel i REVY: Tidsskrift for Danske Fag-, Forsknings- og Uddannelsesbiblioteker</p>
+                               <span style={{ fontWeight: 'bold' }}>Artikel i REVY: Tidsskrift for Danske Fag-, Forsknings- og Uddannelsesbiblioteker</span>
                            </Link>
                        </li>
                        <li>
                            <Link to="https://www.sdu.dk/da/bibliotek/om-biblioteket/special-collections/nyheder-og-projekter/kunstigintelligensregistrerersaersamlingerne" target="_blank" rel="noopener noreferrer">
-                               <p>Intern artikel fra Syddansk Universitet</p>
+                               <span style={{ fontWeight: 'bold' }}>Intern artikel fra Syddansk Universitet</span>
                            </Link>
                        </li>
                    </ul>
                   
-                   <p>Projektet er desværre lagt på is, efter jeg stoppede på Syddansk Universitet. Der var ingen til at overtage vedligeholdelsen af programmet efter mig.</p>
+                   <p>Projektet er desværre lagt på is, efter jeg sagde op på Syddansk Universitet. Der var ingen til at overtage vedligeholdelsen af programmet efter mig.</p>
                </div>
            );
        default:
