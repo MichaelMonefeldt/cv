@@ -7,17 +7,17 @@ export default function Header({showHeader, onScrollToSection}) {
     const location = useLocation();
 
     return (
-        <div className={`${styles.headerContainer} ${(location.pathname !== '/' || showHeader) ? styles.visible : styles.hidden}`}>
+        <div className={`${styles.headerContainer} ${styles.visible}`}>
             <div className={styles.headerLeft} onClick={() => {
                 navigate('/');
                 onScrollToSection('top')}}>
-                <p className={`${styles.logo} ${(location.pathname !== '/' || showHeader) ? styles.visible : styles.hidden}`} onClick={() => navigate('/')}>Michael Monefeldt</p>
+                <p className={`${styles.logo} ${styles.visible}`} onClick={() => navigate('/')}>MICHAEL MONEFELDT</p>
             </div>
             <div className={styles.headerRight}>
-                <button className={`${styles.headerBtn} ${(location.pathname !== '/' || showHeader) ? styles.visible : styles.hidden}`} onClick={() => navigate('/', { state: { scrollTo: 'projects' } })}>
+                <button className={`${styles.headerBtn} ${styles.visible}`} onClick={() => navigate('/', { state: { scrollTo: 'projects' } })}>
                     Projekter
                 </button>
-                <button className={`${styles.headerBtn} ${(location.pathname !== '/' || showHeader) ? styles.visible : styles.hidden}`} onClick={() => navigate('/', { state: { scrollTo: 'contact' } })}>
+                <button className={`${styles.headerBtn} ${styles.visible}`} onClick={() => navigate('/', { state: { scrollTo: 'contact' } })}>
                     Kontakt
                 </button>
             </div>

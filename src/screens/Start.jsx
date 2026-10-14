@@ -84,158 +84,21 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
     const toolsRef = useRef(null);
     const projectRefs = useRef({});
 
-    const [line, setLine] = useState({
-        top: 0,
-        height: 0,
-        active: false,
-        arrow: true,
-        message: '',
-        side: 'left'
-    });
-
-    useEffect(() => {
-        const scrollEl = scrollRef?.current;
-        if (!scrollEl) return;
-
-        const updateLine = () => {
-            if (!specialRef.current || !contactRef.current) return;
-
-            const containerRect = scrollEl.getBoundingClientRect();
-            const specialRect = specialRef.current.getBoundingClientRect();
-            const toolsRect = contactRef.current.getBoundingClientRect();
-
-            const startY =
-                specialRect.bottom - containerRect.top + scrollEl.scrollTop;
-            
-            const stopY =
-                toolsRect.top -
-                containerRect.top +
-                scrollEl.scrollTop +
-                toolsRect.height -
-                toolsRect.height + 10;
-
-            const dotY = scrollEl.scrollTop + scrollEl.clientHeight / 2;
-            const clampedDotY = Math.min(Math.max(dotY, startY), stopY);
-
-            const dotViewportX = containerRect.left + containerRect.width / 2;
-            const dotViewportY = containerRect.top + scrollEl.clientHeight / 2;
-
-            const projects = [
-                {
-                    key: 'pageturner',
-                    message: 'Jeg gjorde det sjovt og intuitivt at følge med i læsevaner',
-                    color: 'var(--primary)'
-                },
-                {
-                    key: 'wishwell',
-                    message: 'En bryllupsinvitation på web blev til en app for alle',
-                    color: 'var(--secondary)'
-                },
-                {
-                    key: 'dreamtrail',
-                    message: 'En dårlig oplevelse med andre produkter gav inspiration',
-                    color: 'var(--fortiary)'
-                },
-                {
-                    key: 'katalogica',
-                    message: 'Jeg gjorde det ti gange hurtigere at oprette poster til historiske bøger',
-                    color: 'var(--tertiary)'
-                }
-            ];
-
-            let activeProject = null;
-            let shortestDistance = Infinity;
-
-            projects.forEach((project) => {
-                const projectEl = projectRefs.current[project.key];
-                if (!projectEl) return;
-
-                const rect = projectEl.getBoundingClientRect();
-
-                const projectTop = rect.top;
-                const projectBottom = rect.bottom;
-                const projectCenterY = rect.top + rect.height / 2;
-
-                const dotIsInsideProject =
-                    dotViewportY >= projectTop &&
-                    dotViewportY <= projectBottom;
-
-                if (!dotIsInsideProject) return;
-
-                const distance = Math.abs(projectCenterY - dotViewportY);
-
-                if (distance < shortestDistance) {
-                    shortestDistance = distance;
-                    activeProject = {
-                        ...project,
-                        rect
-                    };
-                }
-            });
-
-            let message = '';
-            let side = 'left';
-            let color = '';
-            let messageActive = false;
-
-            if (activeProject) {
-                const projectCenterX =
-                    activeProject.rect.left + activeProject.rect.width / 2;
-
-                const projectProgress =
-                    (dotViewportY - activeProject.rect.top) / activeProject.rect.height;
-
-                const isNearBottom = projectProgress > 0.08;
-                const isNearTop = projectProgress < 1;
-
-                message = activeProject.message;
-                side = projectCenterX > dotViewportX ? 'left' : 'right';
-                color = activeProject.color;
-
-                messageActive = !isNearBottom && !isNearTop;
-            }
-
-            // Arrow will show instead of the dot at the very top of the page. As soon as the user scrolls down even a little bit, it turns into the dot.
-            const arrowShowing = scrollEl.scrollTop < 10;
-
-            setLine({
-                top: startY,
-                height: Math.max(0, clampedDotY - startY),
-                active: dotY >= startY && dotY <= stopY,
-                arrow: arrowShowing,
-                message,
-                side,
-                color
-            });
-        };
-
-        updateLine();
-
-        scrollEl.addEventListener("scroll", updateLine);
-        window.addEventListener("resize", updateLine);
-
-        return () => {
-            scrollEl.removeEventListener("scroll", updateLine);
-            window.removeEventListener("resize", updateLine);
-        };
-    }, [scrollRef]);
-
     return (
         <div id="top" ref={topRef} className={styles.startContainer}>
-            
             <div 
                 className={styles.special}
                 ref={specialRef}
             >
-                <div style={{padding: '40px', height: isLargeScreen ? '100%' : '75%', display: 'flex', alignItems: 'flex-start', justifyContent: 'center'}}>
+                <div style={{padding: '40px', height: isLargeScreen ? '100%' : '75%', display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start'}}>
                     <TypingEffect
                         size={isLargeScreen ? "20vh" : "65px"}
-                        alignment={"center"}
+                        alignment={"flex-start"}
                         sentences={
                             [
-                                'MICHAEL MONEFELDT',
                                 'UX-DESIGNER',
                                 'FULL STACK-UDVIKLER',
+                                'STORYTELLER'
                             ]
                         }
                     />
@@ -247,33 +110,6 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                         className={styles.portrait}
                     />
                 </div>
-            </div>
-
-            <div
-                className={styles.scrollLine}
-                style={{
-                    top: `${line.top}px`,
-                    height: `${line.height}px`
-                }}
-            >
-                <div
-                    className={`${styles.scrollMessage} ${
-                        line.message ? styles.scrollMessageVisible : ''
-                    } ${
-                        line.side === 'left'
-                            ? styles.scrollMessageLeft
-                            : styles.scrollMessageRight
-                    }`}
-                    style={{border: `3px solid ${line.active ? line.color : 'transparent'}`, backgroundColor: line.active ? 'white' : 'transparent', color: line.active ? 'black' : 'transparent'}}
-                >
-                    {line.message}
-                </div>
-
-                <div
-                    className={`${styles.scrollMarker} ${
-                        line.arrow ? styles.scrollArrowDown : styles.scrollDot
-                    }`}
-                />
             </div>
 
             <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 4', gridRow: '5 / span 4', backgroundColor: 'var(--primary)' }}>
@@ -497,7 +333,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                 </div>
             ))} */}
 
-            <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '21 / span 3' }}>
+            <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '21 / span 2' }}>
                 <Footer showHeader={true} />
             </div>
 

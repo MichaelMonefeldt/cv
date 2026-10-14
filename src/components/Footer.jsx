@@ -10,7 +10,7 @@ export default function Footer({showHeader}) {
 
     return (
         <div className={`${styles.footerContainer}`}>
-            <LayeredSVGAnimation />
+            {/* <LayeredSVGAnimation /> */}
             <a href="mailto:michaelmonefeldt@gmail.com" className={styles.emailLink}>
                 michaelmonefeldt@gmail.com
             </a>
@@ -18,7 +18,7 @@ export default function Footer({showHeader}) {
                 <a href="https://github.com/michaelmonefeldt" target="_blank" rel="noopener noreferrer">
                     <FaGithub />
                 </a>
-                <a href="https://www.linkedin.com/in/michael-m-89aa4898/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/michaelmonefeldt/" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin />
                 </a>
                 <a href="https://www.instagram.com/michael_monefeldt/" target="_blank" rel="noopener noreferrer">

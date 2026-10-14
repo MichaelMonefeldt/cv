@@ -106,10 +106,10 @@ function App() {
     <Router>
       <div className="App" ref={appRef}>
         <AppScrollManager scrollRef={appRef} />
-        {/* <Header 
+        <Header 
           showHeader={showHeader}
           onScrollToSection={handleScrollToSection}
-        /> */}
+        />
         <Routes>
           <Route
             path="/"
