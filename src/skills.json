@@ -1,0 +1,80 @@
+{
+    "profil": {
+        "AI": {
+            "description": "Både på Det Kgl. Bibliotek og SDU's Bibliotek har jeg haft ansvar for at udvikle, teste og implementere AI-værktøjer i vores daglige arbejde – på SDU gjorde det registreringen af kulturarvsmateriale ti gange hurtigere. På Det Kgl. Bibliotek har jeg testet implementering af kunstig intelligens i søgningen. Jeg er lykkedes med at skabe prototyper, der omdanner naturligt sprog til SQL-kode for på den måde at lave databaseopslag.",
+            "example_projects": [
+                "Katalogica",
+                "Opmærkning af Det Kgl. Biblioteks nodesamling"
+            ]
+        },
+        "Automatisering": {
+            "description": "På Det Kgl. Bibliotek har jeg haft ansvar for automatisering af opgaver samt transformation og rensning af data på tværs af samlinger.",
+            "example_projects": [
+                "Katalogica",
+                "Opmærkning af Det Kgl. Biblioteks nodesamling"
+            ]
+        },
+        "Digitalisering": {
+            "description": "På SDU digitaliserede og efterbehandlede jeg landkort og fysiske kataloger over bibliotekets særsamlinger. Jeg havde desuden ansvaret for at teste gammelt video- og lydudstyr samt indkøbe nyt for at etablere et rum til digitalisering af bibliotekets jazzsamlinger. Jeg digitaliserede alt fra DVD’er og kassetter til spolebånd.",
+            "example_projects": [
+                "Etablering af lydrum på SDU",
+                "Opmærkning af Det Kgl. Biblioteks nodesamling"
+            ]
+        },
+        "Kommunikation": {
+            "description": "Jeg har erfaring med at kommunikere komplekse tekniske emner til både kolleger og ledelse, samt at formidle projektresultater klart og præcist.",
+            "example_projects": []
+        },
+        "UX": {
+            "description": "Jeg designer brugeroplevelser med fokus på intuitiv navigation, æstetik og funktionalitet. Jeg har erfaring med at skabe wireframes, prototyper og interaktive designløsninger.",
+            "example_projects": []
+        }
+    },
+    "teknologi": {
+        "Azure": {
+            "description": "Microsofts cloud computing platform, der tilbyder en bred vifte af tjenester til hosting, datalagring og AI-integration. Jeg bruger Azure i de fleste af mine projekter.",
+            "example_projects": [
+                "PageTurner",
+                "WishWell",
+                "DreamTrail"
+            ]
+        },
+        "Alma": {
+            "description": "",
+            "example_projects": []
+        },
+        "Docker": {
+            "description": "Jeg udruller applikationer i containere for at sikre, at mine applikationer kører ensartet på tværs af forskellige miljøer.",
+            "example_projects": [
+                "PageTurner",
+                "WishWell",
+                "DreamTrail"
+            ]
+        },
+        "Figma": {
+            "description": "Et designværktøj, der gør det nemt at samarbejde om at skabe brugergrænseflader. Jeg bruger Figma til at designe prototyper af mine projekter, før jeg begynder at kode.",
+            "example_projects": [
+                "PageTurner",
+                "WishWell",
+                "DreamTrail",
+                "Katalogica"
+            ]
+        },
+        "Python": {
+            "description": "",
+            "example_projects": []
+        },
+        "React": {
+            "description": "Et JavaScript/TypeScript-bibliotek, brugt til at programmere flotte og intuitive brugergrænseflader til web og Windows.",
+            "example_projects": [
+                "PageTurner",
+                "WishWell",
+                "DreamTrail"
+            ]
+        },
+        "SQL": {
+            "description": "",
+            "example_projects": []
+        }
+    }
+}

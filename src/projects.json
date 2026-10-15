@@ -66,5 +66,23 @@
         "image": "/projects/dreamtrail_logo.svg",
         "link": "https://dreamtrail.orbitter.app/",
         "color": "var(--fortiary)"
+    },
+    "Nodesamling": {
+        "title": "Opmærkning af Det Kgl. Biblioteks nodesamling",
+        "subheader": "Digitalisering",
+        "technologies": {},
+        "link": false
+    },
+    "Lydrum": {
+        "title": "Etablering af lydrum på SDU",
+        "subheader": "Digitalisering",
+        "technologies": {},
+        "link": false
+    },
+    "Vekselvirkninger": {
+        "title": "Vekselvirkninger",
+        "subheader": "Udstilling",
+        "technologies": {},
+        "link": false
     }
 }

@@ -85,8 +85,8 @@ html {
 }
 
 *::selection {
-  background: black;
-  color: white;
+  background: rgb(122, 122, 122);
+  color: var(--background-color);
 }
 
 ::-webkit-scrollbar {

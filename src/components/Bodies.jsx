@@ -7,7 +7,7 @@ import walkEx from '../assets/images/walkEx.svg';
 import ratingGraph from '../assets/images/ratingGraph.png';
 import styles from '../styles/Project.module.css';
  
-export default function Bodies({project}) {
+export default function Bodies({project, paragraphs = []}) {
    const [isHovered, setIsHovered] = useState(false);
    switch (project) {
        case 'PageTurner':
@@ -176,6 +176,10 @@ export default function Bodies({project}) {
                </div>
            );
        default:
-           return null;
+           return (
+               <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>
+                   {paragraphs.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
+               </div>
+           );
    }
 }

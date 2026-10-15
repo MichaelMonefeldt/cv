@@ -20,6 +20,7 @@ import katalogica_concept from '../assets/images/k_concept_dk.png';
 import fromPhoneToComputer from '../assets/images/fromPhoneToComputer.svg';
 import styles from '../styles/Start.module.css';
 import technologies from '../technologies.json';
+import skills from '../skills.json';
 
 function FadeInOnScroll({ children, className = "", style={}, forwardedRef}) {
     const ref = forwardedRef || useRef(null);
@@ -80,6 +81,33 @@ export default function Start({scrollRef,topRef, contactRef, isLargeScreen}) {
         }
     }, [location.state, scrollRef]);
 
+    const openSkill = (section, name) => {
+        const skill = section[name];
+        setSkillTitle(name);
+        setSkillBody(
+            <div style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
+                <p>{skill.description}</p>
+                {skill.example_projects.length > 0 && (
+                    <>
+                        <p><b>Læs, hvordan jeg har brugt {name} i mine projekter:</b></p>
+                        <div className={styles.exampleProjects}>
+                            {skill.example_projects.map((proj) => (
+                                <p
+                                    key={proj}
+                                    className={styles.exampleProject}
+                                    onClick={() => navigate(`/projekt/${proj}`)}
+                                >
+                                    {proj}
+                                </p>
+                            ))}
+                        </div>
+                    </>
+                )}
+            </div>
+        );
+        setWindowOpen(true);
+    };
+
     const specialRef = useRef(null);
     const projectRefs = useRef({});
 
@@ -128,11 +156,11 @@ export default function Start({scrollRef,topRef, contactRef, isLargeScreen}) {
                     </p>
                 </div>
                 <div className={styles.projectButtons}>
-                    <button>AI</button>
-                    <button>Automatisering</button>
-                    <button>Digitalisering</button>
-                    <button>Kommunikation</button>
-                    <button>UX</button>
+                    <button onClick={() => openSkill(skills.profil, "AI")}>AI</button>
+                    <button onClick={() => openSkill(skills.profil, "Automatisering")}>Automatisering</button>
+                    <button onClick={() => openSkill(skills.profil, "Digitalisering")}>Digitalisering</button>
+                    <button onClick={() => openSkill(skills.profil, "Kommunikation")}>Kommunikation</button>
+                    <button onClick={() => openSkill(skills.profil, "UX")}>UX</button>
                 </div>
             </FadeInOnScroll>
 
@@ -153,11 +181,11 @@ export default function Start({scrollRef,topRef, contactRef, isLargeScreen}) {
                     </p>
                 </div>
                 <div className={styles.projectButtons + " " + styles.black}>
-                    <button>PageTurner [Webapp]</button>
-                    <button>Opmærkning af Det Kgl. Biblioteks nodesamling [Digitalisering]</button>
-                    <button>Etablering af lydrum på SDU [Digitalisering]</button>
-                    <button>Katalogica [Webapp]</button>
-                    <button>Vekselvirkninger [Udstilling]</button>
+                    <button onClick={() => navigate("/projekt/PageTurner")}>PageTurner [Webapp]</button>
+                    <button onClick={() => navigate("/projekt/Nodesamling")}>Opmærkning af Det Kgl. Biblioteks nodesamling [Digitalisering]</button>
+                    <button onClick={() => navigate("/projekt/Lydrum")}>Etablering af lydrum på SDU [Digitalisering]</button>
+                    <button onClick={() => navigate("/projekt/Katalogica")}>Katalogica [Webapp]</button>
+                    <button onClick={() => navigate("/projekt/Vekselvirkninger")}>Vekselvirkninger [Udstilling]</button>
                 </div>
             </FadeInOnScroll>
 
@@ -179,13 +207,13 @@ export default function Start({scrollRef,topRef, contactRef, isLargeScreen}) {
                     </p>
                 </div>
                 <div className={styles.projectButtons}>
-                    <button>Azure</button>
-                    <button>Alma</button>
-                    <button>Docker</button>
-                    <button>Figma</button>
-                    <button>Python</button>
-                    <button>React</button>
-                    <button>SQL</button>
+                    <button onClick={() => openSkill(skills.teknologi, "Azure")}>Azure</button>
+                    <button onClick={() => openSkill(skills.teknologi, "Alma")}>Alma</button>
+                    <button onClick={() => openSkill(skills.teknologi, "Docker")}>Docker</button>
+                    <button onClick={() => openSkill(skills.teknologi, "Figma")}>Figma</button>
+                    <button onClick={() => openSkill(skills.teknologi, "Python")}>Python</button>
+                    <button onClick={() => openSkill(skills.teknologi, "React")}>React</button>
+                    <button onClick={() => openSkill(skills.teknologi, "SQL")}>SQL</button>
                 </div>
             </FadeInOnScroll>
 

@@ -37,7 +37,7 @@ export default function Project({projects, scrollRef}) {
                                 className={styles.projectImage} 
                             />
                         </Link>
-                    ) : (
+                    ) : project.image && (
                         <img 
                             src={project.image} 
                             alt={projectName} 
@@ -46,11 +46,11 @@ export default function Project({projects, scrollRef}) {
                     )}
                 </div>
                 <div className={styles.titleElement} style={{ gridColumn: '2 / span 8', gridRow: '3 / span 2'}}>
-                    <h1>{projectName}</h1>
+                    <h1>{project.title ?? projectName}</h1>
                     <h2>{project.subheader}</h2>
                 </div>
 
-                <Bodies project={projectName} />
+                <Bodies project={projectName} paragraphs={project.paragraphs} />
 
                 {project.link && (
                     <div style={{ gridColumn: '2 / span 8', gridRow: '6', display: 'flex', justifyContent: 'center' }}>

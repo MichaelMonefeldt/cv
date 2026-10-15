@@ -24,10 +24,10 @@
     max-width: 700px;
     height: fit-content;
     padding: 0px;
-    border-radius: 30px;
+    border-radius: 0px;
     background-color: var(--secondary-background-color);
     color: var(--text-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     overflow: hidden;
 }
 
@@ -38,6 +38,11 @@
     background-color: black;
     color: white;
     text-align: left;
+}
+
+.header h3 {
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .closeBtn {
