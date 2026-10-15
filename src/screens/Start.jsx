@@ -21,8 +21,8 @@ import fromPhoneToComputer from '../assets/images/fromPhoneToComputer.svg';
 import styles from '../styles/Start.module.css';
 import technologies from '../technologies.json';
 
-function FadeInOnScroll({ children, className = "", style={}}) {
-    const ref = useRef(null);
+function FadeInOnScroll({ children, className = "", style={}, forwardedRef}) {
+    const ref = forwardedRef || useRef(null);
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -52,7 +52,7 @@ function FadeInOnScroll({ children, className = "", style={}}) {
 }
 
 
-export default function Start({scrollRef,topRef, projectsRef, contactRef, isLargeScreen}) {
+export default function Start({scrollRef,topRef, contactRef, isLargeScreen}) {
     const [windowOpen, setWindowOpen] = useState(false);
     const [skillTitle, setSkillTitle] = useState(<div></div>)
     const [skillBody, setSkillBody] = useState(<div></div>)
@@ -81,7 +81,6 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
     }, [location.state, scrollRef]);
 
     const specialRef = useRef(null);
-    const toolsRef = useRef(null);
     const projectRefs = useRef({});
 
     return (
@@ -90,7 +89,7 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                 className={styles.special}
                 ref={specialRef}
             >
-                <div style={{padding: '40px', height: isLargeScreen ? '100%' : '75%', display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start'}}>
+                <div style={{padding: '70px 40px', height: isLargeScreen ? '100%' : '75%', display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start'}}>
                     <TypingEffect
                         size={isLargeScreen ? "20vh" : "65px"}
                         alignment={"flex-start"}
@@ -105,233 +104,114 @@ export default function Start({scrollRef,topRef, projectsRef, contactRef, isLarg
                 </div>
                 <div className={styles.portraitContainer}>
                     <img 
-                        src="./portrait.jpg"
+                        src="./Portræt.jpg"
                         alt="Michael Monefeldt"
                         className={styles.portrait}
                     />
                 </div>
             </div>
 
-            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 4', gridRow: '5 / span 4', backgroundColor: 'var(--primary)' }}>
+            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`}  style={{ gridColumn: '1 / span 10', gridRow: '5 / span 4', backgroundColor: 'var(--background-color)' }}>
                 <div
+                    id="profile"
                     ref={(el) => {
                         projectRefs.current.pageturner = el;
                     }}
                     className={styles.projectRefAnchor}
                 />
-                <div className={styles.projectHeader}>
-                    <img src="./projects/pageturner_logo.svg" alt="PageTurner"/>
-                    <h3>PageTurner</h3>
+                <div className={styles.projectContent}>
+                    <h2>
+                        Profil
+                    </h2>
+                     <p>
+                        Jeg er generalist med specialviden om UX-design, programmering, AI, digitalisering og kulturarv. Med min brede og blandede profil bygger jeg bro mellem forskellige fagligheder: Jeg kan tale med, når det bliver allermest teknisk, og samtidig kan jeg oversætte komplicerede dataproblemer og -løsninger til ledelse og kolleger uden erfaring med programmering.
+                    </p>
                 </div>
-                <PixelSprite
-                        frames={[
-                            "/books_big/book_01.png",
-                            "/books_big/book_02.png",
-                            "/books_big/book_03.png",
-                            "/books_big/book_04.png",
-                            "/books_big/book_05.png",
-                            "/books_big/book_06.png",
-                            "/books_big/book_07.png",
-                            "/books_big/book_08.png",
-                            "/books_big/book_09.png",
-                            "/books_big/book_10.png",
-                            "/books_big/book_11.png",
-                            "/books_big/book_12.png",
-                            "/books_big/book_13.png",
-                            "/books_big/book_14.png",
-                            "/books_big/book_15.png",
-                        ]}
-                        fps={6}
-                        scale={5}
-                    />
-                <Descriptor
-                    description="Den simpleste måde at holde styr på, hvad du læser"
-                    goTo="/projekt/PageTurner"
-                />
+                <div className={styles.projectButtons}>
+                    <button>AI</button>
+                    <button>Automatisering</button>
+                    <button>Digitalisering</button>
+                    <button>Kommunikation</button>
+                    <button>UX</button>
+                </div>
             </FadeInOnScroll>
 
-            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '2 / span 4', gridRow: '9 / span 4', backgroundColor: 'var(--secondary)' }}>
+            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 10', gridRow: '9 / span 4', backgroundColor: 'var(--text-color)' }}>
                 <div
+                    id="projects"
                     ref={(el) => {
                         projectRefs.current.wishwell = el;
                     }}
                     className={styles.projectRefAnchor}
                 />
-                
-                <div className={styles.projectHeader}>
-                    <img  src="./projects/wishwell_logo.svg" alt="WishWell"/>
-                    <h3>WishWell</h3>
+                <div className={styles.projectContent + " " + styles.black}>
+                    <h2>
+                        Projekter
+                    </h2>
+                    <p>
+                        Her kan du gå på opdagelse i gennemførte og aktuelle projekter. Iblandt finder du både webapps, digitaliseringsindsatser og en udstilling.
+                    </p>
                 </div>
-
-                <img
-                    src={wishlist_screenshot}
-                    alt="WishWell-koncept"
-                    style={{
-                        height: 'auto',
-                        width: '30%',
-                        borderRadius: '20px',
-                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-                        zIndex: 10,
-                    }}
-                />
-
-                <img 
-                    src={starStorm}
-                    alt="WishWell-koncept" 
-                    style={{
-                        position: 'absolute',
-                        height: 'auto',
-                        width: '100%',
-                        objectFit: 'cover',
-                        zIndex: 1,
-                        opacity: 0.1,
-                    }}
-                />
-            
-                <Descriptor
-                    description="En smart måde at dele dine ønsker med dine nærmeste"
-                    goTo="/projekt/WishWell"
-                />
+                <div className={styles.projectButtons + " " + styles.black}>
+                    <button>PageTurner [Webapp]</button>
+                    <button>Opmærkning af Det Kgl. Biblioteks nodesamling [Digitalisering]</button>
+                    <button>Etablering af lydrum på SDU [Digitalisering]</button>
+                    <button>Katalogica [Webapp]</button>
+                    <button>Vekselvirkninger [Udstilling]</button>
+                </div>
             </FadeInOnScroll>
 
-            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '6 / span 4', gridRow: '13 / span 4', backgroundColor: 'var(--fortiary)' }}>
+            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 10', gridRow: '13 / span 4', backgroundColor: 'var(--background-color)' }}>
                 <div
+                    id="technologies"
                     ref={(el) => {
                         projectRefs.current.dreamtrail = el;
                     }}
                     className={styles.projectRefAnchor}
                 />
-                <div className={styles.projectHeader}>
-                    <img src="./projects/dreamtrail_logo.svg" alt="DreamTrail"/>
-                    <h3>DreamTrail</h3>
+                <div className={styles.projectContent}>
+                    <h2>
+                        Teknologier
+                    </h2>
+                    <p>
+                        Jeg anvender et hav af teknologier til at sikre effektive og pålidelige løsninger.
+                        Her finder du en oversigt over de teknologier, jeg har størst erfaring og allermest succes med.
+                    </p>
                 </div>
-                <img
-                    src={walkEx}
-                    alt="DreamTrail-koncept"
-                    style={{
-                        height: 'auto',
-                        width: '80%',  
-                        objectFit: 'cover',
-                    }}
-                />
-                <Descriptor
-                    description="Appen der udfordrer dig til at bevæge dig mere"
-                    goTo="/projekt/DreamTrail"
-                />
+                <div className={styles.projectButtons}>
+                    <button>Azure</button>
+                    <button>Alma</button>
+                    <button>Docker</button>
+                    <button>Figma</button>
+                    <button>Python</button>
+                    <button>React</button>
+                    <button>SQL</button>
+                </div>
             </FadeInOnScroll>
 
-            {/* <div className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 5', gridRow: '11 / span 3', backgroundColor: 'var(--tertiary)' }}>
-                <img className={styles.projectHeader} src={l_logo} alt="Librerate"/>
-                <img 
-                    src={fromPhoneToComputer}
-                    alt="Librerate-koncept" 
-                    style={{
-                        height: 'auto',
-                        width: '70%',
-                        objectFit: 'cover',
-                    }}
-                />
-                <Descriptor
-                    description="Scan et væld af materialer med din mobil og registrer dem hurtigere."
-                    goTo="/projekt/Librerate"
-                />
-            </div> */}
-
-            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '2 / span 4', gridRow: '17 / span 4', backgroundColor: 'var(--tertiary)' }}>                
+            <FadeInOnScroll className={`${styles.startContent} ${styles.project}`} style={{ gridColumn: '1 / span 10', gridRow: '17 / span 4', backgroundColor: 'var(--text-color)' }}>                
                 <div
+                    id="publications"
                     ref={(el) => {
                         projectRefs.current.katalogica = el;
                     }}
                     className={styles.projectRefAnchor}
                 />
-                <div className={styles.projectHeader}>
-                    <img src="./projects/katalogica_logo.svg" alt="Katalogica"/>
-                    <h3 style={{color: 'black'}}>Katalogica</h3>
-                </div>
-
-                <img
-                    src={katalogica_concept}
-                    alt="Katalogica-koncept"
-                    style={{
-                        height: 'auto',
-                        width: '70%',
-                        objectFit: 'cover',
-                    }}
-                />
-                <Descriptor
-                    description="Høster metadata i gamle bøger med hjælp fra AI"
-                    goTo="/projekt/Katalogica"
-                />
-            </FadeInOnScroll>
-
-            {/* {isLargeScreen && (
-                <div 
-                    className={styles.centeredHeader} 
-                    style={{ gridColumn: '2 / span 8', gridRow: '22 / span 1'}}
-                    ref={toolsRef}
-                >
+                <div className={styles.projectContent + " " + styles.black}>
                     <h2>
-                        Dyk ned i mine kompetencer
+                        Ekstra
                     </h2>
+                    <p>
+                        Dyk dybere i min baggrund og mine resultater.
+                    </p>
                 </div>
-            )}
-
-            {isLargeScreen && Object.entries(technologies).map(([category, techs], index) => (
-                <div
-                    key={category}
-                    className={`${isLargeScreen ? styles.startContent : ''} ${styles.goldenHover}`}
-                    style={{ 
-                        gridColumn: `${index === 0 ? '2' : '6'} / span 4`, gridRow: '23 / span 2', 
-                        backgroundColor: 'white',
-                        // index % 2 === 0 ? 'var(--secondary)' : 'var(--primary)' 
-                    }}
-                >
-                    <h2 className={styles.title}>{category}</h2>
-                    <div className={styles.hiddenContent}>
-                        {Object.entries(techs).map(([techKey, tech]) => (
-                            <p key={techKey} onClick={() => {
-                                setSkillTitle(tech.name);
-                                setSkillBody(
-                                    <div style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
-                                        <p>{tech.description}</p>
-                                        <p><b>Brugt i udviklingen af:</b></p>
-                                        <div className={styles.exampleProjects}>
-                                            {tech.example_projects.map((proj, idx) => (
-                                                <p 
-                                                    key={idx} 
-                                                    className={styles.exampleProject}
-                                                    onClick={() => {
-                                                        navigate(`/projekt/${proj}`);
-                                                    }}  
-                                                >
-                                                    {proj}
-                                                </p>
-                                            ))}
-                                        </div>
-                                    </div>
-                                );
-                                setWindowOpen(true);
-                            }}>
-                                <b><span style={{fontSize: '20px', marginRight: '10px'}}>→</span> {tech.name}</b>
-                            </p>
-                        ))}
-                    </div>
-                    {index === 0 && (
-                    <img 
-                        src="/coding.jpg"
-                        alt="Coding"
-                        style={{ position: 'absolute', right: '0px', height: 'auto', width: '50%' }}
-                    />
-                    )}
-                    {index === 1 && (
-                    <img 
-                        src="/ux.jpg"
-                        alt="Design"
-                        style={{ position: 'absolute', right: '0px', height: '120%', width: '50%', objectFit: 'cover', top: '-20px' }}
-                    />
-                    )}
+                <div className={styles.projectButtons + " " + styles.black}>
+                    <button onClick={() => window.open("https://www.linkedin.com/in/michaelmonefeldt/details/experience/", "_blank", "noopener,noreferrer")}>Joberfaring</button>
+                    <button onClick={() => window.open("https://www.linkedin.com/in/michaelmonefeldt/details/education/", "_blank", "noopener,noreferrer")}>Uddannelser</button>
+                    <button onClick={() => window.open("https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fwww.credly.com%2Fbadges%2F74bccea4-3653-418b-ac5a-70feb0c7917a%2Flinked_in_profile&urlhash=nm3z&mt=LVHl2fhMiK48QlrAdViGce7SvjTgkxSy5BNbGcvp3m0wfJaG73609RcCRV1EAe05L7W1_HaUiOZPGoiFGCXUF4w5IvE&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BeX5x3eVuT5WGDWtVaBhe5Q%3D%3D", "_blank", "noopener,noreferrer")}>Google UX Design Professional Certificate</button>
+                    <button onClick={() => window.open("https://www.linkedin.com/in/michaelmonefeldt/details/publications/", "_blank", "noopener,noreferrer")}>Publikationer</button>
                 </div>
-            ))} */}
+            </FadeInOnScroll>
 
             <div id="contact" ref={contactRef} className={`${styles.footerWrapper} `} style={{ gridColumn: '1 / span 10', gridRow: '21 / span 2' }}>
                 <Footer showHeader={true} />

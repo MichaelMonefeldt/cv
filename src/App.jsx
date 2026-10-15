@@ -33,7 +33,7 @@ function AppScrollManager({ scrollRef }) {
       requestAnimationFrame(() => {
         scrollEl.scrollTop = savedScrollTop ? Number(savedScrollTop) : 0;
       });
-    } else {
+    } else if (!location.state?.scrollTo) {
       requestAnimationFrame(() => {
         scrollEl.scrollTop = 0;
       });
@@ -45,6 +45,7 @@ function AppScrollManager({ scrollRef }) {
 
 function App() {
   const [showHeader, setShowHeader] = useState(false);
+  const [language, setLanguage] = useState('da');
   const appRef = useRef(null);
   const topRef = useRef(null);
   const projectsRef = useRef(null);
@@ -109,6 +110,8 @@ function App() {
         <Header 
           showHeader={showHeader}
           onScrollToSection={handleScrollToSection}
+          language={language}
+          setLanguage={setLanguage}
         />
         <Routes>
           <Route

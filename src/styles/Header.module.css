@@ -7,7 +7,7 @@
     width: 100%;
     height: 8vh;
     align-items: center;
-    padding: 20px 43px;
+    padding: 20px 45px;
     margin: 0;
     border-radius: 0px;
     color: white;
@@ -23,7 +23,7 @@
 }
 
 .headerContainer.visible {
-    background-color: var(--fiftiary);
+    background-color: var(--primary);
     color: white;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -78,8 +78,7 @@
     width: 100%;
     height: 100%;
     align-items: center;
-    background-color: var(--fiftiary);
-    margin-top: 30px;
+    background-color: var(--primary);
     color: white;
     gap: 20px;
     padding: 40px;

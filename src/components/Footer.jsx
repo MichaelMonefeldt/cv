@@ -11,6 +11,7 @@ export default function Footer({showHeader}) {
     return (
         <div className={`${styles.footerContainer}`}>
             {/* <LayeredSVGAnimation /> */}
+            <h2>Kontakt</h2>
             <a href="mailto:michaelmonefeldt@gmail.com" className={styles.emailLink}>
                 michaelmonefeldt@gmail.com
             </a>
