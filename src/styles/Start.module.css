@@ -99,8 +99,8 @@
     height: 100%;
     object-fit: cover;
     border-radius: 500px;
-    /* Filter black and white */
-    filter: grayscale(100%) contrast(100%) brightness(120%);
+    /* Black and white, warmed with sepia to match --background-color */
+    filter: grayscale(100%) brightness(120%) contrast(100%) sepia(30%);
 }
 
 .centeredHeader {
@@ -157,14 +157,15 @@
     grid-template-columns: repeat(2, 1fr);
     color: black;
     padding: 0px;
-    height: fit-content;
+    height: 100%;
+    min-height: fit-content;
     gap: 40px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .projectContent {
     padding: 40px;
-    max-width: 800px;
+    /* max-width: 800px; */
     height: 100%;
     text-align: left;
 }
@@ -175,7 +176,7 @@
     justify-content: flex-start;
     align-items: flex-end;
     height: 100%;
-    padding: 110px 40px 40px 40px !important;
+    padding: 110px 40px 80px 40px !important;
     gap: 20px;
 }
 
@@ -188,6 +189,10 @@
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+.projectContent p {
+    font-size: 1.2rem;
 }
 
 .projectButtons button {
@@ -266,17 +271,6 @@
 .exampleProject:hover {
     color: var(--primary);
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.fadeInSection {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .scrollLine {

@@ -62,6 +62,14 @@
     opacity: 0.8;
 }
 
+/* The global `*` rule would give <u> another font */
+.headerBtn u {
+    font-family: inherit;
+    font-weight: inherit;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
 .headerBtn.hidden {
     display: none;
 }

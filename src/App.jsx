@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react'
-import { HashRouter as Router, Routes, Route, Navigate, useLocation} from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate, useLocation, useNavigationType } from 'react-router-dom';
 import Header from './components/Header';
 import Start from './screens/Start';
 import Project from './screens/Project';
@@ -9,36 +9,72 @@ import './assets/fonts/Fonts.module.css';
 import useMediaQuery from './useMediaQuery';
 import projects from './projects.json';
 
+const SCROLL_STORAGE_KEY = 'scroll-positions';
+
+function readScrollPositions() {
+  try {
+    return JSON.parse(sessionStorage.getItem(SCROLL_STORAGE_KEY)) || {};
+  } catch {
+    return {};
+  }
+}
+
+// Sets scrollTop, retrying for a while if the page isn't tall enough yet.
+function restoreScroll(scrollEl, top) {
+  let frame;
+  let tries = 0;
+  const step = () => {
+    scrollEl.scrollTop = top;
+    if (Math.abs(scrollEl.scrollTop - top) > 1 && tries++ < 60) {
+      frame = requestAnimationFrame(step);
+    }
+  };
+  frame = requestAnimationFrame(step);
+  return () => cancelAnimationFrame(frame);
+}
+
+// Remembers the scroll position of every history entry (by location.key):
+// back/forward restores it, new navigations go to `state.scrollTo` or the top.
 function AppScrollManager({ scrollRef }) {
   const location = useLocation();
-  const previousPathRef = useRef(location.pathname);
+  const navigationType = useNavigationType();
+  const positionsRef = useRef(readScrollPositions());
+  const keyRef = useRef(location.key);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const scrollEl = scrollRef.current;
     if (!scrollEl) return;
 
-    const previousPath = previousPathRef.current;
-    const currentPath = location.pathname;
+    const handleScroll = () => {
+      positionsRef.current[keyRef.current] = scrollEl.scrollTop;
+      try {
+        sessionStorage.setItem(SCROLL_STORAGE_KEY, JSON.stringify(positionsRef.current));
+      } catch {
+        // Storage unavailable; positions are still kept in memory.
+      }
+    };
 
-    sessionStorage.setItem(
-      `scroll-position:${previousPath}`,
-      String(scrollEl.scrollTop)
-    );
+    scrollEl.addEventListener('scroll', handleScroll, { passive: true });
+    return () => scrollEl.removeEventListener('scroll', handleScroll);
+  }, [scrollRef]);
 
-    previousPathRef.current = currentPath;
+  useLayoutEffect(() => {
+    const scrollEl = scrollRef.current;
+    keyRef.current = location.key;
+    if (!scrollEl) return;
 
-    if (currentPath === '/' && !location.state?.scrollTo) {
-      const savedScrollTop = sessionStorage.getItem(`scroll-position:${currentPath}`);
-
-      requestAnimationFrame(() => {
-        scrollEl.scrollTop = savedScrollTop ? Number(savedScrollTop) : 0;
-      });
-    } else if (!location.state?.scrollTo) {
-      requestAnimationFrame(() => {
-        scrollEl.scrollTop = 0;
-      });
+    if (navigationType === 'POP') {
+      return restoreScroll(scrollEl, positionsRef.current[location.key] ?? 0);
     }
-  }, [location.pathname, location.state, scrollRef]);
+
+    const sectionId = location.state?.scrollTo;
+    const section = sectionId && document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      scrollEl.scrollTop = 0;
+    }
+  }, [location.key, navigationType, scrollRef]);
 
   return null;
 }

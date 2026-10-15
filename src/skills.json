@@ -22,7 +22,7 @@
             ]
         },
         "Kommunikation": {
-            "description": "Jeg har erfaring med at kommunikere komplekse tekniske emner til både kolleger og ledelse, samt at formidle projektresultater klart og præcist.",
+            "description": "Jeg har erfaring med at kommunikere komplekse tekniske emner til både kolleger og ledelse, samt at formidle projektresultater klart og præcist – også foran store publikummer. Efter min uddannelse i litteraturvidenskab og mange år på forskellige skriveskoler er jeg god til på skrift at omsætte mit budskab til en historie, der griber læseren. Og mit blik for det æstetiske taler sit eget tydelige sprog.",
             "example_projects": []
         },
         "UX": {
@@ -40,8 +40,11 @@
             ]
         },
         "Alma": {
-            "description": "",
-            "example_projects": []
+            "description": "Stor erfaring med katalogisering, udlån og dataudtræk i et moderne bibliotekssystem.",
+            "example_projects": [
+                "Katalogica",
+                "Opmærkning af Det Kgl. Biblioteks nodesamling"
+            ]
         },
         "Docker": {
             "description": "Jeg udruller applikationer i containere for at sikre, at mine applikationer kører ensartet på tværs af forskellige miljøer.",
@@ -61,8 +64,13 @@
             ]
         },
         "Python": {
-            "description": "",
-            "example_projects": []
+            "description": "Python er et alsidigt programmeringssprog, som jeg blandt andet bruger til API-baseret webudvikling, dataanalyse og -rensning, automa-tisering, AI-integration, semantisk linking.",
+            "example_projects": [
+                "PageTurner",
+                "WishWell",
+                "DreamTrail",
+                "Katalogica"
+            ]
         },
         "React": {
             "description": "Et JavaScript/TypeScript-bibliotek, brugt til at programmere flotte og intuitive brugergrænseflader til web og Windows.",
@@ -73,8 +81,13 @@
             ]
         },
         "SQL": {
-            "description": "",
-            "example_projects": []
+            "description": "SQL er et sprog til at håndtere og forespørge databaser. Jeg bruger SQL til at forvalte relationelle databaser.",
+            "example_projects": [
+                "PageTurner",
+                "WishWell",
+                "DreamTrail",
+                "Katalogica"
+            ]
         }
     }
 }

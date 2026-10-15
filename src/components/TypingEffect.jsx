@@ -73,7 +73,7 @@ const TypingEffectLoop = ({ sentences = [], size, alignment, speed }) => {
       </span>
       <span
         className="cursor"
-        style={{ animation: 'blink 1s step-end infinite' }}
+        style={{ animation: 'blink 1s step-end infinite', color: 'var(--background-color)' }}
       >
         |
       </span>
