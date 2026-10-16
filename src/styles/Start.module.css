@@ -206,6 +206,34 @@
     font-family: 'ClashDisplay';
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 0.4em;
+}
+
+/* Override the global `* { text-align: left }` so wrapped lines hug the icon */
+.projectButtons button span {
+    text-align: inherit;
+}
+
+.buttonIcon {
+    flex-shrink: 0;
+    font-size: 1em;
+    margin-top: 2px;
+    transition: transform 0.3s ease;
+}
+
+.projectButtons button:hover .buttonIcon.window {
+    transform: rotate(90deg);
+}
+
+.projectButtons button:hover .buttonIcon.internal {
+    transform: translateX(4px);
+}
+
+.projectButtons button:hover .buttonIcon.external {
+    transform: translate(3px, -3px);
 }
 
 .projectButtons.black button {

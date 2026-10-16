@@ -14,7 +14,7 @@
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-icons": "^5.5.0",
+    "react-icons": "^5.7.0",
     "react-router-dom": "^7.6.0",
     "react-snap": "^1.23.0"
   },
@@ -37,7 +37,10 @@
       "/projekt/PageTurner",
       "/projekt/WishWell",
       "/projekt/DreamTrail",
-      "/projekt/Katalogica"
+      "/projekt/Katalogica",
+      "/projekt/Vekselvirkninger",
+      "/projekt/Nodesamling",
+      "/projekt/Lydrum"
     ],
     "puppeteerArgs": [
       "--no-sandbox",

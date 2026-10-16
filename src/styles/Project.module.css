@@ -29,8 +29,8 @@
 
 .backBtn {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 80px;
+    left: 40px;
     width: 35px;
     height: 35px;
     cursor: pointer;
@@ -77,12 +77,14 @@
 
 .titleElement h1 {
     font-size: 100px;
+    text-align: center;
 }
 
 .titleElement h2 {
     font-size: 30px;
     font-family: 'Quicksand', Courier, monospace;
     text-align: center;
+    max-width: 600px;
 }
 
 .element {
@@ -164,7 +166,8 @@
 .visit p {
     font-size: 20px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 800;
+    color: var(--background-color);
 }
 
 .visit img {

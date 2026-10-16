@@ -40,7 +40,7 @@ const TypeOnScroll = ({ text = '', speed = 25 }) => {
           <span style={{ ...inheritFont, display: 'inline-block', width: 0, animation: 'blink 1s step-end infinite' }}>|</span>
         )}
         {/* Reserve the full width so the button doesn't grow while typing */}
-        <span style={{ ...inheritFont, visibility: 'hidden' }}>{text.slice(length)}</span>
+        <span style={{ ...inheritFont, visibility: 'hidden', textAlign: 'right' }}>{text.slice(length)}</span>
       </span>
 
       <style>

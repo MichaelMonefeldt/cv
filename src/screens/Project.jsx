@@ -55,7 +55,7 @@ export default function Project({projects, scrollRef}) {
                 {project.link && (
                     <div style={{ gridColumn: '2 / span 8', gridRow: '6', display: 'flex', justifyContent: 'center' }}>
                         <div className={styles.visit} style={{ backgroundColor: project.color }}>
-                            <p>Besøg {projectName}</p>  
+                            <p>Besøg og lær mere</p>  
                             <Link to={project.link} target="_blank" rel="noopener noreferrer">
                                 <img
                                     src={project.image}

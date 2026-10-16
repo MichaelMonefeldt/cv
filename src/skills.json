@@ -8,10 +8,10 @@
             ]
         },
         "Automatisering": {
-            "description": "På Det Kgl. Bibliotek har jeg haft ansvar for automatisering af opgaver samt transformation og rensning af data på tværs af samlinger.",
+            "description": "På Det Kgl. Bibliotek har jeg haft ansvar for automatisering af opgaver samt transformation og rensning af data på tværs af samlinger. Mange opgaver på et bibliotek er præget af gentagelse, og jeg kan sætte computeren i spil på nye måder for at arbejdsgangene. På den måde frigør jeg tid til mere værdiskabende opgaver.",
             "example_projects": [
-                "Katalogica",
-                "Opmærkning af Det Kgl. Biblioteks nodesamling"
+                "Opmærkning af Det Kgl. Biblioteks nodesamling",
+                "Katalogica"
             ]
         },
         "Digitalisering": {
@@ -22,17 +22,22 @@
             ]
         },
         "Kommunikation": {
-            "description": "Jeg har erfaring med at kommunikere komplekse tekniske emner til både kolleger og ledelse, samt at formidle projektresultater klart og præcist – også foran store publikummer. Efter min uddannelse i litteraturvidenskab og mange år på forskellige skriveskoler er jeg god til på skrift at omsætte mit budskab til en historie, der griber læseren. Og mit blik for det æstetiske taler sit eget tydelige sprog.",
+            "description": "Jeg har erfaring med at kommunikere komplekse tekniske emner til både kolleger og ledelse, samt at formidle projektresultater klart og præcist – også foran store publikummer. Efter min uddannelse i litteraturvidenskab og mange år på forskellige skriveskoler er jeg god til på skrift at omsætte mit budskab til historier, der griber læseren. Og mit blik for det æstetiske taler sit eget tydelige sprog.",
             "example_projects": []
         },
         "UX": {
-            "description": "Jeg designer brugeroplevelser med fokus på intuitiv navigation, æstetik og funktionalitet. Jeg har erfaring med at skabe wireframes, prototyper og interaktive designløsninger.",
-            "example_projects": []
+            "description": "Jeg designer brugeroplevelser med fokus på intuitiv navigation, æstetik og funktionalitet. Jeg har erfaring med at skabe wireframes, prototyper og interaktive designløsninger. Som udvikler har jeg et godt øje for detaljerne i brugergrænseflader, og jeg ved, hvad der kan lade sig gøre teknisk. Når jeg har direkte brugerkontakt, møder jeg dem med en empati og forståelse for deres behov.",
+            "example_projects": [
+                "Katalogica",
+                "PageTurner",
+                "WishWell",
+                "DreamTrail"
+            ]
         }
     },
     "teknologi": {
         "Azure": {
-            "description": "Microsofts cloud computing platform, der tilbyder en bred vifte af tjenester til hosting, datalagring og AI-integration. Jeg bruger Azure i de fleste af mine projekter.",
+            "description": "Microsofts cloud computing platform, der tilbyder en bred vifte af tjenester til hosting, datalagring og AI-integration. Jeg bruger Azure i de fleste af mine projekter. Jeg udruller kontinuerligt til Linux-miljøer ved hjælp af Docker og Git.",
             "example_projects": [
                 "PageTurner",
                 "WishWell",
@@ -40,7 +45,7 @@
             ]
         },
         "Alma": {
-            "description": "Stor erfaring med katalogisering, udlån og dataudtræk i et moderne bibliotekssystem.",
+            "description": "Jeg har stor erfaring med katalogisering, søgning, brugerhåndtering, udlån og dataudtræk i et moderne bibliotekssystem.",
             "example_projects": [
                 "Katalogica",
                 "Opmærkning af Det Kgl. Biblioteks nodesamling"
@@ -55,7 +60,7 @@
             ]
         },
         "Figma": {
-            "description": "Et designværktøj, der gør det nemt at samarbejde om at skabe brugergrænseflader. Jeg bruger Figma til at designe prototyper af mine projekter, før jeg begynder at kode.",
+            "description": "Et designværktøj, der gør det nemt at samarbejde om at skabe brugergrænseflader. Jeg bruger Figma til at designe interaktive prototyper af mine projekter, før jeg begynder at kode.",
             "example_projects": [
                 "PageTurner",
                 "WishWell",
@@ -64,7 +69,7 @@
             ]
         },
         "Python": {
-            "description": "Python er et alsidigt programmeringssprog, som jeg blandt andet bruger til API-baseret webudvikling, dataanalyse og -rensning, automa-tisering, AI-integration, semantisk linking.",
+            "description": "Python er et alsidigt programmeringssprog, som jeg bruger til API-baseret webudvikling, dataanalyse og -rensning, automatisering, AI-integration, semantisk linking m.m.",
             "example_projects": [
                 "PageTurner",
                 "WishWell",

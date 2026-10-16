@@ -1,7 +1,6 @@
 {
     "Librerate": {
         "subheader": "Scan et væld af materialer med din mobil og registrer dem hurtigere",
-        "paragraph1": "På de danske forskningsbiblioteker findes der millioner af bøger, tidsskrifter m.m. som aldrig er blevet registreret. Og som ansat på Syddansk Universitetsbibliotek pinte det mig, at brugerne ikke kunne søge 25% af vores samlinger frem.",
         "technologies": {
             "Frontend": ["React JS"],
             "Backend": ["Flask"],
@@ -15,8 +14,6 @@
     },
     "Katalogica": {
         "subheader": "AI-drevet webapplikation der høster metadata i bøger",
-        "paragraph1": "På de danske forskningsbiblioteker findes der millioner af bøger, tidsskrifter m.m. som aldrig er blevet registreret. Som ansat på Syddansk Universitetsbibliotek pinte det mig, at brugerne ikke kunne søge 25% af vores samlinger frem, og derfor gik jeg et stykke tid og fiflede med forskellige digitale løsninger, som ikke bar frugt.",
-        "paragraph2": "En aften i december 2023 sad min kone og jeg og så første afsnit Hercule Poirot, da jeg fik en indskydelse, der skulle vise sig blive den bedste løsning til dato. Mange steder var det blevet forsøgt at lave en AI-drevet webapplikation, der kunne læse metadata i bøger, men uden held. Den stødte udvikling i vores fælles viden om AI gjorde det dog muligt at lave en velfungerende løsning på et par uger.",
         "technologies": {
             "Frontend": ["Vanilla JS"],
             "Backend": ["Flask"],
@@ -68,16 +65,20 @@
         "color": "var(--fortiary)"
     },
     "Nodesamling": {
-        "title": "Opmærkning af Det Kgl. Biblioteks nodesamling",
-        "subheader": "Digitalisering",
+        "title": "Opmærkning af Nodesamlingen",
+        "subheader": "Præget af gentagelse – løst med programmering",
         "technologies": {},
-        "link": false
+        "link": "https://www.kb.dk/find-materiale/samlinger/nodesamlingen",
+        "image": "/projects/kgl.jpeg",
+        "color": "var(--primary)"
     },
     "Lydrum": {
         "title": "Etablering af lydrum på SDU",
-        "subheader": "Digitalisering",
+        "subheader": "Jeg reddede jazzsamlingerne på SDU's Bibliotek",
         "technologies": {},
-        "link": false
+        "link": "https://www.sdu.dk/da/bibliotek/om-biblioteket/special-collections/nyheder-og-projekter/jazzsamlingerne-paa-sdu",
+        "image": "/projects/sdu.jpeg",
+        "color": "var(--primary)"
     },
     "Vekselvirkninger": {
         "title": "Vekselvirkninger",

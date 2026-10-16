@@ -64,7 +64,6 @@ export default function Bodies({project, paragraphs = []}) {
                        <h3>PageTurner byder på mange ekstra goder:</h3>
                        <ul>
                            <li>Figurer og grafer vækker dine læsevaner til live. Med PageTurner er det altid let at se, hvor mange sider og hvilke genrer du læser, hvor mange stjerner du giver i gennemsnit, m.m.</li>
-                       <img src={ratingGraph} alt="Rating graph" className={styles.displayImage} />
                            <li>Scan ISBN-koder! På den måde slipper du for at taste, og du sikrer dig, at eksemplaret i appen er akkurat det samme, som du holder i hånden.</li>
                            <li>Du kan vælge op til tre yndlingsbøger og udstille dem på din profil.</li>
                        </ul>
@@ -139,7 +138,6 @@ export default function Bodies({project, paragraphs = []}) {
            return (
                <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>
                     <img className={styles.displayImage} src="/projects/k_concept_dk.png" alt="Katalogica" />
-
                    
                    <h3>En gigantisk udfordring løst med AI</h3>
                    <p>På Syddansk Universitet har biblioteket 100.000-vis af materialer, som brugerne ikke kan tilgå, fordi de ikke er registreret. På Det Kgl. Bibliotek overstiger antallet én million.</p>
@@ -173,6 +171,44 @@ export default function Bodies({project, paragraphs = []}) {
                    </ul>
                   
                    <p>Projektet er desværre lagt på is, efter jeg sagde op på Syddansk Universitet. Der var ingen til at overtage vedligeholdelsen af programmet efter mig.</p>
+               </div>
+           );
+        case 'Nodesamling':
+           return (
+               <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>
+                  
+                   <p>
+                        Det Kgl. Bibliotek ejer gigantiske nodersamlinger, som er af stor betydning for musikforskning og bevarelsen af dansk musikkultur. 
+                        Fra 2025 og frem har jeg været ansat til at opmærke, registrere og pleje samlingerne for at sikre deres bevarelse og tilgængelighed for fremtidens brugere.
+                   </p>
+                  
+                   <p>I dag kan hvem som helst oprette ønskelister til alle former begivenheder for at være sikre på, at de får akkurat det, som de har ønsket dig. Gavegiverne kan reservere ønske, og på den måde undgår du dubletter.</p>
+                  
+                   <p>Nye gode tiltag er lagt oven i alt det, der fungerer bedst konkurrende apps:</p>
+               </div>
+           );
+        case 'Lydrum':
+            return (
+                <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>                   
+                    <p>
+                        Blandt særsamlingerne på SDU's Bibliotek finder man jazzsamlingerne: unikke lydoptagelser, fotos, private videooptagelser og objekter fra nogle af jazzens største navne.
+                    </p>
+                    <p>
+                        Da jeg ankom til biblioteket var det dog ikke muligt afspille en pind af det. Gammelt optagerudstyr stod presset sammen bagerst i en kælder, og alt fra kassette- til spolebånd stod og samlede støv. Som årene gik var materialerne dømt til at gå i forfald.
+                    </p>
+                    <img className={styles.displayImage} src="/projects/udstyr_1.jpg" alt="Katalogica" />
+
+                    <h3>Nyt liv til samlingen</h3>
+                    <p>
+                        Nede i kælderen fik jeg støvet de gamle optagere af. Jeg koblede dem til et par højtalere, og snart rungerede jazzen mellem væggene i kældrene på universitetet.
+                    </p>
+                    <img className={styles.displayImage} src="/projects/udstyr_2.jpg" alt="Katalogica" />
+                    <p>
+                        Ikke alle maskinerne havde holdt til den hårde behandling. Men jeg kunne spille spolebånd, grammofonplader fra forskellige aldre og de knap så kendte U-matic bånd. Afspillere til DVD, CD, kassette, videobånd måtte jeg indkøbe på ny.
+                    </p>
+                    <p>
+                        Snart havde jeg etableret et helt lydstudie, som gjorde det muligt at hive hvilket som helst medie ned fra hylderne og afspille det. Og endnu vigtigere: Jeg fik startet indsatsen for at digitalisere de mange unikke materialer. Tænk, hvis de havde fået lov til at ligge hen, til de var helt umulige at redde!
+                    </p>
                </div>
            );
        default:
