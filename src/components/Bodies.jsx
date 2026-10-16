@@ -174,19 +174,29 @@ export default function Bodies({project, paragraphs = []}) {
                </div>
            );
         case 'Nodesamling':
-           return (
-               <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>
+            return (
+                <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>
                   
-                   <p>
-                        Det Kgl. Bibliotek ejer gigantiske nodersamlinger, som er af stor betydning for musikforskning og bevarelsen af dansk musikkultur. 
-                        Fra 2025 og frem har jeg været ansat til at opmærke, registrere og pleje samlingerne for at sikre deres bevarelse og tilgængelighed for fremtidens brugere.
-                   </p>
-                  
-                   <p>I dag kan hvem som helst oprette ønskelister til alle former begivenheder for at være sikre på, at de får akkurat det, som de har ønsket dig. Gavegiverne kan reservere ønske, og på den måde undgår du dubletter.</p>
-                  
-                   <p>Nye gode tiltag er lagt oven i alt det, der fungerer bedst konkurrende apps:</p>
-               </div>
-           );
+                    <p>
+                        Det Kgl. Bibliotek ejer gigantiske nodersamlinger, af stor betydning for musikforskning og bevarelsen af dansk musikkultur. Fra 2025 og frem har jeg været ansat til at opmærke, registrere og pleje samlingerne for at sikre deres bevarelse og tilgængelighed for fremtidens brugere. 
+                    </p>
+                    <img className={styles.displayImage} src="/projects/noder_1.jpg" alt="Noder" />
+                    <p>
+                        Meget af arbejdet er manuelt; jeg skal have hver eneste node mellem hænderne undervejs i projektet. Men med hjælp fra Excel og Python har jeg sparet os for mange måneders ekstraarbejde.                    
+                    </p>
+                    <h3>Automatisering</h3>
+                    <p>
+                        Biblioteksystemet Alma, som Det Kgl. Bibliotek bruger, er en UX-designers værste mareridt: Nogle gange skulle man tro, at systemet var bygget til at gøre det så svært som muligt for en bibliotekar at lave sit arbejde. Ikke nok med at systemet ofte bryder ned, kræver det mange, mange klik og lange ventetider at gennemføre simple ændringer.
+                    </p>
+                    <p>
+                        Derfor har jeg trukket en stor del af vores processer ud af biblioteksystemet og ind i Excel. Her har det været lettere at holde styr på hele samlinger ad gangen, og jeg har kunnet transformere på tværs ved hjælp af makroer og formler. Med Python har jeg derpå renset alle data og kørt ændringerne ind i systemet.
+                    </p>
+                    <p>
+                        Når vi har med fysiske samlinger at gøre, kan man komme til at tro, at alt må gøres manuelt. Men så snart store datasæt er involveret, er det værd at overveje, om ikke computeren skal bringes i spil. Hvis først jeg får fingrene ned i arbejdet, er jeg hurtig til at få øje på, hvor vi kan optimere.
+                    </p>
+                    <img className={styles.displayImage} src="/projects/noder_2.jpg" alt="Noder" />
+                </div>
+            );
         case 'Lydrum':
             return (
                 <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>                   
@@ -196,19 +206,60 @@ export default function Bodies({project, paragraphs = []}) {
                     <p>
                         Da jeg ankom til biblioteket var det dog ikke muligt afspille en pind af det. Gammelt optagerudstyr stod presset sammen bagerst i en kælder, og alt fra kassette- til spolebånd stod og samlede støv. Som årene gik var materialerne dømt til at gå i forfald.
                     </p>
-                    <img className={styles.displayImage} src="/projects/udstyr_1.jpg" alt="Katalogica" />
+                    <img className={styles.displayImage} src="/projects/udstyr_1.jpg" alt="Musikudstyr" />
 
                     <h3>Nyt liv til samlingen</h3>
                     <p>
                         Nede i kælderen fik jeg støvet de gamle optagere af. Jeg koblede dem til et par højtalere, og snart rungerede jazzen mellem væggene i kældrene på universitetet.
                     </p>
-                    <img className={styles.displayImage} src="/projects/udstyr_2.jpg" alt="Katalogica" />
+                    <img className={styles.displayImage} src="/projects/udstyr_2.jpg" alt="Musikudstyr" />
                     <p>
                         Ikke alle maskinerne havde holdt til den hårde behandling. Men jeg kunne spille spolebånd, grammofonplader fra forskellige aldre og de knap så kendte U-matic bånd. Afspillere til DVD, CD, kassette, videobånd måtte jeg indkøbe på ny.
                     </p>
                     <p>
                         Snart havde jeg etableret et helt lydstudie, som gjorde det muligt at hive hvilket som helst medie ned fra hylderne og afspille det. Og endnu vigtigere: Jeg fik startet indsatsen for at digitalisere de mange unikke materialer. Tænk, hvis de havde fået lov til at ligge hen, til de var helt umulige at redde!
                     </p>
+               </div>
+           );
+        case 'Vekselvirkninger':
+            return (
+                <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>   
+
+                    <p>
+                        I 2023 var jeg i praktik på Syddansk Universitetsbibliotek for at lave en udstilling. Udstillingen, kaldet "Vekselvirkninger", fokuserede på litteraturen under den naturvidenskabelige revolution og hvordan videnskabelige opdagelser blev formidlet gennem fiktion. Jeg baserede udstillingen på mit speciale i litteraturvidenskab om samme emne.
+                    </p>
+
+                    <img className={styles.displayImage} src="/projects/udstilling_1.jpg" alt="Hele udstillingen" />
+
+                    <h3>Videnskabens litteraturer</h3>           
+                    <p>
+                        Skellet mellem fiktion og viden er ikke altid blevet opfattet så skarpt som i dag. Under den natur-videnskabelige revolution i 1600-tallets Europa benyttede naturfilosoffer og forfattere den skønne litteratur til at skabe stærke sanseindtryk, så de mere abstrakte idéer blev levendegjort for deres publikummer. 
+                        For renæssancemennesket stod Jorden tilsyneladende stille, og intet instrument gjorde det muligt at beskue verdenen udefra – bortset fra fiktionen. I fortællingen Les états et empires du Soleil (1662) af libertineren Cyrano de Bergerac befinder fortælleren sig i Solens himmel-strøg, da han skuer tilbage på Jorden og opdager, at den ikke blot drejer om sig selv, men at den også bevæger sig i en bane om Solen. Hvad der var umuligt for mange at forestille sig, gjorde litte-raturen således begribeligt.
+                    </p>
+
+                    <img className={styles.displayImage} src="/projects/udstilling_6.jpg" alt="Montre 1" />
+
+                    <p>
+                        Under den naturvidenskabelige revolution blev videnskabelige opdagelser pakket ind i fiktive rammefortællinger; skønne beskrivelser, meta-forer og allegorier blev udnyttet for at gøre natur-filosofiske afhandlinger lettere at sluge. Og sidst men ikke mindst greb videnskabsfolk til ren fik-tion, og brugte den som en metode til at sprede deres idéer.
+                    </p>
+
+                    <img className={styles.displayImage} src="/projects/udstilling_5.jpg" alt="Montre 2" />
+
+                    <p>
+                        Lige så vel som litteraturen kunne bruges opbyggende, kunne den bruges til at kritisere samtidens videnskabelige nybrud. Når der skete for hurtigere fremskridt, eller når det ikke var tydeligt, hvordan forskernernes arbejde skulle forbedre samfundet, gav det anledning til modstand. Blandt andet i The Blazing World (1666) af Margaret Cavendish (se billedet til højre) stilles der spørgsmål til, om det giver mening at spilde tid på optiske forstørrelser, når man kan fremme samfundet bedre ved at bruge sine kræfter andetsteds. Cavendish forkaster både tele- og mikroskopet med det argument, at de alligevel kun vildleder forsk-ernes sanser.
+                    </p>
+                    <img className={styles.displayImage} src="/projects/udstilling_4.jpg" alt="Montre 3" />
+                    <p>
+                        Ofte er det let at regne ud, hvilke teoretikere fiktionsforfatterne drager inspiration fra, når de går i dialog med videnskaberne. Hos Cyrano er det bl.a. rationalisten René Descartes og astronomen Pierre Gassendi. Imens stikker Cavendish til forskeren Robert Hooke, som blev kendt for sine opdagelser gennem mikroskopet. Da danske Ludvig Holberg skriver en satirisk udlægning af viden-skaberne i Niels Klims underjordiske rejse (1741) er den dog ikke møntet på nogen specifikke personer men er i stedet et mere generelt angreb på samtidige tendenser i den nordiske ånd.
+                    </p>
+                    <h3>Billeder fra udstillingen</h3>
+                    <img className={styles.displayImage} src="/projects/bøger_1.jpg" alt="Bog, eksempel 1" />
+                    <img className={styles.displayImage} src="/projects/bøger_2.jpg" alt="Bog, eksempel 2" />
+                    <img className={styles.displayImage} src="/projects/bøger_3.jpg" alt="Bog, eksempel 3" />
+                    <img className={styles.displayImage} src="/projects/bøger_4.jpg" alt="Bog, eksempel 4" />
+                    <img className={styles.displayImage} src="/projects/bøger_5.jpg" alt="Bog, eksempel 5" />
+                    <img className={styles.displayImage} src="/projects/bøger_6.jpg" alt="Bog, eksempel 6" />
+
                </div>
            );
        default:

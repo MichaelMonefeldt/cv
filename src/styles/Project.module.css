@@ -29,7 +29,7 @@
 
 .backBtn {
     position: fixed;
-    top: 80px;
+    top: 10%;
     left: 40px;
     width: 35px;
     height: 35px;
@@ -146,6 +146,7 @@
     height: auto;
     width: 100%;
     max-width: 600px;
+    border-radius: 20px;
     object-fit: cover;
     cursor: pointer;    
 }

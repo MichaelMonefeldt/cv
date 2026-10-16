@@ -82,8 +82,7 @@
     },
     "Vekselvirkninger": {
         "title": "Vekselvirkninger",
-        "subheader": "Udstilling",
-        "technologies": {},
-        "link": false
+        "subheader": "Træd ind i udstillingen Vekselvirkninger – om litteraturen under den naturvidenskabelige revolution",
+        "color": "var(--primary)"
     }
 }
