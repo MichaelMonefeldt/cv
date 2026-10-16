@@ -58,7 +58,7 @@ export default function Start({scrollRef,topRef, contactRef, isLargeScreen}) {
                 <p>{skill.description}</p>
                 {skill.example_projects.length > 0 && (
                     <>
-                        <p><b>Læs, hvordan jeg har brugt {name} i mine projekter:</b></p>
+                        <p><b>Dyk ned i projekter, hvor jeg har brugt {name}:</b></p>
                         <div className={styles.exampleProjects}>
                             {skill.example_projects.map((proj) => (
                                 <p
@@ -129,7 +129,7 @@ export default function Start({scrollRef,topRef, contactRef, isLargeScreen}) {
                     <ProjectButton type="window" onClick={() => openSkill(skills.profil, "Automatisering")} text="Automatisering" />
                     <ProjectButton type="window" onClick={() => openSkill(skills.profil, "Digitalisering")} text="Digitalisering" />
                     <ProjectButton type="window" onClick={() => openSkill(skills.profil, "Kommunikation")} text="Kommunikation" />
-                    <ProjectButton type="window" onClick={() => openSkill(skills.profil, "UX")} text="UX" />
+                    <ProjectButton type="window" onClick={() => openSkill(skills.profil, "UX-design")} text="UX" />
                 </div>
             </div>
 

@@ -73,15 +73,6 @@ export default function Bodies({project, paragraphs = []}) {
        case 'WishWell':
            return (
                <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>
-                   <div className={styles.moovingBackground}>
-                       <img
-                           src={
-                               starStanding
-                           }
-                           alt="Wish Upon a Star"
-                           className={styles.starImage}
-                       />
-                   </div>
                   
                    <p>I 2025 programmerede jeg en hjemmeside som invitation til mit bryllup. Her kunne gæsterne tilmelde sig og reservere ønsker. WishWell er bygget oven på min oprindelige kode.</p>
                   
@@ -233,24 +224,24 @@ export default function Bodies({project, paragraphs = []}) {
 
                     <h3>Videnskabens litteraturer</h3>           
                     <p>
-                        Skellet mellem fiktion og viden er ikke altid blevet opfattet så skarpt som i dag. Under den natur-videnskabelige revolution i 1600-tallets Europa benyttede naturfilosoffer og forfattere den skønne litteratur til at skabe stærke sanseindtryk, så de mere abstrakte idéer blev levendegjort for deres publikummer. 
-                        For renæssancemennesket stod Jorden tilsyneladende stille, og intet instrument gjorde det muligt at beskue verdenen udefra – bortset fra fiktionen. I fortællingen Les états et empires du Soleil (1662) af libertineren Cyrano de Bergerac befinder fortælleren sig i Solens himmel-strøg, da han skuer tilbage på Jorden og opdager, at den ikke blot drejer om sig selv, men at den også bevæger sig i en bane om Solen. Hvad der var umuligt for mange at forestille sig, gjorde litte-raturen således begribeligt.
+                        Skellet mellem fiktion og viden er ikke altid blevet opfattet så skarpt som i dag. Under den naturvidenskabelige revolution i 1600-tallets Europa benyttede naturfilosoffer og forfattere den skønne litteratur til at skabe stærke sanseindtryk, så de mere abstrakte idéer blev levendegjort for deres publikummer. 
+                        For renæssancemennesket stod Jorden tilsyneladende stille, og intet instrument gjorde det muligt at beskue verdenen udefra – bortset fra fiktionen. I fortællingen Les états et empires du Soleil (1662) af libertineren Cyrano de Bergerac befinder fortælleren sig i Solens himmel-strøg, da han skuer tilbage på Jorden og opdager, at den ikke blot drejer om sig selv, men at den også bevæger sig i en bane om Solen. Hvad der var umuligt for mange at forestille sig, gjorde litteraturen således begribeligt.
                     </p>
 
                     <img className={styles.displayImage} src="/projects/udstilling_6.jpg" alt="Montre 1" />
 
                     <p>
-                        Under den naturvidenskabelige revolution blev videnskabelige opdagelser pakket ind i fiktive rammefortællinger; skønne beskrivelser, meta-forer og allegorier blev udnyttet for at gøre natur-filosofiske afhandlinger lettere at sluge. Og sidst men ikke mindst greb videnskabsfolk til ren fik-tion, og brugte den som en metode til at sprede deres idéer.
+                        Under den naturvidenskabelige revolution blev videnskabelige opdagelser pakket ind i fiktive rammefortællinger; skønne beskrivelser, metaforer og allegorier blev udnyttet for at gøre naturfilosofiske afhandlinger lettere at sluge. Og sidst men ikke mindst greb videnskabsfolk til ren fiktion, og brugte den som en metode til at sprede deres idéer.
                     </p>
 
                     <img className={styles.displayImage} src="/projects/udstilling_5.jpg" alt="Montre 2" />
 
                     <p>
-                        Lige så vel som litteraturen kunne bruges opbyggende, kunne den bruges til at kritisere samtidens videnskabelige nybrud. Når der skete for hurtigere fremskridt, eller når det ikke var tydeligt, hvordan forskernernes arbejde skulle forbedre samfundet, gav det anledning til modstand. Blandt andet i The Blazing World (1666) af Margaret Cavendish (se billedet til højre) stilles der spørgsmål til, om det giver mening at spilde tid på optiske forstørrelser, når man kan fremme samfundet bedre ved at bruge sine kræfter andetsteds. Cavendish forkaster både tele- og mikroskopet med det argument, at de alligevel kun vildleder forsk-ernes sanser.
+                        Lige så vel som litteraturen kunne bruges opbyggende, kunne den bruges til at kritisere samtidens videnskabelige nybrud. Når der skete for hurtigere fremskridt, eller når det ikke var tydeligt, hvordan forskernernes arbejde skulle forbedre samfundet, gav det anledning til modstand. Blandt andet i The Blazing World (1666) af Margaret Cavendish stilles der spørgsmål til, om det giver mening at spilde tid på optiske forstørrelser, når man kan fremme samfundet bedre ved at bruge sine kræfter andetsteds. Cavendish forkaster både tele- og mikroskopet med det argument, at de alligevel kun vildleder forskernes sanser.
                     </p>
                     <img className={styles.displayImage} src="/projects/udstilling_4.jpg" alt="Montre 3" />
                     <p>
-                        Ofte er det let at regne ud, hvilke teoretikere fiktionsforfatterne drager inspiration fra, når de går i dialog med videnskaberne. Hos Cyrano er det bl.a. rationalisten René Descartes og astronomen Pierre Gassendi. Imens stikker Cavendish til forskeren Robert Hooke, som blev kendt for sine opdagelser gennem mikroskopet. Da danske Ludvig Holberg skriver en satirisk udlægning af viden-skaberne i Niels Klims underjordiske rejse (1741) er den dog ikke møntet på nogen specifikke personer men er i stedet et mere generelt angreb på samtidige tendenser i den nordiske ånd.
+                        Ofte er det let at regne ud, hvilke teoretikere fiktionsforfatterne drager inspiration fra, når de går i dialog med videnskaberne. Hos Cyrano er det bl.a. rationalisten René Descartes og astronomen Pierre Gassendi. Imens stikker Cavendish til forskeren Robert Hooke, som blev kendt for sine opdagelser gennem mikroskopet. Da danske Ludvig Holberg skriver en satirisk udlægning af videnskaberne i Niels Klims underjordiske rejse (1741) er den dog ikke møntet på nogen specifikke personer men er i stedet et mere generelt angreb på samtidige tendenser i den nordiske ånd.
                     </p>
                     <h3>Billeder fra udstillingen</h3>
                     <img className={styles.displayImage} src="/projects/bøger_1.jpg" alt="Bog, eksempel 1" />

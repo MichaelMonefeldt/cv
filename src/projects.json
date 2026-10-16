@@ -48,7 +48,6 @@
             "Deployment": ["Docker"]
         },
         "image": "/projects/wishwell_logo.svg",
-        "link": "https://wishwell.orbitter.app/",
         "color": "var(--secondary)"
     },
     "DreamTrail": {
@@ -61,7 +60,6 @@
             "Deployment": ["Docker"]
         },
         "image": "/projects/dreamtrail_logo.svg",
-        "link": "https://dreamtrail.orbitter.app/",
         "color": "var(--fortiary)"
     },
     "Nodesamling": {
