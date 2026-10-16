@@ -101,7 +101,10 @@ html {
 }
 
 @media screen and (max-width: 800px) {
-  
+  .App {
+    height: 100dvh;
+  }
+
   ::-webkit-scrollbar {
     display: none;
   }

@@ -60,6 +60,33 @@
     overflow-y: auto;
 }
 
+@media (max-width: 799.98px) {
+    .container {
+        padding: 12px;
+    }
+
+    .floatingWindow {
+        max-height: calc(100dvh - 24px);
+    }
+
+    .header {
+        padding: 10px 20px;
+    }
+
+    .header h3 {
+        font-size: 22px;
+    }
+
+    .closeBtn {
+        padding: 5px 0 5px 15px;
+    }
+
+    .content {
+        padding: 20px;
+        min-height: 0;
+    }
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;

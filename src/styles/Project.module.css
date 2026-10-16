@@ -193,24 +193,43 @@
     }
 
     .imageContainer {
-        height: 300px;
+        height: 260px;
+    }
+
+    .backBtn {
+        top: 72px;
+        left: 14px;
+        width: 40px;
+        height: 40px;
+        padding: 6px;
+        border-radius: 50%;
+        background-color: var(--background-color);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        z-index: 10;
     }
 
     .projectImage {
         transform: translateY(0);
     }
 
+    .projectImage:hover {
+        transform: scale(1.05);
+    }
+
     .titleElement {
         border-radius: 0px;
-        padding: 20px;
+        padding: 40px 20px 20px 20px;
+        gap: 12px;
     }
 
     .titleElement h1 {
-        font-size: 50px;
+        font-size: min(50px, 10vw);
+        max-width: 100%;
+        overflow-wrap: anywhere;
     }
 
     .titleElement h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .element {
@@ -219,14 +238,26 @@
 
     .element h3 {
         font-size: 18px;
+        margin-top: 40px;
     }
 
     .element p, .element ul, .element li {
         font-size: 16px;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    .displayImage {
+        margin: 24px 0;
+        border-radius: 12px;
     }
 
     .visit {
         border-radius: 0;
+    }
+
+    .buttonContainer {
+        padding: 30px 20px;
     }
 }
 

@@ -110,6 +110,85 @@
     font-size: 5vh;
 }
 
+/* Only shown on small screens */
+.menuBtn {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .headerContainer {
+        height: 60px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    .menuBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        margin-right: -8px;
+        background-color: transparent;
+        border: none;
+        border-radius: 0px;
+        width: fit-content;
+        color: var(--background-color);
+        font-size: 28px;
+    }
+
+    .menuBtn:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    .headerRight {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        width: fit-content;
+        width: 100%;
+        padding: 10px 0 40px 0;
+        background-color: var(--primary);
+        border-bottom: var(--background-color) 5px solid;
+    }
+
+    .headerRight.open {
+        display: flex;
+    }
+
+    .headerBtn {
+        padding: 14px 20px;
+        font-size: 22px;
+        text-align: left;
+    }
+
+    .footerContainer {
+        padding: 50px 20px;
+    }
+
+    .footerContainer a {
+        font-size: 16px;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        text-align: center;
+    }
+
+    .socialIcons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .socialIcons a {
+        font-size: 36px;
+    }
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;

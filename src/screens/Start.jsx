@@ -86,10 +86,10 @@ export default function Start({scrollRef,topRef, contactRef, isLargeScreen}) {
                 className={styles.special}
                 ref={specialRef}
             >
-                <div style={{padding: '70px 40px', height: isLargeScreen ? '100%' : '75%', display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start'}}>
+                <div style={{padding: isLargeScreen ? '70px 40px' : '90px 20px', height: isLargeScreen ? '100%' : '75%', display: 'flex', alignItems: 'flex-start', justifyContent: isLargeScreen ? 'flex-start' : 'center'}}>
                     <TypingEffect
-                        size={isLargeScreen ? "20vh" : "65px"}
-                        alignment={"flex-start"}
+                        size={isLargeScreen ? "20vh" : "min(65px, 12vw)"}
+                        alignment={isLargeScreen ? "flex-start" : "center"}
                         sentences={
                             [
                                 'UX-DESIGNER',
