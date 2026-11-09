@@ -7,17 +7,17 @@
     },
     "Flask": {
       "name": "Flask",
-      "description": "Et letvægts Python web framework, der er perfekt til hurtigt at bygge skalerbare webapplikationer.",
+      "description": "Et letvægts-webframework til Python, der er perfekt til hurtigt at bygge skalerbare webapplikationer.",
       "example_projects": ["WishWell", "DreamTrail", "Katalogica"]
     },
     "FastAPI": {
       "name": "FastAPI",
-      "description": "Et moderne, high-performance web framework, der gør det nemt at bygge API'er med automatisk dokumentation.",
+      "description": "Et moderne og hurtigt webframework, der gør det nemt at bygge API'er med automatisk dokumentation.",
       "example_projects": ["PageTurner"]
     },
     "PostgreSQL": { 
         "name": "PostgreSQL", 
-        "description": "Avanceret open-source relationsdatabase. Jeg bruger det i alle mine projekter, da det er pålideligt, skalerbart og har fremragende support for komplekse forespørgsler og datatyper.", 
+        "description": "Avanceret open-source relationsdatabase. Jeg bruger den i alle mine projekter, da det er pålideligt, skalerbart og har fremragende support for komplekse forespørgsler og datatyper.", 
         "example_projects": ["PageTurner", "WishWell", "DreamTrail", "Katalogica"]
     },
     "Docker": {
@@ -27,12 +27,12 @@
     },
     "Azure": { 
         "name": "Azure", 
-        "description": "Microsofts cloud computing platform, der tilbyder en bred vifte af tjenester til hosting, datalagring og AI-integration. Jeg bruger Azure i de fleste af mine projekter.",
+        "description": "Microsofts cloudplatform, der tilbyder en bred vifte af tjenester til hosting, datalagring og AI-integration. Jeg bruger Azure i de fleste af mine projekter.",
         "example_projects": ["PageTurner", "WishWell", "DreamTrail"]
     },
     "AWS": { 
         "name": "AWS", 
-        "description": "Amazon Web Services: En omfattende cloud computing platform, der tilbyder en bred vifte af tjenester til hosting, datalagring og AI-integration.",
+        "description": "Amazon Web Services: En omfattende cloudplatform, der tilbyder en bred vifte af tjenester til hosting, datalagring og AI-integration.",
         "example_projects": ["Katalogica"]
     }
   },

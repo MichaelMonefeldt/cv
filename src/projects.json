@@ -13,7 +13,7 @@
         "link": "librerate.com"
     },
     "Katalogica": {
-        "subheader": "AI-drevet webapplikation der høster metadata i bøger",
+        "subheader": "AI-drevet webapplikation, der høster metadata i bøger",
         "technologies": {
             "Frontend": ["Vanilla JS"],
             "Backend": ["Flask"],
@@ -26,7 +26,7 @@
         "color": "var(--primary)"
     },
     "PageTurner": {
-        "subheader": "Den mest simple måde at holde styr på, hvad du læser",
+        "subheader": "Den simpleste måde at holde styr på, hvad du læser",
         "technologies": {
             "Frontend": ["React JS"],
             "Backend": ["FastAPI"],
@@ -39,7 +39,7 @@
         "color": "var(--primary)"
     },
     "WishWell": {
-        "subheader": "Appen der lader venner og familie reservere ønsker uden at oprette en profil",
+        "subheader": "Appen, der lader venner og familie reservere ønsker uden at oprette en profil",
         "technologies": {
             "Frontend": ["React JS"],
             "Backend": ["Flask"],
@@ -51,7 +51,7 @@
         "color": "var(--secondary)"
     },
     "DreamTrail": {
-        "subheader": "Appen der udfordrer dig til at bevæge dig mere.",
+        "subheader": "Appen, der udfordrer dig til at bevæge dig mere",
         "technologies": {
             "Frontend": ["React JS"],
             "Backend": ["Flask"],

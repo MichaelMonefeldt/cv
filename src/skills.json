@@ -26,7 +26,7 @@
             "example_projects": []
         },
         "UX-design": {
-            "description": "Jeg designer brugeroplevelser med fokus på intuitiv navigation, æstetik og funktionalitet. Jeg har erfaring med at skabe wireframes, prototyper og interaktive designløsninger. Som udvikler har jeg et godt øje for detaljerne i brugergrænseflader, og jeg ved, hvad der kan lade sig gøre teknisk. Når jeg har direkte brugerkontakt, møder jeg mennesket over for mig med empati og forståelse for deres behov.",
+            "description": "Jeg designer brugeroplevelser med fokus på intuitiv navigation, æstetik og funktionalitet. Jeg har erfaring med at skabe wireframes, prototyper og interaktive designløsninger. Som udvikler har jeg et godt øje for detaljerne i brugergrænseflader, og jeg ved, hvad der kan lade sig gøre teknisk. Når jeg har direkte brugerkontakt, møder jeg personen over for mig med empati og forståelse for vedkommendes behov.",
             "example_projects": [
                 "Katalogica",
                 "PageTurner",
@@ -37,7 +37,7 @@
     },
     "teknologi": {
         "Azure": {
-            "description": "Microsofts cloud computing platform, der tilbyder en bred vifte af tjenester til hosting, datalagring og AI-integration. Jeg bruger Azure i de fleste af mine projekter. Jeg udruller kontinuerligt til Linux-miljøer ved hjælp af Docker og Git.",
+            "description": "Microsofts cloudplatform, der tilbyder en bred vifte af tjenester til hosting, datalagring og AI-integration. Jeg bruger Azure i de fleste af mine projekter. Jeg udruller kontinuerligt til Linux-miljøer ved hjælp af Docker og Git.",
             "example_projects": [
                 "PageTurner",
                 "WishWell",
@@ -45,7 +45,7 @@
             ]
         },
         "Alma": {
-            "description": "Jeg har stor erfaring med katalogisering, søgning, brugerhåndtering, udlån og dataudtræk i Alma. Bibliotekssystemet kan til tider være svært at danse med, og jeg er god til at tilrettelægge workflows uden om det for at komme hurtigere i mål med projekter. Jeg transformerer og renser jævnligt metadata på tværs af hele samlinger for at sikre ensformighed.",
+            "description": "Jeg har stor erfaring med katalogisering, søgning, brugerhåndtering, udlån og dataudtræk i Alma. Bibliotekssystemet kan til tider være svært at danse med, og jeg er god til at tilrettelægge workflows uden om det for at komme hurtigere i mål med projekter. Jeg transformerer og renser jævnligt metadata på tværs af hele samlinger for at sikre ensartethed.",
             "example_projects": [
                 "Katalogica",
                 "Nodesamling"

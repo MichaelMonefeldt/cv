@@ -149,7 +149,7 @@ export default function Start({scrollRef,topRef, contactRef, isLargeScreen}) {
                         Projekter
                     </h2>
                     <p>
-                        Her kan du gå på opdagelse i artikler om mine fuldendte og aktuelle projekter. 
+                        Her kan du gå på opdagelse i artikler om mine afsluttede og igangværende projekter. 
                         Udforsk udviklings-, digitaliserings- og udstillingsinitiativer, jeg har haft en bærende rolle i.
                     </p>
                 </div>

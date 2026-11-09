@@ -37,15 +37,15 @@ export default function Bodies({project, paragraphs = []}) {
                        />
                       
                        <h3>Hvorfor endnu en læseapp?</h3>
-                       <p>Goodreads har længe været det mest oplagte valg for de læsere, der gerne vil skabe sig overblik over, hvad de læser – primært fordi de fik en stor brugerbase meget tidligt. Men den dag i dag kunne både appen og hjemmesiden klare en kærlig hånd – de ligner noget fra det forrige århundrede, og Amazon tager ikke initiativ til at udvikle brugeroplevelsen.</p>
+                       <p>Goodreads har længe været det mest oplagte valg for de læsere, der gerne vil skabe sig overblik over, hvad de læser – primært fordi den fik en stor brugerbase meget tidligt. Men den dag i dag kunne både appen og hjemmesiden klare en kærlig hånd – de ligner noget fra det forrige århundrede, og Amazon, der ejer Goodreads, tager ikke initiativ til at udvikle brugeroplevelsen.</p>
   
-                       <p>Flere har forsøgt at skabe nye, moderne versioner af konceptetet. Min research af konkurrende produkter tog dog den klare konklusion, at udviklere bliver ved med at begå én af to graverende fejl:</p>
+                       <p>Flere har forsøgt at skabe nye, moderne versioner af konceptet. Min research af konkurrerende produkter førte dog til den klare konklusion, at udviklere bliver ved med at begå én af to graverende fejl:</p>
                        <ul>
                            <li>enten har de taget Goodreads’ formular og puttet den i en pænere skal (uden at tænke længe over, hvordan brugeren kan komme hurtigere eller lettere i mål),</li>
                            <li>eller også har de forsøgt at bygge videre på formularen; men videreudviklingen består først og fremmest i at give brugeren mulighed for at indtaste langt mere data om bogen og deres læsning. Et falsk hensyn, der får appen til at føles som arbejde frem for sjov.</li>
                        </ul>
                       
-                       <p>De fleste læseapps er bygget op som lister af lister. Du får en liste over bøger, som du har læst + en liste over bøger du er i gang med at læse osv. Brugeren flytter bøgerne fra en liste til en anden til en tredje … </p>
+                       <p>De fleste læseapps er bygget op som lister af lister. Du får en liste over bøger, som du har læst, og en liste over bøger du er i gang med at læse osv. Brugeren flytter bøgerne fra en liste til en anden til en tredje … </p>
                       
                        <p>Det fungerer – men langt mere intuitive løsninger findes. Derfor: PageTurner.</p>
                       
@@ -77,13 +77,13 @@ export default function Bodies({project, paragraphs = []}) {
                    <p>I 2025 programmerede jeg en hjemmeside som invitation til mit bryllup. 
                     Her kunne gæsterne tilmelde sig og reservere ønsker. WishWell er bygget oven på min oprindelige kode.</p>
                   
-                   <p>I dag kan hvem som helst bruge appen til at oprette ønskelister til alle former begivenheder for at være sikre på, at de får akkurat det, som de har ønsket sig. 
+                   <p>I dag kan hvem som helst bruge appen til at oprette ønskelister til alle former for begivenheder for at være sikre på, at de får akkurat det, som de har ønsket sig. 
                     Gavegiverne kan reservere ønsker, og på den måde undgår du dubletter.</p>
                   
-                   <p>Nye gode tiltag er lagt oven i alt det, der fungerer bedst i konkurrende apps:</p>
+                   <p>Nye gode tiltag er lagt oven i alt det, der fungerer bedst i konkurrerende apps:</p>
                    <ul>
-                       <li>Andre apps kræver, at dine venner og familie opretter en profil, hvis de skal reservere ønsker - det gør WishWell ikke. 
-                            I stedet har du mulighed for at sende unikke links, der binder personen til reservationerne. Hvis gavegiveren ændrer mening, bruger de samme link igen for at tilføje nye eller slette gamle reservationer</li>
+                       <li>Andre apps kræver, at dine venner og familie opretter en profil, hvis de skal reservere ønsker – det gør WishWell ikke. 
+                            I stedet har du mulighed for at sende unikke links, der binder personen til reservationerne. Hvis gavegiveren ændrer mening, bruger det samme link igen for at tilføje nye eller slette gamle reservationer.</li>
                        <li>Fodr appen med et link til et produkt, og du behøver ikke selv at taste; WishWell henter automatisk produktnavn og -beskrivelse, pris, billede m.m.</li>
                        <li>Andre apps er lette at snyde; ad bagveje kan brugeren meget let skabe sig overblik over, hvilke gaver i deres ønskeliste, der er reserverede. 
                             Det ødelægger overraskelsen, men det kan være svært at lade være med at tage et smugkig. 
@@ -99,13 +99,13 @@ export default function Bodies({project, paragraphs = []}) {
        case 'DreamTrail':
            return (
                <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>
-                    <img className={styles.displayImage} src={walkEx} alt="Katalogica" />
+                    <img className={styles.displayImage} src={walkEx} alt="DreamTrail" />
 
                    <h3>En dårlig oplevelse gav inspiration</h3>
                     <p>For et par år siden downloadede jeg en app, der afgav et spændende løfte: Hvis jeg kunne gå/løbe/cykle en længere distance, ville jeg blive belønnet med en specialdesignet medalje. Jeg skulle følge en fiktiv historie og gå i fodsporene på dens karakterer!</p> 
                     <p>Overraskende nok: Sjældent har jeg haft en kedeligere oplevelse som bruger.</p>
                     
-                    <p>Medaljen var et godt stykke håndværk, men da jeg havde haft den hængende et par uger, pakkede jeg den alligevel i kælderen. Til gengæld var appen på ingen måde velholdt, og det stod klart, at udviklerne af konceptet gik mere op i at indfange købere end at holde på deres kunder. Alt fra oprettelse til almen navigation i appen var forvirrende, og designet var ligefrem grimt.</p>
+                    <p>Medaljen var et flot stykke håndværk, men efter et par uger på væggen endte den alligevel i kælderen. Appen var derimod på ingen måde velholdt, og det stod klart, at udviklerne af konceptet gik mere op i at indfange købere end at holde på deres kunder. Alt fra oprettelse til almen navigation i appen var forvirrende, og designet var ligefrem grimt.</p>
                     
                     <p>Jeg fik en følelse af at have spildt mine penge. Og jeg tænkte: Det må være muligt at udvikle et bedre alternativ.</p>
                     
@@ -117,7 +117,7 @@ export default function Bodies({project, paragraphs = []}) {
                     
                     <p>
                         DreamTrail skal motivere dig til at bevæge dig længere. Det gør den gennem engagerende udfordringer, grafer og virtuelle belønninger.
-                        Om brugeren har lyst til at bevæge sig alene eller sammen med vennerne, er op til dem. 
+                        Om du vil bevæge dig alene eller sammen med vennerne, er op til dig. 
                         Udfordringerne er designet til også at kunne gennemføres i fællesskab, og appen gør det let at dele resultater med vennerne.
                     </p>
                     
@@ -127,7 +127,7 @@ export default function Bodies({project, paragraphs = []}) {
                     
                     <h3>Hvad er på tegnebrættet?</h3>
                     <p>
-                        Til en start en DreamTrail udgivet uden skræddersyede udfordringer – brugeren kan kun oprette sine egne. Det er en god måde at teste konceptet af, og det giver mig mulighed for at se, hvordan brugerne interagerer med appen, og hvad de har lyst til at bruge den til.
+                        Til at starte med udgives DreamTrail uden skræddersyede udfordringer – brugeren kan kun oprette sine egne. Det er en god måde at teste konceptet, og det giver mig mulighed for at se, hvordan brugerne interagerer med appen, og hvad de har lyst til at bruge den til.
                    </p>
                </div>
            );
@@ -137,21 +137,21 @@ export default function Bodies({project, paragraphs = []}) {
                     <img className={styles.displayImage} src="/projects/k_concept_dk.png" alt="Katalogica" />
                    
                    <h3>En gigantisk udfordring løst med AI</h3>
-                   <p>Syddansk Universitetsbibliotek har 100.000-vis af materialer, som brugerne ikke kan tilgå, fordi materialerne ikke er registreret. På Det Kgl. Bibliotek overstiger antallet én million.</p>
+                   <p>Syddansk Universitetsbibliotek har hundredtusindvis af materialer, som brugerne ikke kan tilgå, fordi materialerne ikke er registreret. På Det Kgl. Bibliotek overstiger antallet én million.</p>
                   
-                   <p>En aften sad jeg og så Agatha Christies Poirot, da jeg fik en indskydelse, der skulle vise sig at kunne gøre registreringen 10 gange hurtigere. Mens filmen kørte skrev jeg et program, der kunne høste tekst fra et titelblad, sortere titel, forfatternavn, udgivelsesår mm. og således danne første udkast til en bibliotekspost på få sekunder. Dagen efter gik jeg til min leder på Syddansk Universitet – og jeg fik lov til at udvikle Katalogica.</p>
+                   <p>En aften sad jeg og så Agatha Christies Poirot, da jeg fik en indskydelse, der skulle vise sig at kunne gøre registreringen 10 gange hurtigere. Mens filmen kørte, skrev jeg et program, der kunne høste tekst fra et titelblad, sortere titel, forfatternavn, udgivelsesår m.m. og således danne første udkast til en bibliotekspost på få sekunder. Dagen efter gik jeg til min leder på Syddansk Universitet – og jeg fik lov til at udvikle Katalogica.</p>
                    
-                   <p>At læse titelblade for at producere poster automatisk var prøvet mange gange før. Mit producerede som det første inden for den danske biblioteksverden præcise nok resultater til at kunne bruges i det daglige – det kunne sågar læse de mest krøllede, gotiske bogstaver, som er at finde i mange ældre bøger.</p>
+                   <p>At læse titelblade for at producere poster automatisk var prøvet mange gange før. Mit program var det første i den danske biblioteksverden, der leverede resultater præcise nok til daglig brug – det kunne sågar læse de mest krøllede, gotiske bogstaver, som er at finde i mange ældre bøger.</p>
                   
-                   <h3>Da AI ikke var nok, UX!</h3>
-                   <p>Statens IT-løsninger kan ofte få en til at tænke: Der har ikke været en designer inden for en 10 kilometers radius, da det her blev program blev udviklet. 
+                   <h3>Når AI ikke er nok: UX</h3>
+                   <p>Statens IT-løsninger kan ofte få en til at tænke: Der har ikke været en designer inden for en 10 kilometers radius, da det her program blev udviklet. 
                     Man spilder meget tid og mange klik på handlinger, der burde være simple. Det frustrerede mig som nyuddannet at blive mødt af ineffektive systemer – og derfor blev jeg alvorligt interesseret i UX-design.</p>
                   
-                   <p>Jeg havde forskningstid på biblioteket, og i min fritid blev jeg certificeret designer. Jeg tegnede wireframes og realiserede dem i Figma for at skabe mig en idé om Katalogicas arkitektur. Også min fritid brugte jeg på alverdens småprojekter, som kunne træne mig i håndværket, og jeg begyndte for alvor at specialisere mig i at programmere apps.</p>
+                   <p>Jeg havde forskningstid på biblioteket, og i min fritid blev jeg certificeret designer. Jeg tegnede wireframes og realiserede dem i Figma for at skabe mig en idé om Katalogicas arkitektur. Resten af min fritid brugte jeg på alverdens småprojekter, som kunne træne mig i håndværket, og jeg begyndte for alvor at specialisere mig i at programmere apps.</p>
                   
-                   <p>Image processing leverer ikke fejlfri resultater. Katalogica måtte nødvendigvis gøre det så gnidningsfrit som muligt at rette til, hvor AI stadig ikke kunne følge med den menneskelige intelligens.</p>
+                   <p>Billedgenkendelse leverer ikke fejlfri resultater. Katalogica måtte nødvendigvis gøre det så gnidningsfrit som muligt at rette til, hvor AI stadig ikke kunne følge med den menneskelige intelligens.</p>
                   
-                   <p>Jeg beholdt billedet som reference og placerede den fulde tekst i midten, så det var let at kopiere tekst over, hvor noget alligevel var sorteret ukorrekt. Romertal blev automatisk oversat til arabertal, og små mellemprocesser sørgede blandt andet for at forfattere blev stavet med stort.</p>
+                   <p>Jeg beholdt billedet som reference og placerede den fulde tekst i midten, så det var let at kopiere tekst over, hvor noget alligevel var sorteret forkert. Romertal blev automatisk oversat til arabertal, og små mellemprocesser sørgede blandt andet for, at forfatternavne fik stort begyndelsesbogstav.</p>
  
                    <h3>Udgivelser om Katalogica</h3>
                    <p>Læs mere om Katalogica i mine udgivelser om værktøjet:</p>
@@ -176,26 +176,26 @@ export default function Bodies({project, paragraphs = []}) {
                 <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>
                   
                     <p>
-                        Det Kgl. Bibliotek ejer gigantiske nodersamlinger af stor betydning for musikforskning og den dansk musikhistorie. 
+                        Det Kgl. Bibliotek ejer gigantiske nodesamlinger af stor betydning for musikforskning og den danske musikhistorie. 
                         Fra 2025 og frem har jeg været ansat til at opmærke, registrere og pleje samlingerne for at sikre deres bevarelse og tilgængelighed for fremtidens brugere. 
                     </p>
                     <img className={styles.displayImage} src="/projects/noder_1.jpg" alt="Noder" />
                     <p>
                         Meget af arbejdet er manuelt; jeg skal have hver eneste node mellem hænderne undervejs i projektet. 
-                        Men med hjælp fra Excel og Python har jeg sparet os for mange måneders ekstraarbejde - for mange opgaver kunne automatiseres delvist eller helt.
+                        Men med hjælp fra Excel og Python har jeg sparet os for mange måneders ekstraarbejde – for mange opgaver kunne automatiseres delvist eller helt.
                     </p>
                     <h3>Automatisering</h3>
                     <p>
-                        Biblioteksystemet Alma, som Det Kgl. Bibliotek bruger, er en UX-designers værste mareridt: Nogle gange skulle man tro, at systemet var bygget til at gøre det så svært som muligt for en bibliotekar at lave sit arbejde. 
-                        Ikke nok med at systemet ofte bryder ned, kræver det mange, mange klik og lange ventetider at gennemføre simple opgaver.
+                        Bibliotekssystemet Alma, som Det Kgl. Bibliotek bruger, er en UX-designers værste mareridt: Nogle gange skulle man tro, at systemet var bygget til at gøre det så svært som muligt for en bibliotekar at lave sit arbejde. 
+                        Ikke nok med, at systemet ofte går ned, det kræver også mange, mange klik og lange ventetider at gennemføre simple opgaver.
                     </p>
                     <p>
-                        Derfor har jeg trukket en stor del af vores processer ud af biblioteksystemet og ind i Excel. Her har det været lettere at holde styr på hele samlinger ad gangen, og jeg har kunnet transformere på tværs ved hjælp af makroer og formler. Med Python har jeg derpå renset alle data og kørt ændringerne ind i systemet.
+                        Derfor har jeg trukket en stor del af vores processer ud af bibliotekssystemet og ind i Excel. Her har det været lettere at holde styr på hele samlinger ad gangen, og jeg har kunnet transformere data på tværs ved hjælp af makroer og formler. Med Python har jeg derpå renset alle data og kørt ændringerne ind i systemet.
                     </p>
                     <p>
                         Når vi har med fysiske samlinger at gøre, kan man komme til at tro, at alt må gøres manuelt. 
                         Men så snart store datasæt er involveret, er det værd at overveje, om ikke computeren skal bringes i spil. 
-                        Hvis først jeg får fingrene i en samling, er jeg hurtig til at få øje på, hvor vi kan optimere.
+                        Når først jeg får fingrene i en samling, ser jeg hurtigt, hvor vi kan optimere.
                     </p>
                     <img className={styles.displayImage} src="/projects/noder_2.jpg" alt="Noder" />
                 </div>
@@ -207,22 +207,22 @@ export default function Bodies({project, paragraphs = []}) {
                         Blandt særsamlingerne på SDU's Bibliotek finder man jazzsamlingerne: unikke lydoptagelser, fotos, private videooptagelser og objekter fra nogle af jazzens største navne.
                     </p>
                     <p>
-                        Da jeg ankom til biblioteket var det dog ikke muligt afspille en pind af materialerne.
+                        Da jeg ankom til biblioteket, var det dog ikke muligt at afspille en pind af materialerne.
                         Gammelt optagerudstyr stod presset sammen bagerst i en kælder, og alt fra kassette- til spolebånd stod og samlede støv. 
-                        Som årene gik var materialerne dømt til at gå i forfald.
+                        Med tiden ville materialerne gå i forfald.
                     </p>
                     <img className={styles.displayImage} src="/projects/udstyr_1.jpg" alt="Musikudstyr" />
 
                     <h3>Nyt liv til samlingen</h3>
                     <p>
                         Nede i kælderen fik jeg støvet de gamle optagere af. 
-                        Jeg koblede dem til et par højtalere, og snart rungerede jazzen mellem væggene i kældrene på universitetet.
+                        Jeg koblede dem til et par højtalere, og snart rungede jazzen mellem væggene på universitetet.
                     </p>
                     <img className={styles.displayImage} src="/projects/udstyr_2.jpg" alt="Musikudstyr" />
                     <p>
                         Ikke alle maskinerne havde holdt til den hårde behandling, de havde fået gennem årene.
-                        Men jeg kunne spille spolebånd, grammofonplader fra forskellige aldre og de knap så kendte U-matic bånd. 
-                        Afspillere til DVD, CD, kassette, videobånd måtte jeg indkøbe på ny.
+                        Men jeg kunne spille spolebånd, grammofonplader fra forskellige årtier og de knap så kendte U-matic-bånd. 
+                        Afspillere til DVD, CD, kassette og videobånd måtte jeg indkøbe på ny.
                     </p>
                     <p>
                         Snart havde jeg etableret et helt lydstudie, som gjorde det muligt at hive hvilket som helst medie ned fra hylderne og afspille det. 
@@ -236,7 +236,7 @@ export default function Bodies({project, paragraphs = []}) {
                 <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>   
 
                     <p>
-                        I 2023 var jeg i praktik på Syddansk Universitetsbibliotek for at lave en udstilling. Udstillingen, kaldet "Vekselvirkninger", fokuserede på litteraturen under den naturvidenskabelige revolution og hvordan videnskabelige opdagelser blev formidlet gennem fiktion. Jeg baserede udstillingen på mit speciale i litteraturvidenskab om samme emne.
+                        I 2023 var jeg i praktik på Syddansk Universitetsbibliotek for at lave en udstilling. Udstillingen, kaldet »Vekselvirkninger«, fokuserede på litteraturen under den naturvidenskabelige revolution, og hvordan videnskabelige opdagelser blev formidlet gennem fiktion. Jeg baserede udstillingen på mit speciale i litteraturvidenskab om samme emne.
                     </p>
 
                     <img className={styles.displayImage} src="/projects/udstilling_1.jpg" alt="Hele udstillingen" />
@@ -244,23 +244,23 @@ export default function Bodies({project, paragraphs = []}) {
                     <h3>Videnskabens litteraturer</h3>           
                     <p>
                         Skellet mellem fiktion og viden er ikke altid blevet opfattet så skarpt som i dag. Under den naturvidenskabelige revolution i 1600-tallets Europa benyttede naturfilosoffer og forfattere den skønne litteratur til at skabe stærke sanseindtryk, så de mere abstrakte idéer blev levendegjort for deres publikummer. 
-                        For renæssancemennesket stod Jorden tilsyneladende stille, og intet instrument gjorde det muligt at beskue verdenen udefra – bortset fra fiktionen. I fortællingen Les états et empires du Soleil (1662) af libertineren Cyrano de Bergerac befinder fortælleren sig i Solens himmel-strøg, da han skuer tilbage på Jorden og opdager, at den ikke blot drejer om sig selv, men at den også bevæger sig i en bane om Solen. Hvad der var umuligt for mange at forestille sig, gjorde litteraturen således begribeligt.
+                        For renæssancemennesket stod Jorden tilsyneladende stille, og intet instrument gjorde det muligt at beskue verden udefra – bortset fra fiktionen. I fortællingen Les états et empires du Soleil (1662) af libertineren Cyrano de Bergerac befinder fortælleren sig i Solens himmelstrøg, da han skuer tilbage på Jorden og opdager, at den ikke blot drejer om sig selv, men at den også bevæger sig i en bane om Solen. Hvad der var umuligt for mange at forestille sig, gjorde litteraturen således begribeligt.
                     </p>
 
                     <img className={styles.displayImage} src="/projects/udstilling_6.jpg" alt="Montre 1" />
 
                     <p>
-                        Under den naturvidenskabelige revolution blev videnskabelige opdagelser pakket ind i fiktive rammefortællinger; skønne beskrivelser, metaforer og allegorier blev udnyttet for at gøre naturfilosofiske afhandlinger lettere at sluge. Og sidst men ikke mindst greb videnskabsfolk til ren fiktion, og brugte den som en metode til at sprede deres idéer.
+                        Under den naturvidenskabelige revolution blev videnskabelige opdagelser pakket ind i fiktive rammefortællinger; skønne beskrivelser, metaforer og allegorier blev udnyttet for at gøre naturfilosofiske afhandlinger lettere at sluge. Og sidst, men ikke mindst, greb videnskabsfolk til ren fiktion og brugte den som en metode til at sprede deres idéer.
                     </p>
 
                     <img className={styles.displayImage} src="/projects/udstilling_5.jpg" alt="Montre 2" />
 
                     <p>
-                        Lige så vel som litteraturen kunne bruges opbyggende, kunne den bruges til at kritisere samtidens videnskabelige nybrud. Når der skete for hurtigere fremskridt, eller når det ikke var tydeligt, hvordan forskernernes arbejde skulle forbedre samfundet, gav det anledning til modstand. Blandt andet i The Blazing World (1666) af Margaret Cavendish stilles der spørgsmål til, om det giver mening at spilde tid på optiske forstørrelser, når man kan fremme samfundet bedre ved at bruge sine kræfter andetsteds. Cavendish forkaster både tele- og mikroskopet med det argument, at de alligevel kun vildleder forskernes sanser.
+                        Ligesom litteraturen kunne bruges opbyggende, kunne den bruges til at kritisere samtidens videnskabelige nybrud. Når der skete for hurtige fremskridt, eller når det ikke var tydeligt, hvordan forskernes arbejde skulle forbedre samfundet, gav det anledning til modstand. Blandt andet i The Blazing World (1666) af Margaret Cavendish stilles der spørgsmål til, om det giver mening at spilde tid på optiske forstørrelser, når man kan fremme samfundet bedre ved at bruge sine kræfter andetsteds. Cavendish forkaster både tele- og mikroskopet med det argument, at de alligevel kun vildleder forskernes sanser.
                     </p>
                     <img className={styles.displayImage} src="/projects/udstilling_4.jpg" alt="Montre 3" />
                     <p>
-                        Ofte er det let at regne ud, hvilke teoretikere fiktionsforfatterne drager inspiration fra, når de går i dialog med videnskaberne. Hos Cyrano er det bl.a. rationalisten René Descartes og astronomen Pierre Gassendi. Imens stikker Cavendish til forskeren Robert Hooke, som blev kendt for sine opdagelser gennem mikroskopet. Da danske Ludvig Holberg skriver en satirisk udlægning af videnskaberne i Niels Klims underjordiske rejse (1741) er den dog ikke møntet på nogen specifikke personer men er i stedet et mere generelt angreb på samtidige tendenser i den nordiske ånd.
+                        Ofte er det let at regne ud, hvilke teoretikere fiktionsforfatterne drager inspiration fra, når de går i dialog med videnskaberne. Hos Cyrano er det bl.a. rationalisten René Descartes og astronomen Pierre Gassendi. Imens stikker Cavendish til forskeren Robert Hooke, som blev kendt for sine opdagelser gennem mikroskopet. Da danske Ludvig Holberg skriver en satirisk udlægning af videnskaberne i Niels Klims underjordiske rejse (1741) er den dog ikke møntet på nogen specifik person, men er i stedet et mere generelt angreb på samtidige tendenser i den nordiske ånd.
                     </p>
                     <h3>Billeder fra udstillingen</h3>
                     <img className={styles.displayImage} src="/projects/bøger_1.jpg" alt="Bog, eksempel 1" />
