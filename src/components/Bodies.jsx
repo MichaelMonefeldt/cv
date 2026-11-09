@@ -37,9 +37,9 @@ export default function Bodies({project, paragraphs = []}) {
                        />
                       
                        <h3>Hvorfor endnu en læseapp?</h3>
-                       <p>Goodreads har længe været det klare valg for de læsere, der gerne vil skabe sig overblik over, hvad de læser – primært fordi de fik en stor brugerbase meget tidligt. Men både appen og hjemmesiden kunne klare en kærlig hånd – de ligner noget fra det forrige århundrede, og Amazon tager ikke initiativ til at udvikle brugeroplevelsen.</p>
+                       <p>Goodreads har længe været det mest oplagte valg for de læsere, der gerne vil skabe sig overblik over, hvad de læser – primært fordi de fik en stor brugerbase meget tidligt. Men den dag i dag kunne både appen og hjemmesiden klare en kærlig hånd – de ligner noget fra det forrige århundrede, og Amazon tager ikke initiativ til at udvikle brugeroplevelsen.</p>
   
-                       <p>Flere har forsøgt at skabe nye, moderne versioner af konceptetet. Min research af konkurrende produkter har dog den klare konklusion, at udviklere bliver ved med at begå én af to graverende fejl:</p>
+                       <p>Flere har forsøgt at skabe nye, moderne versioner af konceptetet. Min research af konkurrende produkter tog dog den klare konklusion, at udviklere bliver ved med at begå én af to graverende fejl:</p>
                        <ul>
                            <li>enten har de taget Goodreads’ formular og puttet den i en pænere skal (uden at tænke længe over, hvordan brugeren kan komme hurtigere eller lettere i mål),</li>
                            <li>eller også har de forsøgt at bygge videre på formularen; men videreudviklingen består først og fremmest i at give brugeren mulighed for at indtaste langt mere data om bogen og deres læsning. Et falsk hensyn, der får appen til at føles som arbejde frem for sjov.</li>
@@ -47,7 +47,7 @@ export default function Bodies({project, paragraphs = []}) {
                       
                        <p>De fleste læseapps er bygget op som lister af lister. Du får en liste over bøger, som du har læst + en liste over bøger du er i gang med at læse osv. Brugeren flytter bøgerne fra en liste til en anden til en tredje … </p>
                       
-                       <p>Det fungerer, men det kan gøres langt mere intuitivt. Derfor: PageTurner.</p>
+                       <p>Det fungerer – men langt mere intuitive løsninger findes. Derfor: PageTurner.</p>
                       
                        <h3>Alt på en hylde</h3>
                        <p>Læste bøger, igangværende læsninger, droppede bøger – alt sammen i en ordnet visning, der gør det let at skabe sig et overblik over dine læsevaner!</p>
@@ -55,9 +55,9 @@ export default function Bodies({project, paragraphs = []}) {
                        <Shelf />
  
                        <h3>Del hvert øjeblik</h3>
-                       <p>Normalt giver læseren én bedømmelse, når bogen er afsluttet. Men hvad hvis man kunne dele sine tanker når som helst undervejs på rejsen?</p>
+                       <p>Normalt giver læseren én bedømmelse, når bogen er afsluttet. Men hvad hvis man kunne dele sine tanker når som helst på rejsen?</p>
                       
-                       <p>På Instagram ser vi kvinder bryde sammen af glæde, når de modtager en bog, hvor deres veninder har efterladt noter i margenerne. En bog er ikke bare sin slutning, og de tanker, vi gør os undervejs, betyder meget. Derfor lægger PageTurner op til, at du skriver dine tanker frem, hvor langt du end er nået. Kig tilbage: Hvor tog du fejl, hvor lærte du noget nyt …</p>
+                       <p>På Instagram ser vi kvinder bryde sammen af glæde, når de modtager en bog, hvor deres veninder har efterladt noter i margenerne. En bog er ikke bare sin slutning; de tanker, vi gør os undervejs, betyder lige så meget. Derfor lægger PageTurner op til, at du skriver dine tanker ned, hvor langt du end er nået. Kig tilbage: Hvor tog du fejl, hvor lærte du noget nyt, hvad overraskede dig …</p>
                       
                        <p>Bare rolig: Du kan efterlade spoiler warnings for ikke at afsløre noget for dine venner uden deres samtykke. Tal frit fra leveren!</p>
  
@@ -74,20 +74,26 @@ export default function Bodies({project, paragraphs = []}) {
            return (
                <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>
                   
-                   <p>I 2025 programmerede jeg en hjemmeside som invitation til mit bryllup. Her kunne gæsterne tilmelde sig og reservere ønsker. WishWell er bygget oven på min oprindelige kode.</p>
+                   <p>I 2025 programmerede jeg en hjemmeside som invitation til mit bryllup. 
+                    Her kunne gæsterne tilmelde sig og reservere ønsker. WishWell er bygget oven på min oprindelige kode.</p>
                   
-                   <p>I dag kan hvem som helst oprette ønskelister til alle former begivenheder for at være sikre på, at de får akkurat det, som de har ønsket dig. Gavegiverne kan reservere ønske, og på den måde undgår du dubletter.</p>
+                   <p>I dag kan hvem som helst bruge appen til at oprette ønskelister til alle former begivenheder for at være sikre på, at de får akkurat det, som de har ønsket sig. 
+                    Gavegiverne kan reservere ønsker, og på den måde undgår du dubletter.</p>
                   
-                   <p>Nye gode tiltag er lagt oven i alt det, der fungerer bedst konkurrende apps:</p>
+                   <p>Nye gode tiltag er lagt oven i alt det, der fungerer bedst i konkurrende apps:</p>
                    <ul>
-                       <li>Andre apps kræver, at dine venner og familie opretter en profil, hvis de skal reservere ønsker; det gør WishWell ikke. I stedet har du mulighed for at sende unikke links, der binder personen til reservationerne. Hvis gavegiveren ændrer mening, bruger de samme link igen for at tilføje nye eller slette gamle reservationer</li>
+                       <li>Andre apps kræver, at dine venner og familie opretter en profil, hvis de skal reservere ønsker - det gør WishWell ikke. 
+                            I stedet har du mulighed for at sende unikke links, der binder personen til reservationerne. Hvis gavegiveren ændrer mening, bruger de samme link igen for at tilføje nye eller slette gamle reservationer</li>
                        <li>Fodr appen med et link til et produkt, og du behøver ikke selv at taste; WishWell henter automatisk produktnavn og -beskrivelse, pris, billede m.m.</li>
-                       <li>Andre apps er lette at snyde; ad bagveje kan brugeren meget let skabe sig overblik over, hvilke gaver i deres ønskeliste, der er reserverede. Det ødelægger overraskelsen, men det kan være svært at lade være med at tage et smugkig. WishWell tager alle forholdsregler for at undgå, at fristelsen presser sig på.</li>
-                       <li>WishWell lader dig oprette kategorier i hver ønskeliste. Gør det lettere for dig selv og gavegiverne at finde rundt i dine ønsker.</li>
+                       <li>Andre apps er lette at snyde; ad bagveje kan brugeren meget let skabe sig overblik over, hvilke gaver i deres ønskeliste, der er reserverede. 
+                            Det ødelægger overraskelsen, men det kan være svært at lade være med at tage et smugkig. 
+                            WishWell tager alle forholdsregler.</li>
+                       <li>WishWell lader dig oprette kategorier i hver ønskeliste. 
+                            Gør det lettere for dig selv og gavegiverne at finde rundt i dine ønsker.</li>
                    </ul>
                   
                    <h3>Hvad er på tegnebrættet?</h3>
-                   <p>Det kan være svært at finde på noget at ønske sig. WishWell skal selvfølgelig give inspiration til ønsker, der er mere kreative end ’Nye sokker’ eller ’Nye underbukser’. En ny inspirationsside er på vej!</p>
+                   <p>Det kan være svært at finde på noget at ønske sig. WishWell skal give inspiration til ønsker, der er mere kreative end ’Nye sokker’. En ny inspirationsside er på vej!</p>
                </div>
            );
        case 'DreamTrail':
@@ -96,16 +102,16 @@ export default function Bodies({project, paragraphs = []}) {
                     <img className={styles.displayImage} src={walkEx} alt="Katalogica" />
 
                    <h3>En dårlig oplevelse gav inspiration</h3>
-                    <p>Sidste år downloadede jeg en app, der gav et spændende løfte: Hvis jeg kunne gå/løbe/cykle en længere distance, ville jeg blive belønnet med en specialdesignet medalje. Jeg skulle følge en fiktiv historie og gå i fodsporene på dens karakterer – virkeligt motiverende!</p> 
-                    <p>Men sjældent har jeg haft en kedeligere oplevelse som bruger.</p>
+                    <p>For et par år siden downloadede jeg en app, der afgav et spændende løfte: Hvis jeg kunne gå/løbe/cykle en længere distance, ville jeg blive belønnet med en specialdesignet medalje. Jeg skulle følge en fiktiv historie og gå i fodsporene på dens karakterer!</p> 
+                    <p>Overraskende nok: Sjældent har jeg haft en kedeligere oplevelse som bruger.</p>
                     
-                    <p>Medaljen var et godt stykke håndværk, men da jeg havde haft den hængende et par uger, pakkede jeg den alligevel i kælderen. Til gengæld var appen på ingen måde velholdt, og det stod klart, at udviklerne af konceptet gik mere op i at indfange købere end at holde på brugerne. Alt fra oprettelse til almen navigation i appen var forvirrende, og designet var ligefremt grimt.</p>
+                    <p>Medaljen var et godt stykke håndværk, men da jeg havde haft den hængende et par uger, pakkede jeg den alligevel i kælderen. Til gengæld var appen på ingen måde velholdt, og det stod klart, at udviklerne af konceptet gik mere op i at indfange købere end at holde på deres kunder. Alt fra oprettelse til almen navigation i appen var forvirrende, og designet var ligefrem grimt.</p>
                     
                     <p>Jeg fik en følelse af at have spildt mine penge. Og jeg tænkte: Det må være muligt at udvikle et bedre alternativ.</p>
                     
                     <h3>Så det gjorde jeg!</h3>
                     <p>
-                        Der venter ingen fysisk præmie for enden af en udfordring i DreamTrail. 
+                        Der venter ingen fysisk præmie for enden af en udfordring i DreamTrail.
                         Til gengæld er appen designet med brugeren i fokus, og den er helt gratis at bruge.
                     </p>
                     
@@ -131,14 +137,15 @@ export default function Bodies({project, paragraphs = []}) {
                     <img className={styles.displayImage} src="/projects/k_concept_dk.png" alt="Katalogica" />
                    
                    <h3>En gigantisk udfordring løst med AI</h3>
-                   <p>På Syddansk Universitet har biblioteket 100.000-vis af materialer, som brugerne ikke kan tilgå, fordi de ikke er registreret. På Det Kgl. Bibliotek overstiger antallet én million.</p>
+                   <p>Syddansk Universitetsbibliotek har 100.000-vis af materialer, som brugerne ikke kan tilgå, fordi materialerne ikke er registreret. På Det Kgl. Bibliotek overstiger antallet én million.</p>
                   
-                   <p>En aften sad jeg og så Agatha Christies Poirot, da jeg fik en indskydelse, der skulle vise sig at gøre registreringen 10 gange hurtigere. Mens filmen kørte skrev jeg hurtigt et program, der kunne høste tekst fra et titelblad, sortere titel, forfatternavn, udgivelsesår mm. og således danne første udkast til en bibliotekspost på få sekunder. Dagen efter gik jeg til min leder på Syddansk Universitet – og jeg fik lov til at udvikle Katalogica.</p>
+                   <p>En aften sad jeg og så Agatha Christies Poirot, da jeg fik en indskydelse, der skulle vise sig at kunne gøre registreringen 10 gange hurtigere. Mens filmen kørte skrev jeg et program, der kunne høste tekst fra et titelblad, sortere titel, forfatternavn, udgivelsesår mm. og således danne første udkast til en bibliotekspost på få sekunder. Dagen efter gik jeg til min leder på Syddansk Universitet – og jeg fik lov til at udvikle Katalogica.</p>
                    
-                   <p>At læse titelblade for at producere poster automatisk var prøvet mange gange før. Mit producerede som det første inden for den danske biblioteksverden præcise nok resultater til at kunne bruges i det daglige – også når det kom til de krøllede gotiske bogstaver, som er at finde i mange ældre bøger.</p>
+                   <p>At læse titelblade for at producere poster automatisk var prøvet mange gange før. Mit producerede som det første inden for den danske biblioteksverden præcise nok resultater til at kunne bruges i det daglige – det kunne sågar læse de mest krøllede, gotiske bogstaver, som er at finde i mange ældre bøger.</p>
                   
                    <h3>Da AI ikke var nok, UX!</h3>
-                   <p>Statens IT-løsninger kan ofte få en til at tænke: Der har ikke været en designer inden for en 10 kilometers radius, da det her blev program blev udviklet. Man spilder meget tid og mange clicks på handlinger, der burde være simple. Det frustrerede mig som nyuddannet at blive mødt af ineffektive systemer – og derfor blev jeg alvorligt interesseret i UX-design.</p>
+                   <p>Statens IT-løsninger kan ofte få en til at tænke: Der har ikke været en designer inden for en 10 kilometers radius, da det her blev program blev udviklet. 
+                    Man spilder meget tid og mange klik på handlinger, der burde være simple. Det frustrerede mig som nyuddannet at blive mødt af ineffektive systemer – og derfor blev jeg alvorligt interesseret i UX-design.</p>
                   
                    <p>Jeg havde forskningstid på biblioteket, og i min fritid blev jeg certificeret designer. Jeg tegnede wireframes og realiserede dem i Figma for at skabe mig en idé om Katalogicas arkitektur. Også min fritid brugte jeg på alverdens småprojekter, som kunne træne mig i håndværket, og jeg begyndte for alvor at specialisere mig i at programmere apps.</p>
                   
@@ -147,7 +154,7 @@ export default function Bodies({project, paragraphs = []}) {
                    <p>Jeg beholdt billedet som reference og placerede den fulde tekst i midten, så det var let at kopiere tekst over, hvor noget alligevel var sorteret ukorrekt. Romertal blev automatisk oversat til arabertal, og små mellemprocesser sørgede blandt andet for at forfattere blev stavet med stort.</p>
  
                    <h3>Udgivelser om Katalogica</h3>
-                   <p>Læs mere om rejsen i mine udgivelser:</p>
+                   <p>Læs mere om Katalogica i mine udgivelser om værktøjet:</p>
                    <ul>
                        <li>
                            <Link to="https://rauli.cbs.dk/index.php/revy/article/view/7356" target="_blank" rel="noopener noreferrer">
@@ -169,21 +176,26 @@ export default function Bodies({project, paragraphs = []}) {
                 <div className={styles.element} style={{ gridColumn: '2 / span 8', gridRow: '5' }}>
                   
                     <p>
-                        Det Kgl. Bibliotek ejer gigantiske nodersamlinger, af stor betydning for musikforskning og bevarelsen af dansk musikkultur. Fra 2025 og frem har jeg været ansat til at opmærke, registrere og pleje samlingerne for at sikre deres bevarelse og tilgængelighed for fremtidens brugere. 
+                        Det Kgl. Bibliotek ejer gigantiske nodersamlinger af stor betydning for musikforskning og den dansk musikhistorie. 
+                        Fra 2025 og frem har jeg været ansat til at opmærke, registrere og pleje samlingerne for at sikre deres bevarelse og tilgængelighed for fremtidens brugere. 
                     </p>
                     <img className={styles.displayImage} src="/projects/noder_1.jpg" alt="Noder" />
                     <p>
-                        Meget af arbejdet er manuelt; jeg skal have hver eneste node mellem hænderne undervejs i projektet. Men med hjælp fra Excel og Python har jeg sparet os for mange måneders ekstraarbejde.                    
+                        Meget af arbejdet er manuelt; jeg skal have hver eneste node mellem hænderne undervejs i projektet. 
+                        Men med hjælp fra Excel og Python har jeg sparet os for mange måneders ekstraarbejde - for mange opgaver kunne automatiseres delvist eller helt.
                     </p>
                     <h3>Automatisering</h3>
                     <p>
-                        Biblioteksystemet Alma, som Det Kgl. Bibliotek bruger, er en UX-designers værste mareridt: Nogle gange skulle man tro, at systemet var bygget til at gøre det så svært som muligt for en bibliotekar at lave sit arbejde. Ikke nok med at systemet ofte bryder ned, kræver det mange, mange klik og lange ventetider at gennemføre simple ændringer.
+                        Biblioteksystemet Alma, som Det Kgl. Bibliotek bruger, er en UX-designers værste mareridt: Nogle gange skulle man tro, at systemet var bygget til at gøre det så svært som muligt for en bibliotekar at lave sit arbejde. 
+                        Ikke nok med at systemet ofte bryder ned, kræver det mange, mange klik og lange ventetider at gennemføre simple opgaver.
                     </p>
                     <p>
                         Derfor har jeg trukket en stor del af vores processer ud af biblioteksystemet og ind i Excel. Her har det været lettere at holde styr på hele samlinger ad gangen, og jeg har kunnet transformere på tværs ved hjælp af makroer og formler. Med Python har jeg derpå renset alle data og kørt ændringerne ind i systemet.
                     </p>
                     <p>
-                        Når vi har med fysiske samlinger at gøre, kan man komme til at tro, at alt må gøres manuelt. Men så snart store datasæt er involveret, er det værd at overveje, om ikke computeren skal bringes i spil. Hvis først jeg får fingrene ned i arbejdet, er jeg hurtig til at få øje på, hvor vi kan optimere.
+                        Når vi har med fysiske samlinger at gøre, kan man komme til at tro, at alt må gøres manuelt. 
+                        Men så snart store datasæt er involveret, er det værd at overveje, om ikke computeren skal bringes i spil. 
+                        Hvis først jeg får fingrene i en samling, er jeg hurtig til at få øje på, hvor vi kan optimere.
                     </p>
                     <img className={styles.displayImage} src="/projects/noder_2.jpg" alt="Noder" />
                 </div>
@@ -195,20 +207,27 @@ export default function Bodies({project, paragraphs = []}) {
                         Blandt særsamlingerne på SDU's Bibliotek finder man jazzsamlingerne: unikke lydoptagelser, fotos, private videooptagelser og objekter fra nogle af jazzens største navne.
                     </p>
                     <p>
-                        Da jeg ankom til biblioteket var det dog ikke muligt afspille en pind af det. Gammelt optagerudstyr stod presset sammen bagerst i en kælder, og alt fra kassette- til spolebånd stod og samlede støv. Som årene gik var materialerne dømt til at gå i forfald.
+                        Da jeg ankom til biblioteket var det dog ikke muligt afspille en pind af materialerne.
+                        Gammelt optagerudstyr stod presset sammen bagerst i en kælder, og alt fra kassette- til spolebånd stod og samlede støv. 
+                        Som årene gik var materialerne dømt til at gå i forfald.
                     </p>
                     <img className={styles.displayImage} src="/projects/udstyr_1.jpg" alt="Musikudstyr" />
 
                     <h3>Nyt liv til samlingen</h3>
                     <p>
-                        Nede i kælderen fik jeg støvet de gamle optagere af. Jeg koblede dem til et par højtalere, og snart rungerede jazzen mellem væggene i kældrene på universitetet.
+                        Nede i kælderen fik jeg støvet de gamle optagere af. 
+                        Jeg koblede dem til et par højtalere, og snart rungerede jazzen mellem væggene i kældrene på universitetet.
                     </p>
                     <img className={styles.displayImage} src="/projects/udstyr_2.jpg" alt="Musikudstyr" />
                     <p>
-                        Ikke alle maskinerne havde holdt til den hårde behandling. Men jeg kunne spille spolebånd, grammofonplader fra forskellige aldre og de knap så kendte U-matic bånd. Afspillere til DVD, CD, kassette, videobånd måtte jeg indkøbe på ny.
+                        Ikke alle maskinerne havde holdt til den hårde behandling, de havde fået gennem årene.
+                        Men jeg kunne spille spolebånd, grammofonplader fra forskellige aldre og de knap så kendte U-matic bånd. 
+                        Afspillere til DVD, CD, kassette, videobånd måtte jeg indkøbe på ny.
                     </p>
                     <p>
-                        Snart havde jeg etableret et helt lydstudie, som gjorde det muligt at hive hvilket som helst medie ned fra hylderne og afspille det. Og endnu vigtigere: Jeg fik startet indsatsen for at digitalisere de mange unikke materialer. Tænk, hvis de havde fået lov til at ligge hen, til de var helt umulige at redde!
+                        Snart havde jeg etableret et helt lydstudie, som gjorde det muligt at hive hvilket som helst medie ned fra hylderne og afspille det. 
+                        Og endnu vigtigere: Jeg fik startet indsatsen for at digitalisere de mange unikke materialer. 
+                        Tænk, hvis de havde fået lov til at ligge hen, til de var helt umulige at redde!
                     </p>
                </div>
            );

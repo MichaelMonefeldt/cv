@@ -23,6 +23,7 @@ import fromPhoneToComputer from '../assets/images/fromPhoneToComputer.svg';
 import styles from '../styles/Start.module.css';
 import technologies from '../technologies.json';
 import skills from '../skills.json';
+import projects from '../projects.json';
 
 // Icons signal what a project button does: open a floating window,
 // navigate to an internal page, or open an external site in a new tab.
@@ -66,7 +67,7 @@ export default function Start({scrollRef,topRef, contactRef, isLargeScreen}) {
                                     className={styles.exampleProject}
                                     onClick={() => navigate(`/projekt/${proj}`)}
                                 >
-                                    {proj}
+                                    {projects[proj]?.title ?? proj}
                                 </p>
                             ))}
                         </div>
@@ -121,7 +122,9 @@ export default function Start({scrollRef,topRef, contactRef, isLargeScreen}) {
                         Profil
                     </h2>
                      <p>
-                        Jeg er generalist med specialviden om UX-design, programmering, AI, digitalisering og kulturarv. Med min brede og blandede profil bygger jeg bro mellem forskellige fagligheder: Jeg kan tale med, når det bliver allermest teknisk, og samtidig kan jeg oversætte komplicerede dataproblemer og -løsninger til ledelse og kolleger uden erfaring med programmering.
+                        Jeg er generalist med specialviden om UX-design, programmering, AI, digitalisering og kulturarv. Med min brede og blandede profil bygger jeg bro mellem forskellige fagligheder: 
+                        Jeg kan tale med, når det bliver allermest teknisk, og samtidig kan jeg oversætte komplicerede dataproblemer og -løsninger til ledelse og kolleger uden erfaring med programmering. 
+                        Jeg arbejder disciplineret og kreativt for at skabe resultater, der er meningsfulde for brugerne.
                     </p>
                 </div>
                 <div className={styles.projectButtons}>
@@ -129,7 +132,7 @@ export default function Start({scrollRef,topRef, contactRef, isLargeScreen}) {
                     <ProjectButton type="window" onClick={() => openSkill(skills.profil, "Automatisering")} text="Automatisering" />
                     <ProjectButton type="window" onClick={() => openSkill(skills.profil, "Digitalisering")} text="Digitalisering" />
                     <ProjectButton type="window" onClick={() => openSkill(skills.profil, "Kommunikation")} text="Kommunikation" />
-                    <ProjectButton type="window" onClick={() => openSkill(skills.profil, "UX-design")} text="UX" />
+                    <ProjectButton type="window" onClick={() => openSkill(skills.profil, "UX-design")} text="UX-design" />
                 </div>
             </div>
 
@@ -146,7 +149,8 @@ export default function Start({scrollRef,topRef, contactRef, isLargeScreen}) {
                         Projekter
                     </h2>
                     <p>
-                        Her kan du gå på opdagelse i artikler om mine færdige og aktuelle projekter. Kom med på rejsen og udforsk de forskellige udviklings-, digitaliserings- og udstillingsinitiativer, jeg har været en del af.
+                        Her kan du gå på opdagelse i artikler om mine fuldendte og aktuelle projekter. 
+                        Udforsk udviklings-, digitaliserings- og udstillingsinitiativer, jeg har haft en bærende rolle i.
                     </p>
                 </div>
                 <div className={styles.projectButtons + " " + styles.black}>

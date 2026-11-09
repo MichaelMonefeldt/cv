@@ -46,7 +46,7 @@ export default function Header({showHeader, onScrollToSection, language, setLang
                 <button className={`${styles.headerBtn} ${styles.visible}`} onClick={() => goToSection('contact')}>
                     Kontakt
                 </button>
-                <button className={`${styles.headerBtn} ${styles.visible}`} onClick={() => setLanguage(language === 'da' ? 'en' : 'da')}>
+                {/* <button className={`${styles.headerBtn} ${styles.visible}`} onClick={() => setLanguage(language === 'da' ? 'en' : 'da')}>
                     {language === 'da' ? (
                         <>
                             <u>DK</u>/EN
@@ -56,7 +56,7 @@ export default function Header({showHeader, onScrollToSection, language, setLang
                             DK/<u>EN</u>
                         </>
                     )}
-                </button>
+                </button> */}
             </div>
         </div>
     );
