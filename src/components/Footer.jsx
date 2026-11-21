@@ -16,14 +16,11 @@ export default function Footer({showHeader}) {
                 michaelmonefeldt@gmail.com
             </a>
             <div className={styles.socialIcons}>
-                <a href="https://github.com/michaelmonefeldt" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/michaelmonefeldt" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <FaGithub />
                 </a>
-                <a href="https://www.linkedin.com/in/michaelmonefeldt/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/michaelmonefeldt/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <FaLinkedin />
-                </a>
-                <a href="https://www.instagram.com/michael_monefeldt/" target="_blank" rel="noopener noreferrer">
-                    <FaInstagram />
                 </a>
             </div>
             <div className={styles.scrollToTop} onClick={() => navigate('/')}>

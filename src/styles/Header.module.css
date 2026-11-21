@@ -100,14 +100,14 @@
     padding: 5px 10px;
     font-weight: 700;
     border: 3px solid var(--background-color);
-    font-size: 3vh;
+    font-size: 25px;
 }
 
 .socialIcons a {
     color: var(--background-color);
     border: none;
     text-decoration: none;
-    font-size: 5vh;
+    font-size: 40px;
 }
 
 /* Only shown on small screens */
